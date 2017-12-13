@@ -88,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		742B37371FE16FE300CEEC2A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				74DB869A1FDE7C3F00106C89 /* Login.storyboard */,
+				74DB86981FDE7C3F00106C89 /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		74DB868A1FDE7C3E00106C89 = {
 			isa = PBXGroup;
 			children = (
@@ -111,16 +120,14 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				742B37371FE16FE300CEEC2A /* Login */,
 				E115713C1FE09EF500E3A96C /* Results */,
 				74DB86C61FDE901100106C89 /* Homepage */,
 				74DB86961FDE7C3F00106C89 /* AppDelegate.swift */,
-				74DB86981FDE7C3F00106C89 /* LoginViewController.swift */,
-				74DB869A1FDE7C3F00106C89 /* Login.storyboard */,
 				74DB869D1FDE7C3F00106C89 /* Assets.xcassets */,
 				74DB869F1FDE7C3F00106C89 /* LaunchScreen.storyboard */,
 				74DB86A21FDE7C3F00106C89 /* Info.plist */,
 				6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */,
-				6B7DAB191FE14A05003A587A /* TravelGuidesCollectionView.swift */,
 			);
 			path = firstMiniChallenge;
 			sourceTree = "<group>";
@@ -149,6 +156,7 @@
 				74DB86C41FDE8DE600106C89 /* Homepage.storyboard */,
 				6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */,
 				74DB86C71FDE904900106C89 /* HomepageViewController.swift */,
+				6B7DAB191FE14A05003A587A /* TravelGuidesCollectionView.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
