@@ -17,7 +17,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @IBOutlet weak var CitiesAvailableCollectionView: UICollectionView!
     
-    @IBOutlet weak var ProfileImage: UIImageView!
     
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Guide4")]
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
