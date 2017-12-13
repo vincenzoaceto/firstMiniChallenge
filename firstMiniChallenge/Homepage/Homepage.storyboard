@@ -44,6 +44,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="citiesImageView" destination="ngj-UM-0JZ" id="9P7-I1-RZB"/>
+                                            <segue destination="zjt-Jl-WUm" kind="show" id="jfQ-9f-dub"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -92,6 +93,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="JOm-Gn-3dO"/>
+                                            <segue destination="oDa-bd-8uP" kind="showDetail" id="tMI-s6-iax"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -100,7 +102,7 @@
                                     <outlet property="delegate" destination="hlC-kP-dX1" id="yqS-UD-EOy"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" barStyle="black" text="Search" translatesAutoresizingMaskIntoConstraints="NO" id="VTO-Q3-4vC">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" text="Search" translatesAutoresizingMaskIntoConstraints="NO" id="VTO-Q3-4vC">
                                 <rect key="frame" x="31" y="104" width="313" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -131,6 +133,22 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="-76" y="-202.84857571214394"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="EGb-zF-HW0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Login" id="zjt-Jl-WUm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc1-dh-bBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624" y="-308"/>
+        </scene>
+        <!--Result-->
+        <scene sceneID="F1L-Jc-MWE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" id="oDa-bd-8uP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zmL-Zs-n9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="-82"/>
         </scene>
     </scenes>
 </document>
