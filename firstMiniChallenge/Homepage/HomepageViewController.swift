@@ -44,6 +44,8 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
            
              let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelGuidesIdentifier", for: indexPath) as! TravelGuidesCollectionView
             
+            print(travelGuides.count)
+            print(indexPath.row)
             cell.travelGuidesCollectionView.image = travelGuides[indexPath.row]
             
             return cell

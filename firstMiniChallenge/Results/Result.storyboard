@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kLw-hg-llk">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="PfX-lw-HqR">
             <objects>
-                <viewController id="kLw-hg-llk" customClass="ViewController" customModule="testingInterface" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kLw-hg-llk" customClass="ResultViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9IT-nA-7XJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,6 +80,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="gAS-ea-SJM"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="j29-X6-QM4">
+                        <barButtonItem key="backBarButtonItem" title="BAck" id="43E-Qd-aZr"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="kRu-hJ-WqD" id="qfd-gF-WPY"/>
                         <outlet property="mapView" destination="7qk-gR-B1c" id="Uug-7y-HNH"/>
@@ -88,12 +91,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3cG-lL-YQQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-50.399999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="28" y="238"/>
         </scene>
-        <!--Modal View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="V3V-FL-HFK">
             <objects>
-                <viewController id="kFb-xL-UvB" customClass="ModalViewController" customModule="testingInterface" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kFb-xL-UvB" customClass="ProfileViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IUu-ny-qMe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hv7-Bu-kz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="802.39999999999998" y="139.880059970015"/>
+            <point key="canvasLocation" x="881" y="244"/>
         </scene>
     </scenes>
     <resources>

@@ -22,6 +22,7 @@
 		74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */; };
 		E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115713D1FE09F0700E3A96C /* ResultViewController.swift */; };
 		E11571401FE09F9000E3A96C /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115713F1FE09F9000E3A96C /* Result.storyboard */; };
+		E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F103091FE19519006CE9BC /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		E115713D1FE09F0700E3A96C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E115713F1FE09F9000E3A96C /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		E1F103091FE19519006CE9BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				E115713D1FE09F0700E3A96C /* ResultViewController.swift */,
 				E115713F1FE09F9000E3A96C /* Result.storyboard */,
+				E1F103091FE19519006CE9BC /* ProfileViewController.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */,
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,
+				E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hlC-kP-dX1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rXT-9g-YeG">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -92,8 +92,8 @@
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="JOm-Gn-3dO"/>
-                                            <segue destination="oDa-bd-8uP" kind="showDetail" id="tMI-s6-iax"/>
+                                            <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
+                                            <segue destination="VV5-6n-j4z" kind="show" id="cQj-qx-ts0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -114,6 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="6Qn-FV-fjd"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hSY-IY-eyu"/>
+                    <navigationItem key="navigationItem" id="J4G-eh-eWA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CitiesAvailableCollectionView" destination="LiA-5W-vuG" id="psi-vQ-GaH"/>
@@ -143,12 +144,28 @@
             <point key="canvasLocation" x="624" y="-308"/>
         </scene>
         <!--Result-->
-        <scene sceneID="F1L-Jc-MWE">
+        <scene sceneID="aDD-9U-Hsz">
             <objects>
-                <viewControllerPlaceholder storyboardName="Result" id="oDa-bd-8uP" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zmL-Zs-n9a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Result" id="VV5-6n-j4z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lLx-i7-DUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="-82"/>
+            <point key="canvasLocation" x="579" y="-101"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ous-ag-6vv">
+            <objects>
+                <navigationController id="rXT-9g-YeG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2a-4N-25k">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hlC-kP-dX1" kind="relationship" relationship="rootViewController" id="j44-1y-kLs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WgD-jb-8pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-534" y="478"/>
         </scene>
     </scenes>
 </document>
