@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "348B850600000578-3605456-image-m-32_1464040491071.jpg",
+      "filename" : "348B850600000578-3605456-image-m-32_1464040491071-2.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "348B850600000578-3605456-image-m-32_1464040491071.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "348B850600000578-3605456-image-m-32_1464040491071-1.jpg",
       "scale" : "3x"
     }
   ],

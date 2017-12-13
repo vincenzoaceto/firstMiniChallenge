@@ -11,7 +11,9 @@ import UIKit
 class HomepageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
     
-    @IBOutlet weak var TravelGuidesCollectionView: UICollectionView!
+    
+    @IBOutlet weak var travelGuidesCollectionView: UICollectionView!
+    
     
     @IBOutlet weak var CitiesAvailableCollectionView: UICollectionView!
     
@@ -34,17 +36,19 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitiesIdentifier", for: indexPath) as! CitiesCollectionViewCell
-            cell.citiesImageView.image = travelGuides[indexPath.row]
+            cell.citiesImageView.image = citiesAvailable[indexPath.row]
             //            cell.event = sentencesForIcons[indexPath.row]
             
             return cell
             
         }else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "GuidesIdentifier", for: indexPath) as! TravelGuidesCollectionView
+           
+             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelGuidesIdentifier", for: indexPath) as! TravelGuidesCollectionView
             
-            cell.guidesImageView.image = citiesAvailable[indexPath.row]
+            cell.travelGuidesCollectionView.image = travelGuides[indexPath.row]
             
             return cell
+            
         }
     }
 }
