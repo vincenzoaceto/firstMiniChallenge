@@ -115,7 +115,6 @@
 				74DB86C61FDE901100106C89 /* Homepage */,
 				74DB86961FDE7C3F00106C89 /* AppDelegate.swift */,
 				74DB86981FDE7C3F00106C89 /* LoginViewController.swift */,
-				74DB86C41FDE8DE600106C89 /* Homepage.storyboard */,
 				74DB869A1FDE7C3F00106C89 /* Login.storyboard */,
 				74DB869D1FDE7C3F00106C89 /* Assets.xcassets */,
 				74DB869F1FDE7C3F00106C89 /* LaunchScreen.storyboard */,
@@ -147,6 +146,7 @@
 		74DB86C61FDE901100106C89 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				74DB86C41FDE8DE600106C89 /* Homepage.storyboard */,
 				6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */,
 				74DB86C71FDE904900106C89 /* HomepageViewController.swift */,
 			);
