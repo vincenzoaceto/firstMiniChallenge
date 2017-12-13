@@ -41,10 +41,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Homepage-->
+        <!--MainStoryBoard-->
         <scene sceneID="9Xm-9h-PXc">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="homepage" storyboardName="Homepage" id="tfH-qB-D96" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="homepage" storyboardName="MainStoryBoard" id="tfH-qB-D96" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZyF-xZ-7u2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="740" y="93"/>

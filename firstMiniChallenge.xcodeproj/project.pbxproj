@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B7DAB181FE14210003A587A /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */; };
 		6BBBA0741FE081A100853FB8 /* TravelGuidesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0731FE081A100853FB8 /* TravelGuidesCollectionView.swift */; };
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
 		74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86961FDE7C3F00106C89 /* AppDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		6BBBA0731FE081A100853FB8 /* TravelGuidesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuidesCollectionView.swift; sourceTree = "<group>"; };
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		74DB86931FDE7C3F00106C89 /* firstMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				74DB869D1FDE7C3F00106C89 /* Assets.xcassets */,
 				74DB869F1FDE7C3F00106C89 /* LaunchScreen.storyboard */,
 				74DB86A21FDE7C3F00106C89 /* Info.plist */,
+				6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */,
 			);
 			path = firstMiniChallenge;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				74DB86C51FDE8DE600106C89 /* Homepage.storyboard in Resources */,
 				74DB86A11FDE7C3F00106C89 /* LaunchScreen.storyboard in Resources */,
 				74DB869E1FDE7C3F00106C89 /* Assets.xcassets in Resources */,
+				6B7DAB181FE14210003A587A /* MainStoryBoard.storyboard in Resources */,
 				74DB869C1FDE7C3F00106C89 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
