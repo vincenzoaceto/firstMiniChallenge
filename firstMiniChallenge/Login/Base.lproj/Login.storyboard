@@ -99,10 +99,10 @@
             </objects>
             <point key="canvasLocation" x="759" y="-341"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="fcZ-uZ-GEh">
             <objects>
-                <viewController id="4ve-oJ-UBc" sceneMemberID="viewController">
+                <viewController id="4ve-oJ-UBc" customClass="SignUpViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nHR-YK-Zlp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,6 +211,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zxb-4B-ZJ0"/>
                     </view>
+                    <connections>
+                        <outlet property="imagePicked" destination="OIt-Hl-qsZ" id="m2v-jT-jJ0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfD-wQ-Tre" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
