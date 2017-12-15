@@ -1,14 +1,8 @@
-//
-//  ReviewsViewController.swift
-//  firstMiniChallenge
-//
-//  Created by Baldev Ghelani on 12/13/17.
-//  Copyright © 2017 Vincenzo Aceto. All rights reserved.
-//
+
 
 import UIKit
 
-class ReviewsViewController: UIViewController {
+class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,11 +10,12 @@ class ReviewsViewController: UIViewController {
     var nameOfReviewers:[String] = ["Janet Ghelani", "Jane Moreano", "Amber Abdullah"]
     var ratings:[Double] = [3.6, 4.2, 4.7]
     var imageNames:[String] = ["Janet", "Jane", "Amber"]
+   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return reviews.count
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath) as! CustomTableViewCell
@@ -42,8 +37,8 @@ class ReviewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.estimatedRowHeight = 140
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
         
         
     }
