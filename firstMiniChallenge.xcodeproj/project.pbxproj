@@ -20,6 +20,10 @@
 		74DB86C51FDE8DE600106C89 /* Homepage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DB86C41FDE8DE600106C89 /* Homepage.storyboard */; };
 		74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86C71FDE904900106C89 /* HomepageViewController.swift */; };
 		74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */; };
+		C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */; };
+		C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */; };
+		C6F8C3741FE1D38E00A4888C /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C3731FE1D38E00A4888C /* CosmosDistrib.swift */; };
+		C6F8C3BE1FE3CA8800A4888C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C3BD1FE3CA8800A4888C /* CustomTableViewCell.swift */; };
 		E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115713D1FE09F0700E3A96C /* ResultViewController.swift */; };
 		E11571401FE09F9000E3A96C /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115713F1FE09F9000E3A96C /* Result.storyboard */; };
 		E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F103091FE19519006CE9BC /* ProfileViewController.swift */; };
@@ -62,6 +66,10 @@
 		74DB86C41FDE8DE600106C89 /* Homepage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Homepage.storyboard; sourceTree = "<group>"; };
 		74DB86C71FDE904900106C89 /* HomepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageViewController.swift; sourceTree = "<group>"; };
 		74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
+		C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		C6F8C3731FE1D38E00A4888C /* CosmosDistrib.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		C6F8C3BD1FE3CA8800A4888C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		E115713D1FE09F0700E3A96C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E115713F1FE09F9000E3A96C /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		E1F103091FE19519006CE9BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +133,7 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				C6F8C36E1FE19A4700A4888C /* Reviews */,
 				742B37371FE16FE300CEEC2A /* Login */,
 				E115713C1FE09EF500E3A96C /* Results */,
 				74DB86C61FDE901100106C89 /* Homepage */,
@@ -164,6 +173,17 @@
 				6B7DAB191FE14A05003A587A /* TravelGuidesCollectionView.swift */,
 			);
 			path = Homepage;
+			sourceTree = "<group>";
+		};
+		C6F8C36E1FE19A4700A4888C /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */,
+				C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */,
+				C6F8C3731FE1D38E00A4888C /* CosmosDistrib.swift */,
+				C6F8C3BD1FE3CA8800A4888C /* CustomTableViewCell.swift */,
+			);
+			path = Reviews;
 			sourceTree = "<group>";
 		};
 		E115713C1FE09EF500E3A96C /* Results */ = {
@@ -284,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11571401FE09F9000E3A96C /* Result.storyboard in Resources */,
+				C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */,
 				74DB86C51FDE8DE600106C89 /* Homepage.storyboard in Resources */,
 				74DB86A11FDE7C3F00106C89 /* LaunchScreen.storyboard in Resources */,
 				74DB869E1FDE7C3F00106C89 /* Assets.xcassets in Resources */,
@@ -315,8 +336,11 @@
 			files = (
 				74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */,
 				74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */,
+				C6F8C3BE1FE3CA8800A4888C /* CustomTableViewCell.swift in Sources */,
 				6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */,
+				C6F8C3741FE1D38E00A4888C /* CosmosDistrib.swift in Sources */,
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */,
+				C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */,
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,
 				E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */,
