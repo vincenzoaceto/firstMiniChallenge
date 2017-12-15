@@ -175,6 +175,14 @@
                                 <rect key="frame" x="16" y="107" width="78" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpq-4W-ogn">
+                                <rect key="frame" x="217" y="206" width="131" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="See my Reviews"/>
+                                <connections>
+                                    <segue destination="CRg-op-7Pg" kind="show" id="E0v-cR-X2H"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="ZPb-hy-e8g"/>
@@ -183,6 +191,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hv7-Bu-kz6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="880.79999999999995" y="243.32833583208398"/>
+        </scene>
+        <!--Reviews-->
+        <scene sceneID="OXc-KR-5Vm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reviews" id="CRg-op-7Pg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="om9-TG-gHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1461" y="152"/>
         </scene>
     </scenes>
     <resources>

@@ -55,8 +55,13 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     var cityArray = ["Rome"]
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-        performSegue(withIdentifier: cityArray[indexPath.row], sender: nil)
+        if collectionView.tag == 1 {
+            performSegue(withIdentifier: cityArray[indexPath.row], sender: nil)
+
+        } else if collectionView.tag == 2{
+            performSegue(withIdentifier: "test", sender: nil)
+
+        }
     
     }
 }

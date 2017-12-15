@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,7 +43,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="citiesImageView" destination="ngj-UM-0JZ" id="9P7-I1-RZB"/>
-                                            <segue destination="zjt-Jl-WUm" kind="show" id="jfQ-9f-dub"/>
+                                            <segue destination="zjt-Jl-WUm" kind="show" identifier="Rome" id="jfQ-9f-dub"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -93,7 +92,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
-                                            <segue destination="VV5-6n-j4z" kind="show" id="cQj-qx-ts0"/>
+                                            <segue destination="VV5-6n-j4z" kind="show" identifier="test" id="cQj-qx-ts0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

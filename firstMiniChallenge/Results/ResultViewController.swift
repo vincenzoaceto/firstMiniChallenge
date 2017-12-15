@@ -21,7 +21,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("ollllaaaaa")
         mapView.delegate = self
         
         collectionView.delegate = self
