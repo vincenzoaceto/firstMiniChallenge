@@ -52,6 +52,13 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             
         }
     }
+    
+    var cityArray = ["Rome"]
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: cityArray[indexPath.row], sender: nil)
+    
+    }
 }
   /*  override func viewDidLoad() {
         super.viewDidLoad()

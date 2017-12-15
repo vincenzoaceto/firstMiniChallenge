@@ -10,6 +10,7 @@
 		6B7DAB181FE14210003A587A /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */; };
 		6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DAB191FE14A05003A587A /* TravelGuidesCollectionView.swift */; };
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
+		747DB42A1FE2AC8100A6B920 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* UserModel.swift */; };
 		74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86961FDE7C3F00106C89 /* AppDelegate.swift */; };
 		74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86981FDE7C3F00106C89 /* LoginViewController.swift */; };
 		74DB869C1FDE7C3F00106C89 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DB869A1FDE7C3F00106C89 /* Login.storyboard */; };
@@ -50,6 +51,7 @@
 		6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		6B7DAB191FE14A05003A587A /* TravelGuidesCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuidesCollectionView.swift; sourceTree = "<group>"; };
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		747DB4291FE2AC8100A6B920 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		74DB86931FDE7C3F00106C89 /* firstMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DB86961FDE7C3F00106C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DB86981FDE7C3F00106C89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,14 @@
 				74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		747DB4281FE2AC5B00A6B920 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				747DB4291FE2AC8100A6B920 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		74DB868A1FDE7C3E00106C89 = {
@@ -344,6 +354,7 @@
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,
 				E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */,
+				747DB42A1FE2AC8100A6B920 /* UserModel.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,8 +524,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = firstMiniChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vincenzoaceto.firstMiniChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazyones.xploreeasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -528,8 +540,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9ZVMLP4E42;
 				INFOPLIST_FILE = firstMiniChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vincenzoaceto.firstMiniChallenge;
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazyones.xploreeasy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
