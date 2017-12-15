@@ -92,7 +92,6 @@
                                         </view>
                                         <connections>
                                             <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
-                                            <segue destination="VV5-6n-j4z" kind="show" identifier="test" id="cQj-qx-ts0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -120,6 +119,7 @@
                         <outlet property="CitiesAvailableCollectionView" destination="LiA-5W-vuG" id="psi-vQ-GaH"/>
                         <outlet property="searchDisplayController" destination="64J-SV-yRM" id="NAB-vc-HdT"/>
                         <outlet property="travelGuidesCollectionView" destination="eeK-YN-ChO" id="zvS-ZN-gIu"/>
+                        <segue destination="VV5-6n-j4z" kind="show" identifier="test" id="R7c-yx-NTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2im-GH-48O" userLabel="First Responder" sceneMemberID="firstResponder"/>
