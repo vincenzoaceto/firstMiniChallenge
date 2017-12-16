@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qk-kT-2ia">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3qk-kT-2ia">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,7 +12,7 @@
         <scene sceneID="v6r-bO-cAy">
             <objects>
                 <viewControllerPlaceholder storyboardName="Homepage" id="Fw2-Pu-Qog" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="LS7-Sx-YBa"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="LS7-Sx-YBa"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UE4-qc-feH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -30,11 +29,22 @@
                     </tabBar>
                     <connections>
                         <segue destination="Fw2-Pu-Qog" kind="relationship" relationship="viewControllers" id="iIS-je-hLb"/>
+                        <segue destination="ola-zs-k9D" kind="relationship" relationship="viewControllers" id="nid-SP-0hC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQr-EE-s13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-596" y="320"/>
+        </scene>
+        <!--Bookings-->
+        <scene sceneID="ppT-8m-40L">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Bookings" id="ola-zs-k9D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookings" id="L22-3a-x5e"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fx0-HH-Gq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="319"/>
         </scene>
     </scenes>
 </document>

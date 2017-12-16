@@ -23,6 +23,10 @@
 		74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86C71FDE904900106C89 /* HomepageViewController.swift */; };
 		74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */; };
 		7804F9868C77CBC76C836FAD /* Pods_firstMiniChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B32C2673244DD3D33B482 /* Pods_firstMiniChallenge.framework */; };
+		9C12653A1FE574F500BBFD7B /* BookingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */; };
+		9C12653C1FE5751800BBFD7B /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C12653B1FE5751800BBFD7B /* Bookings.storyboard */; };
+		9C12653E1FE576DE00BBFD7B /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12653D1FE576DE00BBFD7B /* BookingsTableViewCell.swift */; };
+		9C1265401FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12653F1FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift */; };
 		B62712E42C276509962B14B7 /* Pods_firstMiniChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73367C4FDF9D153BB053B5A /* Pods_firstMiniChallengeUITests.framework */; };
 		C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */; };
 		C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */; };
@@ -79,6 +83,10 @@
 		74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8A7D6A6ADB323A4A417BAADE /* Pods_firstMiniChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstMiniChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91953C69E6ABA57FEFD923D9 /* Pods-firstMiniChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstMiniChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-firstMiniChallengeUITests/Pods-firstMiniChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewController.swift; sourceTree = "<group>"; };
+		9C12653B1FE5751800BBFD7B /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
+		9C12653D1FE576DE00BBFD7B /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewCell.swift; sourceTree = "<group>"; };
+		9C12653F1FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewHeaderCell.swift; sourceTree = "<group>"; };
 		BC9B32C2673244DD3D33B482 /* Pods_firstMiniChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstMiniChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
 		C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				9C1265381FE574B500BBFD7B /* Bookings */,
 				7401643A1FE47D6D004D968A /* GoogleService-Info.plist */,
 				747DB4281FE2AC5B00A6B920 /* Models */,
 				C6F8C36E1FE19A4700A4888C /* Reviews */,
@@ -217,6 +226,17 @@
 				6B7DAB191FE14A05003A587A /* TravelGuidesCollectionView.swift */,
 			);
 			path = Homepage;
+			sourceTree = "<group>";
+		};
+		9C1265381FE574B500BBFD7B /* Bookings */ = {
+			isa = PBXGroup;
+			children = (
+				9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */,
+				9C12653B1FE5751800BBFD7B /* Bookings.storyboard */,
+				9C12653D1FE576DE00BBFD7B /* BookingsTableViewCell.swift */,
+				9C12653F1FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift */,
+			);
+			path = Bookings;
 			sourceTree = "<group>";
 		};
 		C6F8C36E1FE19A4700A4888C /* Reviews */ = {
@@ -373,6 +393,7 @@
 				74DB86A11FDE7C3F00106C89 /* LaunchScreen.storyboard in Resources */,
 				74DB869E1FDE7C3F00106C89 /* Assets.xcassets in Resources */,
 				6B7DAB181FE14210003A587A /* MainStoryBoard.storyboard in Resources */,
+				9C12653C1FE5751800BBFD7B /* Bookings.storyboard in Resources */,
 				74DB869C1FDE7C3F00106C89 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +573,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1265401FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift in Sources */,
+				9C12653A1FE574F500BBFD7B /* BookingsTableViewController.swift in Sources */,
 				74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */,
 				74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */,
 				C6F8C3BE1FE3CA8800A4888C /* CustomTableViewCell.swift in Sources */,
@@ -562,6 +585,7 @@
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,
 				E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */,
+				9C12653E1FE576DE00BBFD7B /* BookingsTableViewCell.swift in Sources */,
 				747DB42A1FE2AC8100A6B920 /* UserModel.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
