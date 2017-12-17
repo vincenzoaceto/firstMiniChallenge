@@ -8,7 +8,7 @@
 
 import Foundation
 
-class UserModel {
+class User {
     
     let username : String
     let password : String
