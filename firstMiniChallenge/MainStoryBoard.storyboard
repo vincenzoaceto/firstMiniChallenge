@@ -12,7 +12,7 @@
         <scene sceneID="v6r-bO-cAy">
             <objects>
                 <viewControllerPlaceholder storyboardName="Homepage" id="Fw2-Pu-Qog" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="LS7-Sx-YBa"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home-selected" id="LS7-Sx-YBa"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UE4-qc-feH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,7 +25,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u8K-6q-SaL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Fw2-Pu-Qog" kind="relationship" relationship="viewControllers" id="iIS-je-hLb"/>
@@ -40,11 +40,17 @@
         <scene sceneID="ppT-8m-40L">
             <objects>
                 <viewControllerPlaceholder storyboardName="Bookings" id="ola-zs-k9D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Bookings" id="L22-3a-x5e"/>
+                    <tabBarItem key="tabBarItem" title="Bookings" image="ticket" selectedImage="ticket-selected" id="L22-3a-x5e"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fx0-HH-Gq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-48" y="319"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="30" height="28"/>
+        <image name="home-selected" width="30" height="28"/>
+        <image name="ticket" width="28" height="28"/>
+        <image name="ticket-selected" width="28" height="28"/>
+    </resources>
 </document>
