@@ -8,18 +8,20 @@
 
 import Foundation
 
-class Booking {
-    let datefrom: Date
+class Booking : BaseEntity{
+    let dateFrom: Date
     let dateTo: Date
     let cost: NSDecimalNumber
     let agent: Agent
     let client: Client
     
-    init(datefrom: Date, dateTo: Date, cost: NSDecimalNumber, agent: Agent, client: Client) {
-        self.datefrom = datefrom
+    init(dateFrom: Date, dateTo: Date, cost: NSDecimalNumber, agent: Agent, client: Client) {
+        self.dateFrom = dateFrom
         self.dateTo = dateTo
         self.cost = cost
         self.agent = agent
         self.client = client
+        
+        super.init(entityId: NSUUID().uuidString)
     }
 }

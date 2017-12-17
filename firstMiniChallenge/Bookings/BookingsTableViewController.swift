@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BookingsTableViewController: UITableViewController {
     // Name, Surname, Date, Location, Profile Image
@@ -31,6 +32,42 @@ class BookingsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let userID = "1234"
+        let username = "username"
+        
+        var postRef = ref.child("users").child(userID)
+        
+        
+        ref.child("users").child(userID).observe(.value, with: { (snapshot) in
+            let valuew = snapshot.value as? NSDictionary
+            let usernamew = valuew?["username"] as? String ?? ""
+            let username2w = valuew?["username"] as? String ?? ""
+            let user2 = 34
+        }){ (error) in
+            print(error.localizedDescription)
+        }
+        
+        ref.child("users").child(userID).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let username = value?["username"] as? String ?? ""
+            let username2 = value?["username"] as? String ?? ""
+            let user = 34
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        
+//        ref.child("users").child(userID).setValue(["username": username])
+        //ref.child("users/1234/username").setValue(username)
+        
+        var val = ref.child("users").child(userID)
+        var val2 = ref.child("users/1234/username")
+        var tesr = 5
     }
     
     override func didReceiveMemoryWarning() {

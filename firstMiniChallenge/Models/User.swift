@@ -8,7 +8,7 @@
 
 import Foundation
 
-class User {
+class User : BaseEntity{
     
     let username : String
     let password : String
@@ -21,6 +21,8 @@ class User {
     init(username: String, password: String) {
         self.username = username
         self.password = password
+        
+        super.init(entityId: NSUUID().uuidString)
     }
     
 }
