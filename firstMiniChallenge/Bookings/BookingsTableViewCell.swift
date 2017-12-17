@@ -12,15 +12,14 @@ class BookingsTableViewCell: UITableViewCell {
     let greyColor = UIColor(red:0.61, green:0.61, blue:0.61, alpha:1.0)
     let blackColor = UIColor.black
     
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var surnameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -51,5 +50,4 @@ class BookingsTableViewCell: UITableViewCell {
         nameLabel.sizeToFit()
         locationLabel.sizeToFit()
     }
-
 }

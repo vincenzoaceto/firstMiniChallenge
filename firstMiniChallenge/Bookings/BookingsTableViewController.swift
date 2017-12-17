@@ -69,11 +69,7 @@ class BookingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Upcoming"
-        } else {
-            return "Completed"
-        }
+        return section == 0 ? "Upcoming" : "Completed"
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
