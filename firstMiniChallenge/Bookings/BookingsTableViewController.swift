@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class BookingsTableViewController: UITableViewController {
     // Name, Surname, Date, Location, Profile Image
