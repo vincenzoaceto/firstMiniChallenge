@@ -18,7 +18,7 @@ class CustomTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        starRatings.fillMode =  2
+        starRatings.fillMode =  1
         starRatings.updateOnTouch = false
         
         userImage.layer.cornerRadius = userImage.frame.height/2

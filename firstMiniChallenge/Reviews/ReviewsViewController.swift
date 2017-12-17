@@ -9,12 +9,12 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     //Array of Reviews
     var reviews:[String] =
         [
-            "THE SOFTWARE IS PROVIDED \"AS IS\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. DONE."
-            , "TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
-            , "Review 3"
+            "This lady is amazing. She knows what she is doing and she is great at it. She asked us our interests and set up the whole trip based our interests. She knows the city very well. She is definetely the right guide for anyone. I would definitely recommend her."
+            , "This guide is the best guide that you can get. She is the best at what she does. She knows her city quite well. Her knowledge about the monuments of the city is very deep. She has definitely earned by recommendation."
+            , "Not a bad guide. She does seem like a she knows a lot about the city but it was hard for me understand her at time. May be she needs to work on her english a bit."
         ]
     var nameOfReviewers:[String] = ["Janet Ghelani", "Jane Moreano", "Amber Abdullah"]
-    var ratings:[Double] = [3.6, 4.2, 4.7]
+    var ratings:[Double] = [4.0, 4.5, 3.5]
     var imageNames:[String] = ["Janet", "Jane", "Amber"]
     
     //Properties for ReView Body
@@ -23,7 +23,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        print("counter is " + String(reviews.count))
+        //print("counter is " + String(reviews.count))
         return reviews.count
     }
     
@@ -43,6 +43,10 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
         //Properties for Star Ratings
         cell.starRatings.rating = ratings[indexPath.row]
+        cell.starRatings.filledColor = UIColor.blue
+        cell.starRatings.filledBorderColor = UIColor.blue
+        cell.starRatings.emptyBorderColor = UIColor.blue
+        cell.starRatings.emptyBorderWidth = 0.25
         
         //Properties  for User Image
         cell.userImage.image = UIImage(named: imageNames[indexPath.row])
@@ -57,6 +61,9 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        
         
         //tableView.rowHeight = UITableViewAutomaticDimension
     }
