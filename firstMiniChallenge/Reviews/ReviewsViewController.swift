@@ -6,8 +6,10 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
 
     @IBOutlet weak var tableView: UITableView!
     
+    //Array of Reviews
     var reviews:[String] =
-        [   "THE SOFTWARE IS PROVIDED \"AS IS\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. DONE."
+        [
+            "THE SOFTWARE IS PROVIDED \"AS IS\" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. DONE."
             , "TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
             , "Review 3"
         ]
@@ -21,28 +23,10 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        print("counter is" + String(reviews.count))
+        print("counter is " + String(reviews.count))
         return reviews.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        
-        
-        
-        
-        let defaultHeightOfTheCell = 100
-        let heightForRow = (reviews[indexPath.row].count / fontSize) * 8
-        
-        //print(reviews[indexPath.row])
-        
-        
-       // print("count ; \(reviews[indexPath.row].count)")
-        //print (heightForRow)
-        
-        //return (heightForRow > defaultHeightOfTheCell) ? CGFloat(heightForRow) : CGFloat(defaultHeightOfTheCell)
-        return CGFloat(heightForRow)
-    }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -55,7 +39,6 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         //Properties for Review Body
         cell.reviewBody.text = reviews[indexPath.row]
         cell.reviewBody.font = cell.reviewBody.font.withSize(CGFloat(fontSize))
-        cell.reviewBody.preferredMaxLayoutWidth = UITableViewAutomaticDimension
         cell.reviewBody.numberOfLines = 0
     
         //Properties for Star Ratings
@@ -76,8 +59,6 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         // Do any additional setup after loading the view, typically from a nib.
         
         //tableView.rowHeight = UITableViewAutomaticDimension
-        //tableView.estimatedRowHeight = 200
-        
     }
     
     override func didReceiveMemoryWarning() {

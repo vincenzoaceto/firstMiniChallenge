@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -67,6 +66,7 @@
                                                 <constraint firstItem="Tok-kC-fkK" firstAttribute="top" secondItem="jef-BE-ULD" secondAttribute="bottom" constant="8" symbolic="YES" id="EyW-KT-d6u"/>
                                                 <constraint firstItem="4iK-Kc-ZZq" firstAttribute="leading" secondItem="jef-BE-ULD" secondAttribute="trailing" constant="8" symbolic="YES" id="Goh-70-kkb"/>
                                                 <constraint firstItem="Tok-kC-fkK" firstAttribute="bottom" secondItem="mFB-oK-0Ay" secondAttribute="bottomMargin" id="OtZ-Pm-g7Y"/>
+                                                <constraint firstAttribute="trailing" secondItem="RZM-0x-OSt" secondAttribute="trailing" constant="143" id="bb8-B5-DnN"/>
                                                 <constraint firstItem="jef-BE-ULD" firstAttribute="leading" secondItem="mFB-oK-0Ay" secondAttribute="leadingMargin" constant="-1" id="gc9-an-tVX"/>
                                                 <constraint firstItem="Tok-kC-fkK" firstAttribute="centerX" secondItem="mFB-oK-0Ay" secondAttribute="centerX" id="hPn-eP-ctt"/>
                                                 <constraint firstItem="4iK-Kc-ZZq" firstAttribute="top" secondItem="jef-BE-ULD" secondAttribute="top" id="l3u-Mn-xFW"/>
