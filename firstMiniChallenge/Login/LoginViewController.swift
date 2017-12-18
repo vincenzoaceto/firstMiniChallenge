@@ -10,6 +10,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameLoginTextField: UITextField!
+    @IBOutlet weak var passwordLoginTextField: UITextField!
+    @IBOutlet weak var signinButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,5 +24,18 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+    @IBAction func signinButtonClick(_ sender: UIButton) {
+        if((usernameLoginTextField.text?.isEmpty)! || (passwordLoginTextField.text?.isEmpty)!) {
+            let alertController = UIAlertController(title: "Warning", message: "The field are mandatory", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+            
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: "loginCorrectSegue", sender: nil)
+        }
+    }
+    
 }
 

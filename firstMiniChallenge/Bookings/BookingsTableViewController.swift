@@ -30,6 +30,17 @@ class BookingsTableViewController: UITableViewController {
             ("Maria", "Corsa", "10/11/17", "Milan", "Guide1")
         ]]
     
+    var ref: DatabaseReference!
+    func getData(_ childURL:String?, completionHandler: @escaping (Any?) -> ()) {
+        var reference = self.ref
+        if let url = childURL{
+            reference = self.ref.child(url)
+        }
+        reference!.observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
+            completionHandler(snapshot.value)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
