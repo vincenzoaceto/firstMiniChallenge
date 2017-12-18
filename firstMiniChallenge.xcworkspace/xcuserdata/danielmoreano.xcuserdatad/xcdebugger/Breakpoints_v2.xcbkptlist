@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "firstMiniChallenge/Login/LoginViewController.swift"
+            timestampString = "535310619.429203"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__ObjC.DataSnapshot) -&gt; () in firstMiniChallenge.LoginViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "firstMiniChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmoreano/Desktop/iOS%20Academy/Challenges/4th%20Challenge/firstMiniChallenge/firstMiniChallenge/Login/LoginViewController.swift"
+                  timestampString = "535309582.806103"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "1415">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "implicit closure #2 : @autoclosure () throws -&gt; Swift.String in closure #1 (__ObjC.DataSnapshot) -&gt; () in firstMiniChallenge.LoginViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "firstMiniChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmoreano/Desktop/iOS%20Academy/Challenges/4th%20Challenge/firstMiniChallenge/firstMiniChallenge/Login/LoginViewController.swift"
+                  timestampString = "535309582.809109"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

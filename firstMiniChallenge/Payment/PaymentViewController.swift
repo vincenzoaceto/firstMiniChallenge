@@ -36,10 +36,7 @@ class PaymentViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "bookedTravelGuideProfile" {
-            
             createEventinTheCalendar(with: "XploreEasy: Travel to Agria", forDate: Date(), toDate: Date())
-            
-            
         }
     }
     

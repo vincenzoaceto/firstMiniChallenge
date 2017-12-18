@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseAuth
+import Firebase
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
     
@@ -18,12 +20,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var signinButton: UIButton!
     
     
+    public var ref : DatabaseReference?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let defaults = UserDefaults.standard
-        
-
         
         usernameLoginTextField.text = defaults.string(forKey: "username")
         passwordLoginTextField.text = defaults.string(forKey: "password")
@@ -32,6 +34,26 @@ class LoginViewController: UIViewController {
         activityIndicator.center = view.center
         activityIndicator.isHidden = true
         self.view.addSubview(activityIndicator)
+        
+        
+        ref = Database.database().reference()
+        
+       
+        ref?.child("cities/city3").observe(DataEventType.value, with: {(snapshot) in
+            
+            let postDict = snapshot.value as? [String : AnyObject] ?? [:]
+            
+            let value = snapshot.value as? NSDictionary
+            let username = value?["name"] as? String ?? ""
+            //let user = User(username: username, password: <#String#>)
+            
+        })
+        
+        
+        
+        
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

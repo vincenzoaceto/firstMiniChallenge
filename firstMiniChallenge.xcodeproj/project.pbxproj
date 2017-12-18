@@ -46,6 +46,7 @@
 		DF918B23C5CD28E0A65669FE /* Pods_firstMiniChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7D6A6ADB323A4A417BAADE /* Pods_firstMiniChallengeTests.framework */; };
 		E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115713D1FE09F0700E3A96C /* ResultViewController.swift */; };
 		E11571401FE09F9000E3A96C /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115713F1FE09F9000E3A96C /* Result.storyboard */; };
+		E189D93F1FE82FCF008A6276 /* travelGuideProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E189D93E1FE82FCF008A6276 /* travelGuideProfile.storyboard */; };
 		E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F103091FE19519006CE9BC /* ProfileViewController.swift */; };
 		E1F486FF1FE7C4860012420F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F486FE1FE7C4860012420F /* Payment.storyboard */; };
 		E1F487011FE7C7610012420F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F487001FE7C7610012420F /* PaymentViewController.swift */; };
@@ -121,6 +122,7 @@
 		C73367C4FDF9D153BB053B5A /* Pods_firstMiniChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstMiniChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E115713D1FE09F0700E3A96C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E115713F1FE09F9000E3A96C /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
+		E189D93E1FE82FCF008A6276 /* travelGuideProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = travelGuideProfile.storyboard; sourceTree = "<group>"; };
 		E1F103091FE19519006CE9BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E1F486FE1FE7C4860012420F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		E1F487001FE7C7610012420F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -225,19 +227,20 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E189D93D1FE82FB4008A6276 /* travelGuideProfile */,
 				9C731C9E1FE80D3E0080F725 /* Util */,
 				74DA44D71FE7FBD8009E8AFB /* Commons */,
-				E1F487021FE7D8FF0012420F /* bookedProfile */,
+				E1F487021FE7D8FF0012420F /* BookedProfile */,
 				E1F486FD1FE7C47C0012420F /* Payment */,
 				9CBA13471FE6979500A1CD72 /* Dao */,
 				9C1265381FE574B500BBFD7B /* Bookings */,
-				7401643A1FE47D6D004D968A /* GoogleService-Info.plist */,
 				747DB4281FE2AC5B00A6B920 /* Models */,
 				C6F8C36E1FE19A4700A4888C /* Reviews */,
 				742B37371FE16FE300CEEC2A /* Login */,
 				E115713C1FE09EF500E3A96C /* Results */,
 				74DB86C61FDE901100106C89 /* Homepage */,
 				74DB86961FDE7C3F00106C89 /* AppDelegate.swift */,
+				7401643A1FE47D6D004D968A /* GoogleService-Info.plist */,
 				74DB869D1FDE7C3F00106C89 /* Assets.xcassets */,
 				74DB869F1FDE7C3F00106C89 /* LaunchScreen.storyboard */,
 				74DB86A21FDE7C3F00106C89 /* Info.plist */,
@@ -322,9 +325,17 @@
 			children = (
 				E115713D1FE09F0700E3A96C /* ResultViewController.swift */,
 				E115713F1FE09F9000E3A96C /* Result.storyboard */,
-				E1F103091FE19519006CE9BC /* ProfileViewController.swift */,
 			);
 			path = Results;
+			sourceTree = "<group>";
+		};
+		E189D93D1FE82FB4008A6276 /* travelGuideProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E189D93E1FE82FCF008A6276 /* travelGuideProfile.storyboard */,
+				E1F103091FE19519006CE9BC /* ProfileViewController.swift */,
+			);
+			path = travelGuideProfile;
 			sourceTree = "<group>";
 		};
 		E1F486FD1FE7C47C0012420F /* Payment */ = {
@@ -472,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E11571401FE09F9000E3A96C /* Result.storyboard in Resources */,
+				E189D93F1FE82FCF008A6276 /* travelGuideProfile.storyboard in Resources */,
 				7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */,
 				C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */,
 				74DB86C51FDE8DE600106C89 /* Homepage.storyboard in Resources */,
