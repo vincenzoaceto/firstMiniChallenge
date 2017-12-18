@@ -47,7 +47,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="8Wk-Pq-iIL"/>
                                 </constraints>
-                                <state key="normal" title="Sign In" backgroundImage="signinButton">
+                                <state key="normal" title="Sign In" backgroundImage="SigninButton-1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -61,7 +61,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" red="0.27058823529411763" green="0.28235294117647058" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -77,14 +77,13 @@
                                     <segue destination="4ve-oJ-UBc" kind="show" id="htc-N2-Ddp"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myf-ih-zyL">
+                            <textField opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="myf-ih-zyL">
                                 <rect key="frame" x="60" y="279" width="255" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="814-yk-Ayf"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                         <color key="value" red="0.27058823529411763" green="0.28235294117647058" blue="0.27058823529411763" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -254,7 +253,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Lc2-6i-wIf" secondAttribute="height" multiplier="294:65" id="fAa-cd-wNQ"/>
                                 </constraints>
-                                <state key="normal" title="Sign Up" backgroundImage="signinButton">
+                                <state key="normal" title="Sign Up" backgroundImage="SigninButton-1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -320,10 +319,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SigninButton-1" width="300" height="65"/>
         <image name="addPhoto" width="112" height="112"/>
         <image name="back_arrow" width="17" height="26"/>
         <image name="login_background" width="375" height="667"/>
-        <image name="signinButton" width="300" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="smM-cW-wb0"/>
