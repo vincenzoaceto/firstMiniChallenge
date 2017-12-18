@@ -26,9 +26,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let defaults = UserDefaults.standard
-        
-        usernameLoginTextField.text = defaults.string(forKey: "username")
-        passwordLoginTextField.text = defaults.string(forKey: "password")
+        //usernameLoginTextField.text = defaults.string(forKey: "username")
+        //passwordLoginTextField.text = defaults.string(forKey: "password")
         
         activityIndicator =  UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         activityIndicator.center = view.center
