@@ -14,6 +14,7 @@
         <!--Navigation Controller-->
         <scene sceneID="n6s-oN-iev">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6C-fm-3ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="TNq-p8-NnK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cCZ-hX-0u2">
                         <autoresizingMask key="autoresizingMask"/>
@@ -22,7 +23,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZLf-38-nvJ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y6C-fm-3ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-707" y="130"/>
         </scene>
@@ -261,6 +261,6 @@
         <image name="signinButton" width="300" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nKR-gg-Zca"/>
+        <segue reference="wyB-eq-Vdi"/>
     </inferredMetricsTieBreakers>
 </document>

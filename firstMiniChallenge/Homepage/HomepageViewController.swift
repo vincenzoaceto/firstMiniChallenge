@@ -10,6 +10,13 @@ import UIKit
 
 class HomepageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
    
+    override func viewDidLoad() {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     
     @IBOutlet weak var travelGuidesCollectionView: UICollectionView!
@@ -22,7 +29,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if collectionView.tag == 2 {
             return travelGuides.count
         }else {
@@ -59,7 +65,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             performSegue(withIdentifier: cityArray[indexPath.row], sender: nil)
 
         } else if collectionView.tag == 2{
-            performSegue(withIdentifier: "test", sender: nil)
+         //   performSegue(withIdentifier: "test", sender: nil)
 
         }
     

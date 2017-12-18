@@ -21,12 +21,15 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ollllaaaaa")
+        
+        self.title = "Results"
+        
         mapView.delegate = self
         
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPrefetchingEnabled = false
+        self.tabBarController?.tabBar.isHidden = true
         
         test.append((x: 40.835211, y: 14.2426034))
         test.append((x: 40.835456, y: 14.2501048))
@@ -111,7 +114,7 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "test", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "travelguideCell", for: indexPath)
         
         actualPosition = CLLocation(latitude: test[indexPath.row].x, longitude: test[indexPath.row].y)
         centerMapOnLocation(location: actualPosition)
@@ -120,7 +123,7 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "tet", sender: nil)
+        //performSegue(withIdentifier: "profileTravelGuide", sender: nil)
         
     }
     

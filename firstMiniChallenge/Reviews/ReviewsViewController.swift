@@ -22,6 +22,10 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     //Properties for ReView Body
     var fontSize = 13
     
+    @IBAction func closeReview(_ sender: Any) {
+        //self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
