@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-5W-vuG">
-                                <rect key="frame" x="8" y="212" width="367" height="140"/>
+                                <rect key="frame" x="8" y="421" width="367" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ctF-x4-nu5">
@@ -65,47 +65,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-YN-ChO">
-                                <rect key="frame" x="8" y="430" width="367" height="140"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mNX-AJ-tIo">
-                                    <size key="itemSize" width="110" height="120"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TravelGuidesIdentifier" id="UWn-2w-KW7" customClass="TravelGuidesCollectionView" customModule="firstMiniChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="10" width="110" height="120"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="110" height="120"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtL-if-6N1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="120"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <connections>
-                                            <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
-                                            <segue destination="VV5-6n-j4z" kind="show" identifier="Guide1" id="0Tl-Xq-qeK"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="hlC-kP-dX1" id="acG-ax-54c"/>
-                                    <outlet property="delegate" destination="hlC-kP-dX1" id="yqS-UD-EOy"/>
-                                </connections>
-                            </collectionView>
                             <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleAspectFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-aZ-UW9">
-                                <rect key="frame" x="0.0" y="166" width="375" height="452"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="I4o-3j-8OL" customClass="TableViewCell" customModule="firstMiniChallenge" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" restorationIdentifier="goToCountry" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="I4o-3j-8OL" customClass="TableViewCell" customModule="firstMiniChallenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4o-3j-8OL" id="NDK-tu-drK">
@@ -127,6 +92,41 @@
                                     <outlet property="delegate" destination="hlC-kP-dX1" id="ahK-lW-zSh"/>
                                 </connections>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-YN-ChO">
+                                <rect key="frame" x="8" y="225" width="367" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mNX-AJ-tIo">
+                                    <size key="itemSize" width="130" height="130"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TravelGuidesIdentifier" id="UWn-2w-KW7" customClass="TravelGuidesCollectionView" customModule="firstMiniChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="5" width="130" height="130"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtL-if-6N1">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="120"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
+                                            <segue destination="VV5-6n-j4z" kind="show" identifier="Guide1" id="0Tl-Xq-qeK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="hlC-kP-dX1" id="acG-ax-54c"/>
+                                    <outlet property="delegate" destination="hlC-kP-dX1" id="yqS-UD-EOy"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Qn-FV-fjd"/>
@@ -145,6 +145,7 @@
                         <segue destination="lgJ-mn-gNz" kind="show" identifier="Agra" id="BFf-BN-58K"/>
                         <segue destination="yK6-8d-dG3" kind="show" identifier="Guide4" id="qgz-Z8-wno"/>
                         <segue destination="ok0-hk-Bdn" kind="show" identifier="Rome" id="jtD-4D-0WT"/>
+                        <segue destination="yjG-6l-k4Q" kind="show" identifier="goToResult" id="JRm-Jf-Mds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2im-GH-48O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -152,58 +153,66 @@
             </objects>
             <point key="canvasLocation" x="-180" y="-308.09595202398805"/>
         </scene>
-        <!--Bookings-->
+        <!--travelGuideProfile-->
         <scene sceneID="rhk-B2-wgy">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide3" storyboardName="Bookings" id="opS-tR-KDB" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Guide3" storyboardName="travelGuideProfile" id="opS-tR-KDB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kD6-Z8-xbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="329" y="-775"/>
         </scene>
-        <!--Reviews-->
+        <!--Result-->
         <scene sceneID="D3w-mr-eqN">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Agra" storyboardName="Reviews" id="lgJ-mn-gNz" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Agra" storyboardName="Result" id="lgJ-mn-gNz" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E65-Fy-WXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="472" y="-692"/>
         </scene>
-        <!--Reviews-->
+        <!--Result-->
         <scene sceneID="1QP-VF-UKE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Paris" storyboardName="Reviews" id="eO9-C4-fq8" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Paris" storyboardName="Result" id="eO9-C4-fq8" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6e-v3-iVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="506" y="-608"/>
+            <point key="canvasLocation" x="545" y="-540"/>
         </scene>
-        <!--Bookings-->
+        <!--travelGuideProfile-->
         <scene sceneID="bl4-ia-tqr">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide4" storyboardName="Bookings" id="yK6-8d-dG3" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Guide4" storyboardName="travelGuideProfile" id="yK6-8d-dG3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x96-QQ-VHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="545" y="-435"/>
         </scene>
-        <!--Reviews-->
+        <!--Result-->
         <scene sceneID="S4x-tb-4JK">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Rome" storyboardName="Reviews" id="ok0-hk-Bdn" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Rome" storyboardName="Result" id="ok0-hk-Bdn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fB-Mk-GoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576" y="-318"/>
         </scene>
-        <!--Bookings-->
+        <!--Result-->
+        <scene sceneID="PP8-hx-jjx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Result" id="yjG-6l-k4Q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TzH-71-qMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="-378"/>
+        </scene>
+        <!--travelGuideProfile-->
         <scene sceneID="aDD-9U-Hsz">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide1" storyboardName="Bookings" id="VV5-6n-j4z" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Guide1" storyboardName="travelGuideProfile" id="VV5-6n-j4z" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLx-i7-DUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="544" y="-238"/>
         </scene>
-        <!--Bookings-->
+        <!--travelGuideProfile-->
         <scene sceneID="U6T-LK-q8d">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide2" storyboardName="Bookings" id="Z8k-zn-mra" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Guide2" storyboardName="travelGuideProfile" id="Z8k-zn-mra" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-FU-8Mu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="568" y="-28"/>
