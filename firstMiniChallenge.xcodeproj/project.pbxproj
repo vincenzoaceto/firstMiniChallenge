@@ -44,6 +44,8 @@
 		E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F103091FE19519006CE9BC /* ProfileViewController.swift */; };
 		E1F486FF1FE7C4860012420F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F486FE1FE7C4860012420F /* Payment.storyboard */; };
 		E1F487011FE7C7610012420F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F487001FE7C7610012420F /* PaymentViewController.swift */; };
+		E1F487041FE7D9120012420F /* bookedProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F487031FE7D9120012420F /* bookedProfile.storyboard */; };
+		E1F487061FE7D96A0012420F /* bookedProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F487051FE7D96A0012420F /* bookedProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		E1F103091FE19519006CE9BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E1F486FE1FE7C4860012420F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		E1F487001FE7C7610012420F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		E1F487031FE7D9120012420F /* bookedProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = bookedProfile.storyboard; sourceTree = "<group>"; };
+		E1F487051FE7D96A0012420F /* bookedProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bookedProfileViewController.swift; sourceTree = "<group>"; };
 		EDEEC0780A98DAF92B3B28E4 /* Pods-firstMiniChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstMiniChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-firstMiniChallengeTests/Pods-firstMiniChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +207,7 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				E1F487021FE7D8FF0012420F /* bookedProfile */,
 				E1F486FD1FE7C47C0012420F /* Payment */,
 				9CBA13471FE6979500A1CD72 /* Dao */,
 				9C1265381FE574B500BBFD7B /* Bookings */,
@@ -298,6 +303,15 @@
 				E1F487001FE7C7610012420F /* PaymentViewController.swift */,
 			);
 			path = Payment;
+			sourceTree = "<group>";
+		};
+		E1F487021FE7D8FF0012420F /* bookedProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E1F487031FE7D9120012420F /* bookedProfile.storyboard */,
+				E1F487051FE7D96A0012420F /* bookedProfileViewController.swift */,
+			);
+			path = bookedProfile;
 			sourceTree = "<group>";
 		};
 		EED30995E1C51D40650CAFCA /* Frameworks */ = {
@@ -431,6 +445,7 @@
 				C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */,
 				74DB86C51FDE8DE600106C89 /* Homepage.storyboard in Resources */,
 				74DB86A11FDE7C3F00106C89 /* LaunchScreen.storyboard in Resources */,
+				E1F487041FE7D9120012420F /* bookedProfile.storyboard in Resources */,
 				74DB869E1FDE7C3F00106C89 /* Assets.xcassets in Resources */,
 				6B7DAB181FE14210003A587A /* MainStoryBoard.storyboard in Resources */,
 				9C12653C1FE5751800BBFD7B /* Bookings.storyboard in Resources */,
@@ -617,6 +632,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C1265401FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift in Sources */,
+				E1F487061FE7D96A0012420F /* bookedProfileViewController.swift in Sources */,
 				9CC848381FE648550095A9DC /* Agent.swift in Sources */,
 				9C12653A1FE574F500BBFD7B /* BookingsTableViewController.swift in Sources */,
 				74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */,
