@@ -12,6 +12,7 @@
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
 		7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7401643A1FE47D6D004D968A /* GoogleService-Info.plist */; };
 		747DB42A1FE2AC8100A6B920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* User.swift */; };
+		74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DA44D81FE7FBEB009E8AFB /* Tools.swift */; };
 		74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86961FDE7C3F00106C89 /* AppDelegate.swift */; };
 		74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86981FDE7C3F00106C89 /* LoginViewController.swift */; };
 		74DB869C1FDE7C3F00106C89 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DB869A1FDE7C3F00106C89 /* Login.storyboard */; };
@@ -75,6 +76,7 @@
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7401643A1FE47D6D004D968A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		747DB4291FE2AC8100A6B920 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		74DA44D81FE7FBEB009E8AFB /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		74DB86931FDE7C3F00106C89 /* firstMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DB86961FDE7C3F00106C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DB86981FDE7C3F00106C89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +184,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		74DA44D71FE7FBD8009E8AFB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				74DA44D81FE7FBEB009E8AFB /* Tools.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		74DB868A1FDE7C3E00106C89 = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +217,7 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				74DA44D71FE7FBD8009E8AFB /* Commons */,
 				E1F487021FE7D8FF0012420F /* bookedProfile */,
 				E1F486FD1FE7C47C0012420F /* Payment */,
 				9CBA13471FE6979500A1CD72 /* Dao */,
@@ -577,6 +588,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-firstMiniChallenge/Pods-firstMiniChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -584,6 +596,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBDatePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -646,6 +659,7 @@
 				9CC848361FE648080095A9DC /* Booking.swift in Sources */,
 				9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */,
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */,
+				74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */,
 				C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */,
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,

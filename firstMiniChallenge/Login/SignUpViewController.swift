@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -82,9 +83,9 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func signupButtonClick(_ sender: UIButton) {
         var flag = false;
         var field = ""
-        if(usernameSignupTextField.text?.isEmpty)!{
+        if((usernameSignupTextField.text?.isEmpty)! || !Tools.isValidEmail(email: usernameSignupTextField.text)){
             flag = true
-            field = "Username"
+            field = "Email"
         } else if (passwordSignupTextField.text?.isEmpty)! {
             flag = true
             field = "Password"
@@ -97,22 +98,47 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         } else if (dateOfBirthSignupTextField.text?.isEmpty)! {
             flag = true
             field = "Date of Birth"
+        } else if (citySignupTextField.text?.isEmpty)! {
+            flag = true
+            field = "City"
         }
         
         if flag {
-            //TEST USERDEFAULT
-            let defaults = UserDefaults.standard
-            defaults.set(usernameSignupTextField.text, forKey: "username")
-            defaults.set(passwordSignupTextField.text, forKey: "password")
-
             
             let alertController = UIAlertController(title: "Warning", message: field + " is mandatory", preferredStyle: UIAlertControllerStyle.alert)
             
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
             
             self.present(alertController, animated: true, completion: nil)
+            flag = false
         } else {
-            performSegue(withIdentifier: "signupSegue", sender: nil)
+            //TEST USERDEFAULT
+            let defaults = UserDefaults.standard
+            defaults.set(usernameSignupTextField.text, forKey: "username")
+            defaults.set(passwordSignupTextField.text, forKey: "password")
+            defaults.set(nameSignupTextField.text, forKey: "name")
+            defaults.set(surnameSignupTextField.text, forKey: "surname")
+            defaults.set(dateOfBirthSignupTextField.text, forKey: "date")
+            defaults.set(citySignupTextField.text, forKey: "city")
+
+
+            print("Firebase Auth")
+
+            Auth.auth().createUser(withEmail: usernameSignupTextField.text!, password: passwordSignupTextField.text!) { (user, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    let alertController = UIAlertController(title: "Warning", message: "Registration error, try again", preferredStyle: UIAlertControllerStyle.alert)
+                    
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                    flag = false
+                }
+                else if let user = user {
+                    print(user)
+                    self.performSegue(withIdentifier: "signupSegue", sender: nil)
+                }
+            }
         }
     }
     
