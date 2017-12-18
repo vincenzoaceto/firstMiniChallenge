@@ -60,7 +60,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="fJ5-3P-XJJ" kind="show" identifier="profileTravelGuide" id="0nT-iT-Sh9"/>
+                                            <segue destination="THs-xQ-yFl" kind="show" id="lxd-Xk-oWz"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -91,7 +91,7 @@
                 <viewControllerPlaceholder storyboardName="Reviews" id="CRg-op-7Pg" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="om9-TG-gHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1461" y="152"/>
+            <point key="canvasLocation" x="1826" y="-65"/>
         </scene>
         <!--Payment-->
         <scene sceneID="yZF-Xc-1Lb">
@@ -100,6 +100,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OMi-XJ-yQd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1586" y="468"/>
+        </scene>
+        <!--travelGuideProfile-->
+        <scene sceneID="ax5-0c-h48">
+            <objects>
+                <viewControllerPlaceholder storyboardName="travelGuideProfile" id="THs-xQ-yFl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q50-Qp-xcK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467" y="1127"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="igN-LM-pAx">
@@ -155,7 +163,7 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="test" id="SSS-cq-rFh">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemoryCell" id="SSS-cq-rFh">
                                                         <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

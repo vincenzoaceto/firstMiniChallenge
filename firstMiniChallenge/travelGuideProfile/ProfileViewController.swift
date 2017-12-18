@@ -100,6 +100,8 @@ class ProfileViewController: UIViewController {
             }
             
             let destinationVC = segue.destination as! PaymentViewController
+            
+            
             destinationVC.totalCost = costPerDay * dateComponents.day!
             destinationVC.startDate = startDateLabel.text!
             destinationVC.endDate = endDateLabel.text!
@@ -136,7 +138,7 @@ extension ProfileViewController: UICollectionViewDataSource,UICollectionViewDele
         return 10
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "test", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath)
         
         
         return cell
@@ -157,6 +159,8 @@ extension ProfileViewController: JBDatePickerViewDelegate{
         let month = calendar.component(.month, from: dayView.date!)
         let day = calendar.component(.day, from: dayView.date!)
         
+        
+        
         if isStartDate{
             startDate = dayView.date
             endDateLabel.textColor = UIColor(red:0.13, green:0.59, blue:0.95, alpha:1.0)
@@ -164,11 +168,27 @@ extension ProfileViewController: JBDatePickerViewDelegate{
             startDateLabel.text = "\(day)/\(month)/\(year)"
             isStartDate = !isStartDate
         }else{
+            
             endDate = dayView.date
-            startDateLabel.textColor = UIColor(red:0.13, green:0.59, blue:0.95, alpha:1.0)
-            endDateLabel.textColor = UIColor.black
-            endDateLabel.text = "\(day)/\(month)/\(year)"
-            isStartDate = !isStartDate
+            let calendar = NSCalendar.current
+            let startingDate = calendar.startOfDay(for: self.startDate!)
+            let endingDate = calendar.startOfDay(for: self.endDate!)
+            
+            var dateComponents = calendar.dateComponents([.day], from: startingDate, to: endingDate)
+            
+            if dateComponents.day! >= 0 {
+                //endDate = dayView.date
+                startDateLabel.textColor = UIColor(red:0.13, green:0.59, blue:0.95, alpha:1.0)
+                endDateLabel.textColor = UIColor.black
+                endDateLabel.text = "\(day)/\(month)/\(year)"
+                isStartDate = !isStartDate
+                
+            }else{
+                let alertController = UIAlertController(title: "The end date cannot be before the start date", message: "", preferredStyle: UIAlertControllerStyle.alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
         }
     }
     

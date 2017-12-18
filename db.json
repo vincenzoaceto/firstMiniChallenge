@@ -1,0 +1,124 @@
+{
+  "cities": {
+    "city": {
+      "name": "Rome",
+      "latitude": "40.835211",
+      "longitude": "14.2426034",
+      "travel_guides": {
+        "user1": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        },
+        "user2": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        },
+        "user3": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        }
+      }
+    },
+    "city2": {
+      "name": "Rome",
+      "latitude": "John Vincent",
+      "longitude": "9th Feb 2015",
+      "travel_guides": {
+        "user1": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        },
+        "user2": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        },
+        "user3": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        }
+      }
+    },
+    "city3": {
+      "name": "Rome",
+      "latitude": "John Vincent",
+      "longitude": "9th Feb 2015",
+      "travel_guides": {
+        "user1": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        },
+        "user2": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        },
+        "user3": {
+          "email": "test@test.com",
+          "password": "password",
+          "name": "test",
+          "surename": "test",
+          "latitude": "40.835211",
+          "longitude": "14.2426034",
+          "costPerDay": "20€",
+          "dateOfBirth": "12/12/2012",
+          "aboutMe": ""
+        }
+      }
+    }
+  }
+}
