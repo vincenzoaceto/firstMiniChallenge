@@ -21,6 +21,10 @@ open class DAO<Entity: BaseEntity> {
         preconditionFailure()
     }
     
+    open func readAll() -> [Entity] {
+        preconditionFailure()
+    }
+    
     open func read(predicatedBy predicate: NSPredicate?) -> [Entity] {
         preconditionFailure()
     }

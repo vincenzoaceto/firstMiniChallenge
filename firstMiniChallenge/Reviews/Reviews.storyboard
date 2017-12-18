@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reviews View Controller-->
+        <!--Title-->
         <scene sceneID="Ur7-e3-Ch0">
             <objects>
                 <viewController id="4qr-0A-MaX" customClass="ReviewsViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,29 +30,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jef-BE-ULD">
-                                                    <rect key="frame" x="14" y="11" width="60" height="60"/>
+                                                    <rect key="frame" x="14" y="14" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="K3n-rb-6Qc"/>
                                                         <constraint firstAttribute="width" constant="60" id="zf0-ev-GeI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iK-Kc-ZZq">
-                                                    <rect key="frame" x="82" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="82" y="14" width="42" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-0x-OSt" customClass="CosmosView" customModule="firstMiniChallenge" customModuleProvider="target">
-                                                    <rect key="frame" x="82" y="40" width="150" height="23"/>
+                                                    <rect key="frame" x="82" y="40" width="150" height="26"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                             <real key="value" value="26"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                            <color key="value" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-kC-fkK">
-                                                    <rect key="frame" x="14" y="79" width="347" height="110"/>
+                                                    <rect key="frame" x="14" y="82" width="347" height="107"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -86,12 +89,17 @@
                                     <outlet property="delegate" destination="4qr-0A-MaX" id="A8D-T3-wBE"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" backIndicatorImage="Amber" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-W9-02o">
+                            <navigationBar contentMode="scaleToFill" backIndicatorImage="navigationBar:NOg-W9-02o:backIndicatorImage" translatesAutoresizingMaskIntoConstraints="NO" id="NOg-W9-02o">
                                 <rect key="frame" x="0.0" y="19" width="375" height="44"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
                                     <navigationItem title="Reviews" id="1Aq-ye-OYO">
                                         <barButtonItem key="backBarButtonItem" title="Back" id="SN0-8n-twj"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Close" id="8ZG-7I-2dQ">
+                                            <connections>
+                                                <action selector="closeReview:" destination="4qr-0A-MaX" id="kYJ-8k-DNM"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -108,16 +116,34 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O0y-TR-doD"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="M5J-km-1l9">
+                        <barButtonItem key="leftBarButtonItem" title="Close" id="RvS-3v-GKF"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="reviewsNavigationBar" destination="NOg-W9-02o" id="mX3-SP-1E7"/>
                         <outlet property="tableView" destination="sii-YA-U4s" id="jla-tG-1uj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kh-xA-dZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-700" y="-190.25487256371815"/>
+            <point key="canvasLocation" x="-361" y="-282"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Amber" width="309" height="193"/>
+        <image name="navigationBar:NOg-W9-02o:backIndicatorImage" width="309" height="193">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBMU
+GR4fJSYsLzU4VSRudWxs1QkKCwwNDg8QERJWTlNTaXplViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBz
+V05TQ29sb3KAAoAMEiTAAACAA4AKWnszMDksIDE5M33SFQoWGFpOUy5vYmplY3RzoReABIAJ0hUKGhii
+GxyABYAGgAkQBdMgCiEiIyRXTlMuYmFzZVtOUy5yZWxhdGl2ZYAAgAiAB18Qc2ZpbGU6Ly8vQXBwbGlj
+YXRpb25zL1hjb2RlLmFwcC9Db250ZW50cy9QbHVnSW5zL0lERUludGVyZmFjZUJ1aWxkZXJLaXQuZnJh
+bWV3b3JrL1Jlc291cmNlcy9JQk1pc3NpbmdJbWFnZUdseXBoLnRpZmbSJygpKlokY2xhc3NuYW1lWCRj
+bGFzc2VzVU5TVVJMoikrWE5TT2JqZWN00icoLS5XTlNBcnJheaItK9MwMQoyMzRXTlNXaGl0ZVxOU0Nv
+bG9yU3BhY2VEMCAwABADgAvSJyg2N1dOU0NvbG9yojYr0icoOTpXTlNJbWFnZaI5K18QD05TS2V5ZWRB
+cmNoaXZlctE9PlRyb290gAEACAARABoAIwAtADIANwBFAEsAVgBdAGQAcQB4AIAAggCEAIkAiwCNAJgA
+nQCoAKoArACuALMAtgC4ALoAvAC+AMUAzQDZANsA3QDfAVUBWgFlAW4BdAF3AYABhQGNAZABlwGfAawB
+sQGzAbUBugHCAcUBygHSAdUB5wHqAe8AAAAAAAACAQAAAAAAAAA/AAAAAAAAAAAAAAAAAAAB8Q
+</mutableData>
+        </image>
     </resources>
 </document>

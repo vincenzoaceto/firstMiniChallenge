@@ -4,6 +4,8 @@ import UIKit
 
 class ReviewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var reviewsNavigationBar: UINavigationBar!
+    
     @IBOutlet weak var tableView: UITableView!
     
     //Array of Reviews
@@ -20,6 +22,10 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     //Properties for ReView Body
     var fontSize = 13
     
+    @IBAction func closeReview(_ sender: Any) {
+        //self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -43,9 +49,9 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
         //Properties for Star Ratings
         cell.starRatings.rating = ratings[indexPath.row]
-        cell.starRatings.filledColor = UIColor.blue
-        cell.starRatings.filledBorderColor = UIColor.blue
-        cell.starRatings.emptyBorderColor = UIColor.blue
+        cell.starRatings.filledColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        cell.starRatings.filledBorderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+        cell.starRatings.emptyBorderColor = #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
         cell.starRatings.emptyBorderWidth = 0.25
         
         //Properties  for User Image
@@ -64,6 +70,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
+        //reviewsNavigationBar.back
         
         //tableView.rowHeight = UITableViewAutomaticDimension
     }

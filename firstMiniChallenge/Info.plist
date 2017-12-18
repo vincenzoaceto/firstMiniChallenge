@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Allow it to add the booking to your calendar</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -26,6 +28,8 @@
 	<string>You can take photos to improve your profile</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UILaunchImageFile</key>
+	<string>App Icon</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Login</string>
 	<key>UIRequiredDeviceCapabilities</key>

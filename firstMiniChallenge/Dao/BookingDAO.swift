@@ -10,23 +10,34 @@ import Foundation
 import Firebase
 
 class BookingDAO : DAO<Booking> {
-    var ref: DatabaseReference!
+    static let sharedInstance = BookingDAO()
+    var bookings: [Booking]
     
-    override public init() {
-        ref = Database.database().reference()
+    override private init() {
+        bookings = []
         super.init()
     }
     
     override func persist(_ booking: Booking) throws {
-        let bookingRef = ref.child("bookings").child(booking.entityId)
-        bookingRef.setValue(["dateFrom": booking.dateFrom.description])
-        bookingRef.setValue(["dateTo": booking.dateTo.description])
-        bookingRef.setValue(["cost": booking.cost])
+        bookings.append(booking)
     }
     
     override func persist(_ bookings: [Booking]) throws {
         for booking in bookings {
             try self.persist(booking)
         }
+    }
+    
+    override func read(_ entityId: String) -> Booking? {
+        for booking in bookings {
+            if booking.entityId == entityId {
+                return booking
+            }
+        }
+        return nil
+    }
+    
+    override func readAll() -> [Booking] {
+        return bookings
     }
 }

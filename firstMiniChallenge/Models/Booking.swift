@@ -15,7 +15,7 @@ class Booking : BaseEntity{
     let agent: Agent
     let client: Client
     
-    init(dateFrom: Date, dateTo: Date, cost: NSDecimalNumber, agent: Agent, client: Client) {
+    init(_ dateFrom: Date, _ dateTo: Date, _ cost: NSDecimalNumber, _ agent: Agent!, _ client: Client!) {
         self.dateFrom = dateFrom
         self.dateTo = dateTo
         self.cost = cost

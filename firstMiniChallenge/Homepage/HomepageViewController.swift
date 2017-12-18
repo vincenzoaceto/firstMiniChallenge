@@ -11,7 +11,13 @@ import MapKit
 
 class HomepageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
    
+    override func viewDidLoad() {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     
     
@@ -40,7 +46,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     var citiesAvailable = [#imageLiteral(resourceName: "Brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         if collectionView.tag == 2 {
             return travelGuides.count
         }else {

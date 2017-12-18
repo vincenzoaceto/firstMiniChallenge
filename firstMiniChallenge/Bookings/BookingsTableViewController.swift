@@ -30,6 +30,9 @@ class BookingsTableViewController: UITableViewController {
             ("Maria", "Corsa", "10/11/17", "Milan", "Guide1")
         ]]
     
+    var ref: DatabaseReference!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,7 +53,7 @@ class BookingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 30
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

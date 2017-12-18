@@ -14,19 +14,26 @@ class ResultViewController: UIViewController {
     
     public var test : [(x: CLLocationDegrees ,y: CLLocationDegrees)] = []
     public var actualPosition = CLLocation(latitude: 40.8425211, longitude: 14.2426034)
+    public var citySelected = "Results"
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    public var latitude = 0.0
+    public var longitude = 0.0
+    public var cityName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ollllaaaaa")
+        
+        self.title = citySelected
+        
         mapView.delegate = self
         
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPrefetchingEnabled = false
+        self.tabBarController?.tabBar.isHidden = true
         
         test.append((x: 40.835211, y: 14.2426034))
         test.append((x: 40.835456, y: 14.2501048))
@@ -54,6 +61,8 @@ class ResultViewController: UIViewController {
         self.mapView.removeOverlays(self.mapView.overlays)
         self.mapView.add(circle, level: MKOverlayLevel.aboveRoads)
     }
+    
+    
 }
 
 extension ResultViewController: MKMapViewDelegate {
@@ -111,19 +120,14 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "test", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "travelguideCell", for: indexPath)
         
         actualPosition = CLLocation(latitude: test[indexPath.row].x, longitude: test[indexPath.row].y)
         centerMapOnLocation(location: actualPosition)
         
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "tet", sender: nil)
-        
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

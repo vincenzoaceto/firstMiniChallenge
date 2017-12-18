@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rXT-9g-YeG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hlC-kP-dX1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -92,6 +92,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
+                                            <segue destination="VV5-6n-j4z" kind="show" identifier="test" id="0Tl-Xq-qeK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -139,7 +140,6 @@
                         <outlet property="searchBar" destination="sxD-sM-ADD" id="htb-1s-tU7"/>
                         <outlet property="tblSearch" destination="g9B-aZ-UW9" id="yT7-xu-Xum"/>
                         <outlet property="travelGuidesCollectionView" destination="eeK-YN-ChO" id="zvS-ZN-gIu"/>
-                        <segue destination="VV5-6n-j4z" kind="show" identifier="test" id="R7c-yx-NTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2im-GH-48O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -162,22 +162,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLx-i7-DUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="579" y="-101"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ous-ag-6vv">
-            <objects>
-                <navigationController id="rXT-9g-YeG" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I2a-4N-25k">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="hlC-kP-dX1" kind="relationship" relationship="rootViewController" id="j44-1y-kLs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WgD-jb-8pq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-534" y="478"/>
         </scene>
     </scenes>
 </document>
