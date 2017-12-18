@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="n6s-oN-iev">
@@ -86,9 +91,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="XploreEasyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="BFy-Uz-uTf">
-                                <rect key="frame" x="110" y="94" width="154" height="28"/>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XploreEasy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wq3-K6-N2t">
+                                <rect key="frame" x="60" y="90" width="255" height="44"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="38"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -97,20 +105,20 @@
                             <constraint firstAttribute="bottom" secondItem="sSZ-S9-ION" secondAttribute="bottom" id="4OF-Uk-bZq"/>
                             <constraint firstItem="sSZ-S9-ION" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="B8N-R2-EvN"/>
                             <constraint firstItem="sSZ-S9-ION" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="ImG-EH-FtV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wq3-K6-N2t" secondAttribute="trailing" constant="60" id="NLh-AU-dvH"/>
                             <constraint firstItem="mYe-Cn-Cv1" firstAttribute="top" secondItem="hhd-dT-mUt" secondAttribute="bottom" constant="20" id="QfU-zY-raE"/>
-                            <constraint firstItem="BFy-Uz-uTf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="W74-hU-Q4H"/>
                             <constraint firstItem="myf-ih-zyL" firstAttribute="top" secondItem="bqx-gv-rbH" secondAttribute="bottom" constant="41" id="brI-Wb-pDC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bqx-gv-rbH" secondAttribute="trailing" constant="60" id="dRH-os-1hL"/>
-                            <constraint firstItem="BFy-Uz-uTf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="dqK-O3-TdO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hhd-dT-mUt" secondAttribute="trailing" constant="60" id="frU-hm-1h3"/>
                             <constraint firstItem="bqx-gv-rbH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="gGm-1C-KFJ"/>
+                            <constraint firstItem="wq3-K6-N2t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="ibG-k7-RWU"/>
                             <constraint firstItem="hhd-dT-mUt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="inK-Lm-FXn"/>
-                            <constraint firstItem="bqx-gv-rbH" firstAttribute="top" secondItem="BFy-Uz-uTf" secondAttribute="bottom" constant="76" id="mlH-pn-c70"/>
+                            <constraint firstItem="wq3-K6-N2t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="jb6-0j-bAD"/>
                             <constraint firstItem="myf-ih-zyL" firstAttribute="leading" secondItem="bqx-gv-rbH" secondAttribute="leading" id="o3H-gn-NFO"/>
                             <constraint firstItem="sSZ-S9-ION" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pc9-7y-bHo"/>
                             <constraint firstItem="mYe-Cn-Cv1" firstAttribute="trailing" secondItem="hhd-dT-mUt" secondAttribute="trailing" id="rUC-Sx-ki0"/>
                             <constraint firstItem="myf-ih-zyL" firstAttribute="trailing" secondItem="bqx-gv-rbH" secondAttribute="trailing" id="s8f-rb-hag"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BFy-Uz-uTf" secondAttribute="trailing" constant="111" id="uru-hl-Xc2"/>
+                            <constraint firstItem="bqx-gv-rbH" firstAttribute="top" secondItem="wq3-K6-N2t" secondAttribute="bottom" constant="64" id="twb-AB-KoL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -124,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.23188405797103" y="129.61956521739131"/>
+            <point key="canvasLocation" x="135.19999999999999" y="129.08545727136433"/>
         </scene>
         <!--MainStoryBoard-->
         <scene sceneID="9Xm-9h-PXc">
@@ -312,7 +320,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="XploreEasyLogo" width="160" height="28"/>
         <image name="addPhoto" width="112" height="112"/>
         <image name="back_arrow" width="17" height="26"/>
         <image name="login_background" width="375" height="667"/>
