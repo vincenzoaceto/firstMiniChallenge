@@ -10,15 +10,23 @@ import UIKit
 
 class PaymentViewController: UIViewController {
 
+    public var startDate = ""
+    public var endDate = ""
+    public var totalCost = 0
+    
+    @IBOutlet weak var startDateLabel: UILabel!
+    @IBOutlet weak var endDateLabel: UILabel!
+    @IBOutlet weak var totalCostLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        startDateLabel.text = startDate
+        endDateLabel.text = endDate
+        totalCostLabel.text = String(totalCost) + "€"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
