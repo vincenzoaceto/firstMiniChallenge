@@ -49,6 +49,9 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                             <real key="value" value="26"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                            <color key="value" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-kC-fkK">
@@ -117,6 +120,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Close" id="RvS-3v-GKF"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="reviewsNavigationBar" destination="NOg-W9-02o" id="mX3-SP-1E7"/>
                         <outlet property="tableView" destination="sii-YA-U4s" id="jla-tG-1uj"/>
                     </connections>
                 </viewController>
