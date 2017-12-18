@@ -31,15 +31,7 @@ class BookingsTableViewController: UITableViewController {
         ]]
     
     var ref: DatabaseReference!
-    func getData(_ childURL:String?, completionHandler: @escaping (Any?) -> ()) {
-        var reference = self.ref
-        if let url = childURL{
-            reference = self.ref.child(url)
-        }
-        reference!.observeSingleEvent(of: .value) { (snapshot: DataSnapshot) in
-            completionHandler(snapshot.value)
-        }
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +53,7 @@ class BookingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 30
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

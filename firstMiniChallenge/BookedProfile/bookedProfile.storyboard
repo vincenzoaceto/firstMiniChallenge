@@ -80,7 +80,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="test" id="MJA-ZM-a14">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MemoryCell" id="MJA-ZM-a14">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="102"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -102,6 +102,7 @@
                         <viewLayoutGuide key="safeArea" id="hhG-nd-AqR"/>
                     </view>
                     <connections>
+                        <outlet property="collectionView" destination="yhE-Lj-iLP" id="zQ3-2u-HSj"/>
                         <outlet property="myPassionsLabel" destination="1wp-1a-TNF" id="gpn-sK-x3h"/>
                     </connections>
                 </viewController>

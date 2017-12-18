@@ -14,15 +14,19 @@ class ResultViewController: UIViewController {
     
     public var test : [(x: CLLocationDegrees ,y: CLLocationDegrees)] = []
     public var actualPosition = CLLocation(latitude: 40.8425211, longitude: 14.2426034)
+    public var citySelected = "Results"
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    public var latitude = 0.0
+    public var longitude = 0.0
+    public var cityName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Results"
+        self.title = citySelected
         
         mapView.delegate = self
         
