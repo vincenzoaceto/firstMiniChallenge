@@ -57,6 +57,8 @@ class ResultViewController: UIViewController {
         self.mapView.removeOverlays(self.mapView.overlays)
         self.mapView.add(circle, level: MKOverlayLevel.aboveRoads)
     }
+    
+    
 }
 
 extension ResultViewController: MKMapViewDelegate {
@@ -121,12 +123,7 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
         return cell
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //performSegue(withIdentifier: "profileTravelGuide", sender: nil)
-        
-    }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }

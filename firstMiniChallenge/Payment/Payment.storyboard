@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Payment View Controller-->
         <scene sceneID="fdl-3h-YKL">
             <objects>
-                <viewController id="wfe-1p-2kk" sceneMemberID="viewController">
+                <viewController id="wfe-1p-2kk" customClass="PaymentViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ccm-a5-j3x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +24,9 @@
                                 <state key="normal" title="Pay">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="n7L-yp-LeN" kind="show" id="BcP-Tv-YAL"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundProfileTravelGuide" translatesAutoresizingMaskIntoConstraints="NO" id="kef-us-Bnb">
                                 <rect key="frame" x="0.0" y="44" width="375" height="264"/>
@@ -55,14 +58,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="6/11/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrc-ej-egm">
-                                <rect key="frame" x="16" y="368" width="74" height="21"/>
+                                <rect key="frame" x="16" y="368" width="137" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10/11/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-Mb-AFU">
-                                <rect key="frame" x="264" y="368" width="81" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10/11/2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-Mb-AFU">
+                                <rect key="frame" x="217" y="368" width="128" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -103,10 +106,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="m6M-rY-SdH"/>
                     </view>
+                    <connections>
+                        <outlet property="endDateLabel" destination="OYr-Mb-AFU" id="4F2-lc-Zbl"/>
+                        <outlet property="startDateLabel" destination="yrc-ej-egm" id="wtJ-Gl-qyX"/>
+                        <outlet property="totalCostLabel" destination="lhR-z0-fHT" id="0VH-3t-J69"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NqB-mF-7zw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-84" y="-445.72713643178412"/>
+        </scene>
+        <!--bookedProfile-->
+        <scene sceneID="jyX-V6-PWu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="bookedProfile" id="n7L-yp-LeN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn4-de-bUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="-454"/>
         </scene>
     </scenes>
     <resources>
