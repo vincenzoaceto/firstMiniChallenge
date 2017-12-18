@@ -11,9 +11,7 @@ import MapKit
 
 class HomepageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
    
-    override func viewDidLoad() {
-        self.tabBarController?.tabBar.isHidden = false
-    }
+   
     
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
@@ -85,15 +83,17 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         
         
-        var cityArray = ["Rome"]
-        var guideArray = ["Guide1"]
+        var cityArray = ["Agra", "Rome", "Paris"]
+        var guideArray = ["Guide1", "Guide2", "Guide3", "Guide4"]
     
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
             if collectionView.tag == 1 {
                 performSegue(withIdentifier: cityArray[indexPath.row], sender: nil)
+               
+                
                 
             } else if collectionView.tag == 2{
-                performSegue(withIdentifier: guideArray[indexPath.row], sender: nil)
+                performSegue(withIdentifier:  guideArray[indexPath.row], sender: nil)
                 
             }
             
@@ -120,6 +120,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.tblSearch.dataSource = self
         self.tblSearch.delegate = self
         self.searchBar.delegate = self
+        self.tabBarController?.tabBar.isHidden = false
 
         // Do any additional setup after loading the view.
     }
