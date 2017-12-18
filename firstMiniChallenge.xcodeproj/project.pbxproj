@@ -207,7 +207,7 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				E1F487021FE7D8FF0012420F /* bookedProfile */,
+				E1F487021FE7D8FF0012420F /* BookedProfile */,
 				E1F486FD1FE7C47C0012420F /* Payment */,
 				9CBA13471FE6979500A1CD72 /* Dao */,
 				9C1265381FE574B500BBFD7B /* Bookings */,
@@ -305,13 +305,13 @@
 			path = Payment;
 			sourceTree = "<group>";
 		};
-		E1F487021FE7D8FF0012420F /* bookedProfile */ = {
+		E1F487021FE7D8FF0012420F /* BookedProfile */ = {
 			isa = PBXGroup;
 			children = (
 				E1F487031FE7D9120012420F /* bookedProfile.storyboard */,
 				E1F487051FE7D96A0012420F /* bookedProfileViewController.swift */,
 			);
-			path = bookedProfile;
+			path = BookedProfile;
 			sourceTree = "<group>";
 		};
 		EED30995E1C51D40650CAFCA /* Frameworks */ = {

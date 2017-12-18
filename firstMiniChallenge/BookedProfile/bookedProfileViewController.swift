@@ -11,11 +11,14 @@ import UIKit
 class bookedProfileViewController: UIViewController {
 
     @IBOutlet weak var myPassionsLabel: UILabel!
-    
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
         var myPassions = ["I love trying new cuisines","Books","Love rock music","Fashionista","Pizza","Still 30","Global trotter"]
         
@@ -37,7 +40,6 @@ class bookedProfileViewController: UIViewController {
             endPositionX += label.frame.width + 10
             
             if endPositionX >= myPassionsLabel.frame.width {
-                
                 beginPositionX = myPassionsLabel.frame.origin.x
                 endPositionX = label.frame.width + 10
                 beginPositionY += myPassionsLabel.frame.height
@@ -68,6 +70,7 @@ class bookedProfileViewController: UIViewController {
       //  navigationController?.popToRootViewController(animated: true)
     }
     
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -75,4 +78,19 @@ class bookedProfileViewController: UIViewController {
     
     
 
+}
+extension bookedProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
+    
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return 10
+        }
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath)
+            
+            
+            return cell
+        }
+    
+    
+    
 }
