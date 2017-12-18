@@ -30,29 +30,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jef-BE-ULD">
-                                                    <rect key="frame" x="14" y="11" width="60" height="60"/>
+                                                    <rect key="frame" x="14" y="14" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="K3n-rb-6Qc"/>
                                                         <constraint firstAttribute="width" constant="60" id="zf0-ev-GeI"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iK-Kc-ZZq">
-                                                    <rect key="frame" x="82" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="82" y="14" width="42" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZM-0x-OSt" customClass="CosmosView" customModule="firstMiniChallenge" customModuleProvider="target">
-                                                    <rect key="frame" x="82" y="40" width="150" height="23"/>
+                                                    <rect key="frame" x="82" y="40" width="150" height="26"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="starSize">
                                                             <real key="value" value="26"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                            <color key="value" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tok-kC-fkK">
-                                                    <rect key="frame" x="14" y="79" width="347" height="110"/>
+                                                    <rect key="frame" x="14" y="82" width="347" height="107"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -109,6 +112,7 @@
                         <viewLayoutGuide key="safeArea" id="O0y-TR-doD"/>
                     </view>
                     <connections>
+                        <outlet property="reviewsNavigationBar" destination="NOg-W9-02o" id="mX3-SP-1E7"/>
                         <outlet property="tableView" destination="sii-YA-U4s" id="jla-tG-1uj"/>
                     </connections>
                 </viewController>
