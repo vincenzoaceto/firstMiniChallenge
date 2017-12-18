@@ -12,6 +12,7 @@
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
 		7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7401643A1FE47D6D004D968A /* GoogleService-Info.plist */; };
 		747DB42A1FE2AC8100A6B920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* User.swift */; };
+		74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DA44D81FE7FBEB009E8AFB /* Tools.swift */; };
 		74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86961FDE7C3F00106C89 /* AppDelegate.swift */; };
 		74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86981FDE7C3F00106C89 /* LoginViewController.swift */; };
 		74DB869C1FDE7C3F00106C89 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74DB869A1FDE7C3F00106C89 /* Login.storyboard */; };
@@ -27,12 +28,16 @@
 		9C12653C1FE5751800BBFD7B /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C12653B1FE5751800BBFD7B /* Bookings.storyboard */; };
 		9C12653E1FE576DE00BBFD7B /* BookingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12653D1FE576DE00BBFD7B /* BookingsTableViewCell.swift */; };
 		9C1265401FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C12653F1FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift */; };
+		9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731C9F1FE80D520080F725 /* ImageUtil.swift */; };
+		9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731CA11FE80D550080F725 /* SeedDbUtil.swift */; };
 		9CBA13491FE6994100A1CD72 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13481FE6994000A1CD72 /* BaseEntity.swift */; };
 		9CBA134B1FE69BC900A1CD72 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134A1FE69BC900A1CD72 /* DAO.swift */; };
 		9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */; };
+		9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */; };
 		9CC848361FE648080095A9DC /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848351FE648080095A9DC /* Booking.swift */; };
 		9CC848381FE648550095A9DC /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848371FE648550095A9DC /* Agent.swift */; };
 		9CC8483A1FE64AAD0095A9DC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848391FE64AAD0095A9DC /* Client.swift */; };
+		9CEDB8DD1FE80B3F00C77B7B /* AgentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDB8DC1FE80B3F00C77B7B /* AgentDAO.swift */; };
 		B62712E42C276509962B14B7 /* Pods_firstMiniChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73367C4FDF9D153BB053B5A /* Pods_firstMiniChallengeUITests.framework */; };
 		C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */; };
 		C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */; };
@@ -75,6 +80,7 @@
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7401643A1FE47D6D004D968A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		747DB4291FE2AC8100A6B920 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		74DA44D81FE7FBEB009E8AFB /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		74DB86931FDE7C3F00106C89 /* firstMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DB86961FDE7C3F00106C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74DB86981FDE7C3F00106C89 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -97,12 +103,16 @@
 		9C12653B1FE5751800BBFD7B /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
 		9C12653D1FE576DE00BBFD7B /* BookingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewCell.swift; sourceTree = "<group>"; };
 		9C12653F1FE5784E00BBFD7B /* BookingsTableViewHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewHeaderCell.swift; sourceTree = "<group>"; };
+		9C731C9F1FE80D520080F725 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
+		9C731CA11FE80D550080F725 /* SeedDbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDbUtil.swift; sourceTree = "<group>"; };
 		9CBA13481FE6994000A1CD72 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
 		9CBA134A1FE69BC900A1CD72 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDAO.swift; sourceTree = "<group>"; };
+		9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDAO.swift; sourceTree = "<group>"; };
 		9CC848351FE648080095A9DC /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
 		9CC848371FE648550095A9DC /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 		9CC848391FE64AAD0095A9DC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		9CEDB8DC1FE80B3F00C77B7B /* AgentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDAO.swift; sourceTree = "<group>"; };
 		BC9B32C2673244DD3D33B482 /* Pods_firstMiniChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstMiniChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
 		C6F8C3711FE19A8000A4888C /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +192,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		74DA44D71FE7FBD8009E8AFB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				74DA44D81FE7FBEB009E8AFB /* Tools.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		74DB868A1FDE7C3E00106C89 = {
 			isa = PBXGroup;
 			children = (
@@ -207,7 +225,9 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				E1F487021FE7D8FF0012420F /* BookedProfile */,
+				9C731C9E1FE80D3E0080F725 /* Util */,
+				74DA44D71FE7FBD8009E8AFB /* Commons */,
+				E1F487021FE7D8FF0012420F /* bookedProfile */,
 				E1F486FD1FE7C47C0012420F /* Payment */,
 				9CBA13471FE6979500A1CD72 /* Dao */,
 				9C1265381FE574B500BBFD7B /* Bookings */,
@@ -266,11 +286,22 @@
 			path = Bookings;
 			sourceTree = "<group>";
 		};
+		9C731C9E1FE80D3E0080F725 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				9C731CA11FE80D550080F725 /* SeedDbUtil.swift */,
+				9C731C9F1FE80D520080F725 /* ImageUtil.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		9CBA13471FE6979500A1CD72 /* Dao */ = {
 			isa = PBXGroup;
 			children = (
 				9CBA134A1FE69BC900A1CD72 /* DAO.swift */,
 				9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */,
+				9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */,
+				9CEDB8DC1FE80B3F00C77B7B /* AgentDAO.swift */,
 			);
 			path = Dao;
 			sourceTree = "<group>";
@@ -577,6 +608,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-firstMiniChallenge/Pods-firstMiniChallenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -584,6 +616,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBDatePicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -645,14 +678,19 @@
 				9CC8483A1FE64AAD0095A9DC /* Client.swift in Sources */,
 				9CC848361FE648080095A9DC /* Booking.swift in Sources */,
 				9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */,
+				9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */,
+				9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */,
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */,
+				74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */,
 				C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */,
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,
+				9CEDB8DD1FE80B3F00C77B7B /* AgentDAO.swift in Sources */,
 				E1F487011FE7C7610012420F /* PaymentViewController.swift in Sources */,
 				E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */,
 				9C12653E1FE576DE00BBFD7B /* BookingsTableViewCell.swift in Sources */,
 				747DB42A1FE2AC8100A6B920 /* User.swift in Sources */,
+				9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

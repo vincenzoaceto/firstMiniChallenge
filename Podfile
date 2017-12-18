@@ -17,5 +17,6 @@ target 'firstMiniChallenge' do
   end
 pod 'Firebase/Core'
 pod 'Firebase/Database'
-pod ‘JBDatePicker’
+pod 'JBDatePicker'
+pod 'Firebase/Auth'
 end

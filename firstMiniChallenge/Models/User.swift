@@ -13,16 +13,18 @@ class User : BaseEntity{
     let username : String
     let password : String
     
-    var name : String?
+    var name : String? 
     var surname: String?
     var age: Int?
+    var email: String?
+    var facebook: String?
     var city: String?
+    var country: String?
+    var profileImage: String?
     
     init(username: String, password: String) {
         self.username = username
         self.password = password
-        
         super.init(entityId: NSUUID().uuidString)
     }
-    
 }
