@@ -114,12 +114,13 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         } else {
             //TEST USERDEFAULT
             let defaults = UserDefaults.standard
-            defaults.set(usernameSignupTextField.text, forKey: "username")
-            defaults.set(passwordSignupTextField.text, forKey: "password")
-            defaults.set(nameSignupTextField.text, forKey: "name")
-            defaults.set(surnameSignupTextField.text, forKey: "surname")
-            defaults.set(dateOfBirthSignupTextField.text, forKey: "date")
-            defaults.set(citySignupTextField.text, forKey: "city")
+            let user = usernameSignupTextField.text!
+            defaults.set(usernameSignupTextField.text, forKey: "username" + user)
+            defaults.set(passwordSignupTextField.text, forKey: "password" + user)
+            defaults.set(nameSignupTextField.text, forKey: "name" + user)
+            defaults.set(surnameSignupTextField.text, forKey: "surname" + user)
+            defaults.set(dateOfBirthSignupTextField.text, forKey: "date" + user)
+            defaults.set(citySignupTextField.text, forKey: "city" + user)
 
 
             print("Firebase Auth")
