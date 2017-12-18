@@ -14,7 +14,6 @@
         <!--Navigation Controller-->
         <scene sceneID="n6s-oN-iev">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y6C-fm-3ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="TNq-p8-NnK" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cCZ-hX-0u2">
                         <autoresizingMask key="autoresizingMask"/>
@@ -23,6 +22,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZLf-38-nvJ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6C-fm-3ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-707" y="130"/>
         </scene>
@@ -250,7 +250,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="tfH-qB-D96" kind="show" id="nKR-gg-Zca"/>
+                                    <action selector="signupButtonClick:" destination="4ve-oJ-UBc" eventType="touchUpInside" id="4b4-Yf-CB7"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="A30-DQ-ylU">
@@ -296,7 +296,14 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="A30-DQ-ylU" id="fng-TT-XQi"/>
+                        <outlet property="citySignupTextField" destination="5dd-BF-8y9" id="d4V-Fh-nrx"/>
+                        <outlet property="dateOfBirthSignupTextField" destination="4Gg-FZ-jaR" id="tyY-wJ-zgm"/>
                         <outlet property="imagePicked" destination="OIt-Hl-qsZ" id="m2v-jT-jJ0"/>
+                        <outlet property="nameSignupTextField" destination="B2G-4G-x9O" id="lcd-pB-V6i"/>
+                        <outlet property="passwordSignupTextField" destination="7vX-H8-Ccb" id="Arl-5X-Hhr"/>
+                        <outlet property="surnameSignupTextField" destination="x7a-ma-d46" id="ivm-Zf-PGB"/>
+                        <outlet property="usernameSignupTextField" destination="Qor-Gb-7VP" id="EDg-TB-7Fu"/>
+                        <segue destination="tfH-qB-D96" kind="show" identifier="signupSegue" id="Eob-FZ-Lly"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfD-wQ-Tre" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -312,6 +319,6 @@
         <image name="signinButton" width="300" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="smM-cW-wb0"/>
+        <segue reference="Eob-FZ-Lly"/>
     </inferredMetricsTieBreakers>
 </document>

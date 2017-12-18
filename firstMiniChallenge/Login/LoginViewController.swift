@@ -18,6 +18,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let defaults = UserDefaults.standard
+        usernameLoginTextField.text = defaults.string(forKey: "username")
+        passwordLoginTextField.text = defaults.string(forKey: "password")
     }
 
     override func didReceiveMemoryWarning() {
