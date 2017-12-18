@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-5W-vuG">
-                                <rect key="frame" x="16" y="212" width="328" height="140"/>
+                                <rect key="frame" x="8" y="212" width="367" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ctF-x4-nu5">
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-YN-ChO">
-                                <rect key="frame" x="16" y="430" width="328" height="140"/>
+                                <rect key="frame" x="8" y="430" width="367" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mNX-AJ-tIo">
@@ -100,18 +100,33 @@
                                     <outlet property="delegate" destination="hlC-kP-dX1" id="yqS-UD-EOy"/>
                                 </connections>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="VTO-Q3-4vC">
-                                <rect key="frame" x="31" y="104" width="313" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <offsetWrapper key="searchTextPositionAdjustment" horizontal="0.0" vertical="0.0"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZxV-mF-Dd3">
-                                <rect key="frame" x="60" y="118" width="240" height="29"/>
+                            <tableView clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleAspectFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g9B-aZ-UW9">
+                                <rect key="frame" x="0.0" y="166" width="375" height="452"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" alpha="0.94999999999999996" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="I4o-3j-8OL" customClass="TableViewCell" customModule="firstMiniChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I4o-3j-8OL" id="NDK-tu-drK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hlC-kP-dX1" id="sJL-9A-fjG"/>
+                                    <outlet property="delegate" destination="hlC-kP-dX1" id="cv1-t7-gy5"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxD-sM-ADD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="hlC-kP-dX1" id="ahK-lW-zSh"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Qn-FV-fjd"/>
@@ -121,28 +136,21 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="CitiesAvailableCollectionView" destination="LiA-5W-vuG" id="psi-vQ-GaH"/>
-                        <outlet property="searchDisplayController" destination="64J-SV-yRM" id="NAB-vc-HdT"/>
+                        <outlet property="searchBar" destination="sxD-sM-ADD" id="htb-1s-tU7"/>
+                        <outlet property="tblSearch" destination="g9B-aZ-UW9" id="yT7-xu-Xum"/>
                         <outlet property="travelGuidesCollectionView" destination="eeK-YN-ChO" id="zvS-ZN-gIu"/>
                         <segue destination="VV5-6n-j4z" kind="show" identifier="test" id="R7c-yx-NTN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2im-GH-48O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer direction="right" id="lQx-Tk-HjN"/>
-                <searchDisplayController id="64J-SV-yRM">
-                    <connections>
-                        <outlet property="delegate" destination="hlC-kP-dX1" id="nJc-xQ-L1v"/>
-                        <outlet property="searchContentsController" destination="hlC-kP-dX1" id="sYP-s5-GZj"/>
-                        <outlet property="searchResultsDataSource" destination="hlC-kP-dX1" id="l7L-4x-A1l"/>
-                        <outlet property="searchResultsDelegate" destination="hlC-kP-dX1" id="lFJ-xf-N8X"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="-76" y="-202.84857571214394"/>
+            <point key="canvasLocation" x="-180" y="-308.09595202398805"/>
         </scene>
-        <!--Login-->
+        <!--Result-->
         <scene sceneID="EGb-zF-HW0">
             <objects>
-                <viewControllerPlaceholder storyboardName="Login" id="zjt-Jl-WUm" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Result" id="zjt-Jl-WUm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uc1-dh-bBO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="624" y="-308"/>
