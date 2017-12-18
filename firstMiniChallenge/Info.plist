@@ -26,6 +26,8 @@
 	<string>You can take photos to improve your profile</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
+	<key>UILaunchImageFile</key>
+	<string>App Icon</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Login</string>
 	<key>UIRequiredDeviceCapabilities</key>
