@@ -13,6 +13,7 @@
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
 		7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7401643A1FE47D6D004D968A /* GoogleService-Info.plist */; };
 		747DB42A1FE2AC8100A6B920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* User.swift */; };
+		7485E02D1FE939D700AB460D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485E02C1FE939D700AB460D /* Constants.swift */; };
 		74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DA44D81FE7FBEB009E8AFB /* Tools.swift */; };
 		74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86961FDE7C3F00106C89 /* AppDelegate.swift */; };
 		74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86981FDE7C3F00106C89 /* LoginViewController.swift */; };
@@ -28,7 +29,6 @@
 		95BBCB351FE9213D002D732A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BBCB341FE9213D002D732A /* Profile.storyboard */; };
 		95BBCB391FE92241002D732A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCB381FE92241002D732A /* MyProfileViewController.swift */; };
 		95BBCB3B1FE92BB5002D732A /* MyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCB3A1FE92BB5002D732A /* MyProfileTableViewCell.swift */; };
-		9C12653A1FE574F500BBFD7B /* BookingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */; };
 		9C12653C1FE5751800BBFD7B /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C12653B1FE5751800BBFD7B /* Bookings.storyboard */; };
 		9C5C79191FE8E50000E6B54F /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C79181FE8E50000E6B54F /* Timeline.swift */; };
 		9C5C791B1FE8E55F00E6B54F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C791A1FE8E55F00E6B54F /* HeaderTableViewCell.swift */; };
@@ -93,6 +93,7 @@
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7401643A1FE47D6D004D968A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		747DB4291FE2AC8100A6B920 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		7485E02C1FE939D700AB460D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		74DA44D81FE7FBEB009E8AFB /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		74DB86931FDE7C3F00106C89 /* firstMiniChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstMiniChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74DB86961FDE7C3F00106C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		95BBCB341FE9213D002D732A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		95BBCB381FE92241002D732A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		95BBCB3A1FE92BB5002D732A /* MyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableViewCell.swift; sourceTree = "<group>"; };
-		9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewController.swift; sourceTree = "<group>"; };
 		9C12653B1FE5751800BBFD7B /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
 		9C5C79181FE8E50000E6B54F /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		9C5C791A1FE8E55F00E6B54F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -222,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				74DA44D81FE7FBEB009E8AFB /* Tools.swift */,
+				7485E02C1FE939D700AB460D /* Constants.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -753,6 +754,7 @@
 				9C5C791B1FE8E55F00E6B54F /* HeaderTableViewCell.swift in Sources */,
 				747DB42A1FE2AC8100A6B920 /* User.swift in Sources */,
 				9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */,
+				7485E02D1FE939D700AB460D /* Constants.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

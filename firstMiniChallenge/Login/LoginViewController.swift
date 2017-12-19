@@ -81,6 +81,10 @@ class LoginViewController: UIViewController {
 
     @IBAction func signinButtonClick(_ sender: UIButton) {
         // For easy login during debugging
+        if Constants.DEBUG {
+            self.performSegue(withIdentifier: "loginCorrectSegue", sender: nil)
+        } else {
+
         if((usernameLoginTextField.text?.isEmpty)! || (passwordLoginTextField.text?.isEmpty)!) {
             let alertController = UIAlertController(title: "Warning", message: "The field are mandatory", preferredStyle: UIAlertControllerStyle.alert)
 
@@ -108,6 +112,7 @@ class LoginViewController: UIViewController {
                 }
                 self.hideActivityIndicatorView()
             }
+        }
         }
     }
     
