@@ -46,7 +46,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Guide4")]
-    var citiesAvailable = [#imageLiteral(resourceName: "Brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
+    var citiesAvailable = [#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
@@ -132,6 +132,9 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.tblSearch.isUserInteractionEnabled = true
         self.tblSearch.addGestureRecognizer(backTapGestureRecognizer)
         
+        self.tabBarController?.tabBar.items![2].image = #imageLiteral(resourceName: "avatar")
+        self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
+        self.tabBarController?.tabBar.items![2].title = "Profile"
         
         // Do any additional setup after loading the view.
     }

@@ -52,8 +52,15 @@ UINavigationControllerDelegate {
         circle1.strokeColor = UIColor(red:0.29, green:0.63, blue:0.89, alpha:1.0).cgColor
         view.layer.addSublayer(circle1)
         
-        
+        self.tabBarController?.tabBar.items![2].image = #imageLiteral(resourceName: "avatar")
+        self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+//        profileImage.contentMode = .scaleToFill
+//        profileImage.frame = UIScreen.main.bounds
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
