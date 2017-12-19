@@ -54,6 +54,12 @@ UINavigationControllerDelegate {
         
         self.tabBarController?.tabBar.items![2].image = #imageLiteral(resourceName: "avatar")
         self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
+        
+        let defaults = UserDefaults.standard
+        let username = defaults.string(forKey: "username")
+        if let username = defaults.string(forKey: "username") {
+            getImage(imageName: username)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -169,6 +175,17 @@ UINavigationControllerDelegate {
         self.tabBarController?.tabBar.isHidden = false
         sender.view?.removeFromSuperview()
     }
+    
+        func getImage(imageName: String){
+            let fileManager = FileManager.default
+            let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+            if fileManager.fileExists(atPath: imagePath){
+                profileImage.image = UIImage(contentsOfFile: imagePath)
+            }else{
+                print("Panic! No Image!")
+            }
+        }
+
     
 }
 

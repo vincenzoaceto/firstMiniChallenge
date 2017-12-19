@@ -132,7 +132,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         let image = imagePicked.image!
         //get the PNG data for this image
         let data = UIImagePNGRepresentation(image)
-        //store it in the document directory    fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+        //store it in the document directory
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
     }
     
 //    func to get the profile image
@@ -190,6 +191,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             defaults.set(citySignupTextField.text, forKey: "city")
             
             if photoPickedFlag {
+                print("i'm trying to save image")
+
                 saveImage(imageName: usernameSignupTextField.text!)
             }
 
