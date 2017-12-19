@@ -9,7 +9,6 @@
 import UIKit
 
 class bookedProfileViewController: UIViewController {
-
     @IBOutlet weak var myPassionsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     

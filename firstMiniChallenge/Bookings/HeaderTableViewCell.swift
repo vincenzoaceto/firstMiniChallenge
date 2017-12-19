@@ -1,14 +1,15 @@
 //
-//  BookingsHeaderTableViewCell.swift
+//  HeaderTableViewCell.swift
 //  firstMiniChallenge
 //
-//  Created by Bilal Abdullah on 16/12/2017.
+//  Created by Bilal Abdullah on 19/12/2017.
 //  Copyright © 2017 Vincenzo Aceto. All rights reserved.
 //
 
 import UIKit
 
-class BookingsTableViewHeaderCell: UITableViewCell {
+class HeaderTableViewCell: UITableViewCell {
+
     @IBOutlet weak var headerLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -17,4 +18,5 @@ class BookingsTableViewHeaderCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
 }

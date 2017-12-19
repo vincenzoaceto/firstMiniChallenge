@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="75S-m8-IdY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oH7-lr-adQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,109 +12,66 @@
         <array key="Helvetica.ttc">
             <string>Helvetica</string>
         </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
     </customFonts>
     <scenes>
         <!--Bookings-->
-        <scene sceneID="Sl3-fv-cRf">
+        <scene sceneID="T0o-7x-QMm">
             <objects>
-                <tableViewController title="Bookings" id="75S-m8-IdY" customClass="BookingsTableViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ihz-xB-HBF">
+                <tableViewController id="oH7-lr-adQ" customClass="BookingsTableViewController" customModule="firstMiniChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hpm-20-Xz1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" id="Kuo-xF-syj" customClass="BookingsTableViewHeaderCell" customModule="firstMiniChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="110" id="N2u-aJ-V25" customClass="HeaderTableViewCell" customModule="firstMiniChallenge" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kuo-xF-syj" id="CU2-VV-Gm9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaO-9e-gCU">
-                                            <rect key="frame" x="21" y="26" width="59" height="28"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="DaO-9e-gCU" firstAttribute="centerY" secondItem="CU2-VV-Gm9" secondAttribute="centerY" id="WzV-Wr-uqD"/>
-                                        <constraint firstItem="DaO-9e-gCU" firstAttribute="leading" secondItem="CU2-VV-Gm9" secondAttribute="leadingMargin" constant="5" id="tNx-F6-3Qn"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="headerLabel" destination="DaO-9e-gCU" id="X4L-YU-PUZ"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookingsTableViewCell" rowHeight="110" id="EJ2-34-xQp" customClass="BookingsTableViewCell" customModule="firstMiniChallenge" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="108" width="375" height="110"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EJ2-34-xQp" id="8Jf-6c-HTH">
+                                <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N2u-aJ-V25" id="OKU-yV-K7K">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="109.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r95-H9-EdR">
-                                            <rect key="frame" x="16" y="16" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AM-rC-vc0" userLabel="Name">
-                                            <rect key="frame" x="90" y="16" width="42" height="20"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1H0-O9-dQa" userLabel="Surname">
-                                            <rect key="frame" x="90" y="74" width="42" height="20"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuA-Zi-G4I" userLabel="Date">
-                                            <rect key="frame" x="297" y="16" width="42" height="20"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw9-E7-dbk" userLabel="Location">
-                                            <rect key="frame" x="250.5" y="63" width="88.5" height="41.5"/>
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eRY-3B-eQD">
+                                            <rect key="frame" x="21" y="40.5" width="59" height="28"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="24"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="tintColor" red="0.0" green="0.6470588235294118" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="zw9-E7-dbk" secondAttribute="trailing" constant="20" id="3dV-qi-LWf"/>
-                                        <constraint firstItem="tuA-Zi-G4I" firstAttribute="top" secondItem="8Jf-6c-HTH" secondAttribute="topMargin" constant="5" id="6p8-rj-8QF"/>
-                                        <constraint firstAttribute="bottom" secondItem="zw9-E7-dbk" secondAttribute="bottom" constant="5" id="7vG-3V-dQb"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="1H0-O9-dQa" secondAttribute="bottom" constant="5" id="NdP-Wg-Kbd"/>
-                                        <constraint firstItem="9AM-rC-vc0" firstAttribute="top" secondItem="8Jf-6c-HTH" secondAttribute="topMargin" constant="5" id="idm-k4-I8O"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="tuA-Zi-G4I" secondAttribute="trailing" constant="20" id="pBd-MB-duW"/>
-                                        <constraint firstItem="1H0-O9-dQa" firstAttribute="leading" secondItem="8Jf-6c-HTH" secondAttribute="leading" constant="90" id="wNm-dV-snt"/>
-                                        <constraint firstItem="9AM-rC-vc0" firstAttribute="leading" secondItem="8Jf-6c-HTH" secondAttribute="leading" constant="90" id="z6b-Rb-GWi"/>
+                                        <constraint firstItem="eRY-3B-eQD" firstAttribute="centerY" secondItem="OKU-yV-K7K" secondAttribute="centerY" id="e6I-zR-FRA"/>
+                                        <constraint firstItem="eRY-3B-eQD" firstAttribute="leading" secondItem="OKU-yV-K7K" secondAttribute="leadingMargin" constant="5" id="iEI-CL-W7g"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="dateLabel" destination="tuA-Zi-G4I" id="VLc-Ya-KsB"/>
-                                    <outlet property="locationLabel" destination="zw9-E7-dbk" id="DjQ-tF-zvg"/>
-                                    <outlet property="nameLabel" destination="9AM-rC-vc0" id="w20-Lp-ugE"/>
-                                    <outlet property="profileImage" destination="r95-H9-EdR" id="ut7-oU-seI"/>
-                                    <outlet property="surnameLabel" destination="1H0-O9-dQa" id="uNt-JC-bnL"/>
+                                    <outlet property="headerLabel" destination="eRY-3B-eQD" id="FiA-hG-Du7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="75S-m8-IdY" id="Tgr-bz-9ig"/>
-                            <outlet property="delegate" destination="75S-m8-IdY" id="P7U-Jh-7IY"/>
+                            <outlet property="dataSource" destination="oH7-lr-adQ" id="o3L-zV-krQ"/>
+                            <outlet property="delegate" destination="oH7-lr-adQ" id="Ias-OP-a82"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Bookings" id="xyQ-18-51x"/>
+                    <navigationItem key="navigationItem" title="Bookings" id="tRO-ie-je7"/>
+                    <connections>
+                        <segue destination="FIP-LY-GkN" kind="push" identifier="bookedProfile" id="Ck9-f9-mOh"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G4L-JF-amE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="31C-r8-HhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1212" y="871.21439280359823"/>
+            <point key="canvasLocation" x="341.60000000000002" y="871.21439280359823"/>
+        </scene>
+        <!--bookedProfile-->
+        <scene sceneID="1NC-wW-bt2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="bookedProfile" id="FIP-LY-GkN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d5I-P3-eWE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1r4-q6-7vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="886"/>
         </scene>
     </scenes>
 </document>

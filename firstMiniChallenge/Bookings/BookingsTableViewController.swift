@@ -1,15 +1,17 @@
 //
-//  BookingsTableViewController.swift
+//  TimelineTableViewController.swift
 //  firstMiniChallenge
 //
-//  Created by Bilal Abdullah on 16/12/2017.
+//  Created by Bilal Abdullah on 19/12/2017.
 //  Copyright © 2017 Vincenzo Aceto. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
 class BookingsTableViewController: UITableViewController {
+    let lineColor = UIColor(red:0.00, green:0.38, blue:1.00, alpha:1.0)
+    let pointColor = UIColor(red:0.33, green:0.63, blue:0.99, alpha:1.0)
+    
     // Name, Surname, Date, Location, Profile Image
     let data:[Int: [(String, String, String?, String?, String?)]] = [0:[
         ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
@@ -30,11 +32,11 @@ class BookingsTableViewController: UITableViewController {
             ("Maria", "Corsa", "10/11/17", "Milan", "Guide1")
         ]]
     
-    var ref: DatabaseReference!
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let timelineTableViewCellNib = UINib(nibName: "TimelineTableViewCell", bundle: Bundle(for: TimelineTableViewCell.self))
+        self.tableView.register(timelineTableViewCellNib, forCellReuseIdentifier: "TimelineTableViewCell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -53,12 +55,12 @@ class BookingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 50
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let  headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! BookingsTableViewHeaderCell
-        
+        let  headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell") as! HeaderTableViewCell
+
         switch (section) {
         case 0:
             headerCell.headerLabel.text = "Upcoming";
@@ -68,16 +70,12 @@ class BookingsTableViewController: UITableViewController {
         default:
             headerCell.headerLabel.text = "Completed";
         }
-        
+
         return headerCell
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return section == 0 ? "Upcoming" : "Completed"
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookingsTableViewCell", for: indexPath) as! BookingsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TimelineTableViewCell", for: indexPath) as! TimelineTableViewCell
         
         guard let sectionData = data[indexPath.section] else {
             return cell
@@ -86,12 +84,21 @@ class BookingsTableViewController: UITableViewController {
         indexPath.section == 1 ? cell.makeGrey() : cell.makeBlack()
         
         let (name, surname, date, location, profile) = sectionData[indexPath.row]
+        var timelineFrontColor = UIColor.clear
+        if (indexPath.row > 0) {
+            timelineFrontColor = lineColor
+        }
         
+        cell.timelinePoint = TimelinePoint(color: pointColor, filled: false)
+        cell.timeline.frontColor = timelineFrontColor
+        cell.timeline.backColor = lineColor
+        cell.titleLabel.text = location
+        cell.lineInfoLabel.text = nil
         cell.nameLabel.text = name
         cell.surnameLabel.text = surname
         cell.dateLabel.text = date
-        cell.locationLabel.text = location
-        cell.profileImage.image = UIImage(named: profile!)
+        cell.profileImageView.image = UIImage(named: profile!)
+        cell.illustrationImageView.image = UIImage(named: "airport")
         
         return cell
     }
@@ -100,18 +107,9 @@ class BookingsTableViewController: UITableViewController {
         guard let sectionData = data[indexPath.section] else {
             return
         }
-
+    
+        self.performSegue(withIdentifier: "bookedProfile", sender: self)
+        
         print(sectionData[indexPath.row])
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
-
 }

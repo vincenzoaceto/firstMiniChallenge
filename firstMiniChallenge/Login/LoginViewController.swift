@@ -80,26 +80,27 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func signinButtonClick(_ sender: UIButton) {
+        // For easy login during debugging
         if((usernameLoginTextField.text?.isEmpty)! || (passwordLoginTextField.text?.isEmpty)!) {
             let alertController = UIAlertController(title: "Warning", message: "The field are mandatory", preferredStyle: UIAlertControllerStyle.alert)
-            
+
             alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-            
+
             self.present(alertController, animated: true, completion: nil)
         } else if(Tools.isValidEmail(email: usernameLoginTextField.text)){
-            
+
 //            start authentication
             self.displayActivityIndicatorView()
 
-            
+
             Auth.auth().signIn(withEmail: usernameLoginTextField.text!, password: passwordLoginTextField.text!) { (user, error) in
                 if let error = error {
                     let alertController = UIAlertController(title: "Login Error", message: "Please try again", preferredStyle: UIAlertControllerStyle.alert)
-                    
+
                     alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-                    
+
                     self.present(alertController, animated: true, completion: nil)
-                    
+
                 }
                 else if let user = user {
                     print(user)
