@@ -39,29 +39,68 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-        openCameraButton()
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let action1 = UIAlertAction(title: "Fotocamera", style: .default, handler: {(alert: UIAlertAction) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                var imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .camera;
+                imagePicker.allowsEditing = false
+                self.present(imagePicker, animated: true, completion: nil)
+            } else {
+                print("No Camera on this Device")
+                let alertController = UIAlertController(title: "No Camera", message: "No Camera on this Device", preferredStyle: UIAlertControllerStyle.alert)
+                
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+                
+                self.present(alertController, animated: true, completion: nil)
+            }
+            
+        })
+        let action2 = UIAlertAction(title: "Libreria foto e video", style: .default, handler: {(alert: UIAlertAction) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .photoLibrary;
+                imagePicker.allowsEditing = true
+                self.present(imagePicker, animated: true, completion: nil)
+            }
+            
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancella", style: .cancel, handler: {(alert: UIAlertAction) -> Void in
+            
+            
+        })
+        
+        actionSheet.addAction(action1)
+        actionSheet.addAction(action2)
+        actionSheet.addAction(cancelAction)
+        
+        self.present(actionSheet, animated: true, completion: nil)
+//        openCameraButton()
     }
     
     @objc func backTapped(tapGestureRecognizer: UITapGestureRecognizer){
         self.navigationController?.popViewController(animated: true)
     }
     
-    func openCameraButton() {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            var imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .camera;
-            imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-        } else {
-            print("No Camera on this Device")
-            let alertController = UIAlertController(title: "No Camera", message: "No Camera on this Device", preferredStyle: UIAlertControllerStyle.alert)
-            
-            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
-            
-            self.present(alertController, animated: true, completion: nil)
-        }
-    }
+//    func openCameraButton() {
+//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+//            var imagePicker = UIImagePickerController()
+//            imagePicker.delegate = self
+//            imagePicker.sourceType = .camera;
+//            imagePicker.allowsEditing = false
+//            self.present(imagePicker, animated: true, completion: nil)
+//        } else {
+//            print("No Camera on this Device")
+//            let alertController = UIAlertController(title: "No Camera", message: "No Camera on this Device", preferredStyle: UIAlertControllerStyle.alert)
+//
+//            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default,handler: nil))
+//
+//            self.present(alertController, animated: true, completion: nil)
+//        }
+//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
@@ -143,12 +182,12 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             //TEST USERDEFAULT
             let defaults = UserDefaults.standard
             let user = usernameSignupTextField.text!
-            defaults.set(usernameSignupTextField.text, forKey: "username" + user)
-            defaults.set(passwordSignupTextField.text, forKey: "password" + user)
-            defaults.set(nameSignupTextField.text, forKey: "name" + user)
-            defaults.set(surnameSignupTextField.text, forKey: "surname" + user)
-            defaults.set(dateOfBirthSignupTextField.text, forKey: "date" + user)
-            defaults.set(citySignupTextField.text, forKey: "city" + user)
+            defaults.set(usernameSignupTextField.text, forKey: "username")
+            defaults.set(passwordSignupTextField.text, forKey: "password")
+            defaults.set(nameSignupTextField.text, forKey: "name")
+            defaults.set(surnameSignupTextField.text, forKey: "surname")
+            defaults.set(dateOfBirthSignupTextField.text, forKey: "date")
+            defaults.set(citySignupTextField.text, forKey: "city")
             
             if photoPickedFlag {
                 saveImage(imageName: usernameSignupTextField.text!)
