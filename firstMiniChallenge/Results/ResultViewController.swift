@@ -21,6 +21,7 @@ class ResultViewController: UIViewController {
     public var longitude = 0.0
     public var cityName = "Results"
     public var travelGuideIndexSelected = 0
+    public var citySelected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
