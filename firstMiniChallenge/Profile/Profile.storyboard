@@ -86,7 +86,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="giovanna" translatesAutoresizingMaskIntoConstraints="NO" id="ZgL-4Q-S02">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-plus-sign-hi" translatesAutoresizingMaskIntoConstraints="NO" id="ZgL-4Q-S02">
                                 <rect key="frame" x="132" y="98" width="110" height="110"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -150,6 +150,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="giovanna" width="202" height="135"/>
+        <image name="blue-plus-sign-hi" width="300" height="299"/>
     </resources>
 </document>
