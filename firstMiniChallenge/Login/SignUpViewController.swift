@@ -20,6 +20,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var dateOfBirthSignupTextField: UITextField!
     @IBOutlet weak var citySignupTextField: UITextField!
     
+    var photoPickedFlag = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
@@ -72,6 +74,8 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicked.layer.cornerRadius = imagePicked.frame.size.width / 2
         imagePicked.clipsToBounds = true
         
+        photoPickedFlag = true
+        
         dismiss(animated:true, completion: nil)
         
     }
@@ -79,6 +83,30 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
     }
+    
+    func saveImage(imageName: String){
+        //create an instance of the FileManager
+        let fileManager = FileManager.default
+        //get the image path
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+        //get the image we took with camera
+        let image = imagePicked.image!
+        //get the PNG data for this image
+        let data = UIImagePNGRepresentation(image)
+        //store it in the document directory    fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+    }
+    
+//    func to get the profile image
+//
+//    func getImage(imageName: String){
+//        let fileManager = FileManager.default
+//        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+//        if fileManager.fileExists(atPath: imagePath){
+//            imageView.image = UIImage(contentsOfFile: imagePath)
+//        }else{
+//            print("Panic! No Image!")
+//        }
+//    }
     
     @IBAction func signupButtonClick(_ sender: UIButton) {
         var flag = false;
@@ -121,7 +149,10 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             defaults.set(surnameSignupTextField.text, forKey: "surname" + user)
             defaults.set(dateOfBirthSignupTextField.text, forKey: "date" + user)
             defaults.set(citySignupTextField.text, forKey: "city" + user)
-
+            
+            if photoPickedFlag {
+                saveImage(imageName: usernameSignupTextField.text!)
+            }
 
             print("Firebase Auth")
 
