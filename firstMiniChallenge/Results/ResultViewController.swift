@@ -11,35 +11,38 @@ import MapKit
 
 class ResultViewController: UIViewController {
 
-    
-    public var test : [(x: CLLocationDegrees ,y: CLLocationDegrees)] = []
     public var actualPosition = CLLocation(latitude: 40.8425211, longitude: 14.2426034)
-    public var citySelected = "Results"
+    public var placeSelected: Place?
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
     
     public var latitude = 0.0
     public var longitude = 0.0
-    public var cityName = ""
+    public var cityName = "Results"
+    public var travelGuideIndexSelected = 0
+    public var citySelected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = citySelected
         
         mapView.delegate = self
         
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.isPrefetchingEnabled = false
+        
         self.tabBarController?.tabBar.isHidden = true
         
-        test.append((x: 40.835211, y: 14.2426034))
-        test.append((x: 40.835456, y: 14.2501048))
-        test.append((x: 40.8357648, y: 14.2461082))
-        test.append((x: 40.839078, y: 14.2485123))
+        if let found = Place.places.first(where: { $0.name == "Paris" }) {
+            placeSelected = found
+            cityName = found.name
+            actualPosition = CLLocation(latitude: found.travelGuides[0].latitude, longitude: found.travelGuides[0].longitude)
+            
+        }
         
+        self.title = cityName
         centerMapOnLocation(location: actualPosition)
     }
     
@@ -60,6 +63,15 @@ class ResultViewController: UIViewController {
         
         self.mapView.removeOverlays(self.mapView.overlays)
         self.mapView.add(circle, level: MKOverlayLevel.aboveRoads)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "" {
+            var destinationViewController = segue.destination as! ProfileViewController
+            
+            destinationViewController.travelGuide = (placeSelected?.travelGuides[travelGuideIndexSelected])!
+        }
+        
     }
     
     
@@ -115,20 +127,31 @@ extension ResultViewController: MKMapViewDelegate {
 extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return test.count
+     //   return travelGuides.count
+        return placeSelected!.travelGuides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "travelguideCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "travelguideCell", for: indexPath) as! TravelGuideCell
         
-        actualPosition = CLLocation(latitude: test[indexPath.row].x, longitude: test[indexPath.row].y)
+        cell.travelGuideImageView.image = placeSelected!.travelGuides[indexPath.row].image
+        cell.descriptionTextView.text = placeSelected!.travelGuides[indexPath.row].description
+        cell.nameLabel.text = placeSelected!.travelGuides[indexPath.row].name
+        cell.locationLabel.text = placeSelected!.travelGuides[indexPath.row].location
+        
+        actualPosition = CLLocation(latitude: placeSelected!.travelGuides[indexPath.row].latitude, longitude: placeSelected!.travelGuides[indexPath.row].longitude)
+        
         centerMapOnLocation(location: actualPosition)
         
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        travelGuideIndexSelected = indexPath.row
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
 }
+

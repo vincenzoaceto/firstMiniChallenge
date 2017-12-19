@@ -48,6 +48,9 @@
 		E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E115713D1FE09F0700E3A96C /* ResultViewController.swift */; };
 		E11571401FE09F9000E3A96C /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E115713F1FE09F9000E3A96C /* Result.storyboard */; };
 		E189D93F1FE82FCF008A6276 /* travelGuideProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E189D93E1FE82FCF008A6276 /* travelGuideProfile.storyboard */; };
+		E189D9411FE8616C008A6276 /* TravelGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E189D9401FE8616C008A6276 /* TravelGuide.swift */; };
+		E189D9431FE86173008A6276 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E189D9421FE86173008A6276 /* Place.swift */; };
+		E189D9451FE86544008A6276 /* TravelGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E189D9441FE86544008A6276 /* TravelGuideCell.swift */; };
 		E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F103091FE19519006CE9BC /* ProfileViewController.swift */; };
 		E1F486FF1FE7C4860012420F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F486FE1FE7C4860012420F /* Payment.storyboard */; };
 		E1F487011FE7C7610012420F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F487001FE7C7610012420F /* PaymentViewController.swift */; };
@@ -125,6 +128,9 @@
 		E115713D1FE09F0700E3A96C /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E115713F1FE09F9000E3A96C /* Result.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		E189D93E1FE82FCF008A6276 /* travelGuideProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = travelGuideProfile.storyboard; sourceTree = "<group>"; };
+		E189D9401FE8616C008A6276 /* TravelGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuide.swift; sourceTree = "<group>"; };
+		E189D9421FE86173008A6276 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		E189D9441FE86544008A6276 /* TravelGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuideCell.swift; sourceTree = "<group>"; };
 		E1F103091FE19519006CE9BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E1F486FE1FE7C4860012420F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		E1F487001FE7C7610012420F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +198,8 @@
 				9CC848371FE648550095A9DC /* Agent.swift */,
 				9CC848391FE64AAD0095A9DC /* Client.swift */,
 				9CBA13481FE6994000A1CD72 /* BaseEntity.swift */,
+				E189D9401FE8616C008A6276 /* TravelGuide.swift */,
+				E189D9421FE86173008A6276 /* Place.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,6 +336,7 @@
 			children = (
 				E115713D1FE09F0700E3A96C /* ResultViewController.swift */,
 				E115713F1FE09F9000E3A96C /* Result.storyboard */,
+				E189D9441FE86544008A6276 /* TravelGuideCell.swift */,
 			);
 			path = Results;
 			sourceTree = "<group>";
@@ -687,13 +696,16 @@
 				9CBA134B1FE69BC900A1CD72 /* DAO.swift in Sources */,
 				74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */,
 				9CBA13491FE6994100A1CD72 /* BaseEntity.swift in Sources */,
+				E189D9411FE8616C008A6276 /* TravelGuide.swift in Sources */,
 				C6F8C3BE1FE3CA8800A4888C /* CustomTableViewCell.swift in Sources */,
 				6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */,
 				C6F8C3741FE1D38E00A4888C /* CosmosDistrib.swift in Sources */,
+				E189D9451FE86544008A6276 /* TravelGuideCell.swift in Sources */,
 				9CC8483A1FE64AAD0095A9DC /* Client.swift in Sources */,
 				9CC848361FE648080095A9DC /* Booking.swift in Sources */,
 				9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */,
 				9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */,
+				E189D9431FE86173008A6276 /* Place.swift in Sources */,
 				9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */,
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */,
 				74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */,

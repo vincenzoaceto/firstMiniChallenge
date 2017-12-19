@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
 
     public var startDate : Date?
     public var endDate : Date?
-    
+    public var travelGuide: TravelGuide = TravelGuide.travelGuides[0]
     
     public var costPerDay = 20
     
@@ -41,7 +41,8 @@ class ProfileViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource  = self
         
-        self.title = "Janet Ghelani"
+        
+        self.title = travelGuide.name
         
         var beginPositionX : CGFloat = 0
         var beginPositionY : CGFloat = 0
@@ -100,7 +101,6 @@ class ProfileViewController: UIViewController {
             }
             
             let destinationVC = segue.destination as! PaymentViewController
-            
             
             destinationVC.totalCost = costPerDay * dateComponents.day!
             destinationVC.startDate = startDateLabel.text!
