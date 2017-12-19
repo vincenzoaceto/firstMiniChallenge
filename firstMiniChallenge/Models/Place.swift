@@ -8,21 +8,6 @@
 
 import Foundation
 import MapKit
-/*
-public Class Place {
-    public var latitude = 0.0
-    public var longitude = 0.0
-    public var name = ""
-    public var travelGuides : [TravelGuide] = []
-    
-    init(latitude: CLLocationDegrees,longitude: CLLocationDegrees, name: String, travelGuides: TravelGuide) {
-        self.latitude = latitude
-        self.longitude = longitude
-        self.name = name
-        self.travelGuides.append(travelGuides)
-    }
-}
-*/
 
 struct Place {
     public var latitude : CLLocationDegrees
