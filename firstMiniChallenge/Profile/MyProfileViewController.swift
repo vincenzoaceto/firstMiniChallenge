@@ -56,16 +56,12 @@ UINavigationControllerDelegate {
         self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
         
         let defaults = UserDefaults.standard
-        let username = defaults.string(forKey: "username")
         if let username = defaults.string(forKey: "username") {
             getImage(imageName: username)
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-//        profileImage.contentMode = .scaleToFill
-//        profileImage.frame = UIScreen.main.bounds
-    }
+
     
     
     override func didReceiveMemoryWarning() {
@@ -91,19 +87,25 @@ UINavigationControllerDelegate {
     }
     
     var newImageView: UIImageView?
+    var changeImageButton: UIButton?
     
     @IBAction func imageTapped(_ sender: UITapGestureRecognizer) {
         let imageView = sender.view as! UIImageView
         newImageView = UIImageView(image: imageView.image)
-        newImageView?.backgroundColor = .black
+        newImageView?.backgroundColor = .white
         newImageView?.contentMode = .scaleAspectFit
         newImageView?.frame = UIScreen.main.bounds
         newImageView?.isUserInteractionEnabled = true
+        changeImageButton = UIButton(frame: CGRect(x: 220.0, y: 33.0, width: 150, height: 30))
+        changeImageButton?.setTitle("Change Image", for: .normal)
+        changeImageButton?.setTitleColor(UIColor(red:0.00, green:0.38, blue:1.00, alpha:1.0), for: .normal)
+        changeImageButton?.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         let tap = UITapGestureRecognizer(target: self, action: #selector(showButton(_:)))
         let pan = UIPanGestureRecognizer(target: self, action: #selector(dismissFullscreenImage(_:)))
         newImageView?.addGestureRecognizer(tap)
         newImageView?.addGestureRecognizer(pan)
         self.view.addSubview(newImageView!)
+        newImageView?.addSubview(changeImageButton!)
         self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = true
         newImageView?.layer.zPosition = CGFloat(2)
@@ -112,15 +114,13 @@ UINavigationControllerDelegate {
     
     
     @objc func showButton(_ sender: UITapGestureRecognizer) {
-        let changeImageButton = UIButton(frame: CGRect(x: 220.0, y: 33.0, width: 150, height: 30))
-        changeImageButton.setTitle("Change Image", for: .normal)
-        changeImageButton.setTitleColor(UIColor(red:0.00, green:0.38, blue:1.00, alpha:1.0), for: .normal)
-        changeImageButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        sender.view?.addSubview(changeImageButton)
+        sender.view?.addSubview(changeImageButton!)
         if sender.view?.backgroundColor == .white {
             sender.view?.backgroundColor = .black
+            changeImageButton?.isHidden = true
         } else {
             sender.view?.backgroundColor = .white
+            changeImageButton?.isHidden = false
         }
         
     }
@@ -132,7 +132,7 @@ UINavigationControllerDelegate {
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
-                imagePicker.sourceType = .camera;
+                imagePicker.sourceType = .camera
                 imagePicker.allowsEditing = false
                 self.present(imagePicker, animated: true, completion: nil)
             }
@@ -142,14 +142,14 @@ UINavigationControllerDelegate {
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
-                imagePicker.sourceType = .photoLibrary;
+                imagePicker.sourceType = .photoLibrary
                 imagePicker.allowsEditing = true
                 self.present(imagePicker, animated: true, completion: nil)
             }
             
         })
         
-        let cancelAction = UIAlertAction(title: "Cancella", style: .cancel, handler: {(alert: UIAlertAction) -> Void in
+        let cancelAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: {(alert: UIAlertAction) -> Void in
             
             
         })
@@ -165,8 +165,13 @@ UINavigationControllerDelegate {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         profileImage.image = image
         newImageView?.image = image
-        dismiss(animated:true, completion: nil)
-        self.view?.removeFromSuperview()
+        let defaults = UserDefaults.standard
+        if let username = defaults.string(forKey: "username") {
+            saveImage(imageName: username)
+        }
+        self.dismiss(animated:true, completion: nil)
+//        self.view?.removeFromSuperview()
+        
     }
     
     
@@ -186,6 +191,21 @@ UINavigationControllerDelegate {
             }
         }
 
+    
+    func saveImage(imageName: String){
+        //create an instance of the FileManager
+        let fileManager = FileManager.default
+        //get the image path
+        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
+        //get the image we took with camera
+        let image = profileImage.image!
+        //get the PNG data for this image
+        let data = UIImagePNGRepresentation(image)
+        //store it in the document directory
+        fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
+    }
+    
+    
     
 }
 
