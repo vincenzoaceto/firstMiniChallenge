@@ -68,7 +68,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         //reviewsNavigationBar.back
         

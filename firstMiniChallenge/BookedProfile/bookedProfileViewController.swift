@@ -13,6 +13,11 @@ class bookedProfileViewController: UIViewController {
     @IBOutlet weak var myPassionsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBAction func goBackToHomepageWhenTapped(_ sender: Any)
+    {
+        performSegue(withIdentifier: "unwindToHomepage", sender: self)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -60,7 +65,7 @@ class bookedProfileViewController: UIViewController {
     }
     
     
-    
+    /*
     @objc
     func test() {
         navigationController?.popToRootViewController(animated: true)
@@ -69,7 +74,7 @@ class bookedProfileViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
       //  navigationController?.popToRootViewController(animated: true)
     }
-    
+    */
     
 
     override func didReceiveMemoryWarning() {

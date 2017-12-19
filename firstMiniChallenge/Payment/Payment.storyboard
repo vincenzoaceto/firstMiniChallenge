@@ -25,7 +25,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="n7L-yp-LeN" kind="show" identifier="bookedTravelGuideProfile" id="BcP-Tv-YAL"/>
+                                    <segue destination="n7L-yp-LeN" kind="presentation" identifier="bookedTravelGuideProfile" id="BcP-Tv-YAL"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundProfileTravelGuide" translatesAutoresizingMaskIntoConstraints="NO" id="kef-us-Bnb">
