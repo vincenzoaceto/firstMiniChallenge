@@ -122,6 +122,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.searchBar.delegate = self
         self.tabBarController?.tabBar.isHidden = false
         
+        
         // Do any additional setup after loading the view.
     }
     
@@ -187,6 +188,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
         isSearch = false;
+        self.tblSearch.reloadData()
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
