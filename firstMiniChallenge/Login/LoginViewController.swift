@@ -80,7 +80,6 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func signinButtonClick(_ sender: UIButton) {
-       
         // For easy login during debugging
         if((usernameLoginTextField.text?.isEmpty)! || (passwordLoginTextField.text?.isEmpty)!) {
             let alertController = UIAlertController(title: "Warning", message: "The field are mandatory", preferredStyle: UIAlertControllerStyle.alert)

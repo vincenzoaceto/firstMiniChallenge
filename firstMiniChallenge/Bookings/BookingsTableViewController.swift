@@ -102,4 +102,14 @@ class BookingsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let sectionData = data[indexPath.section] else {
+            return
+        }
+    
+        self.performSegue(withIdentifier: "bookedProfile", sender: self)
+        
+        print(sectionData[indexPath.row])
+    }
 }
