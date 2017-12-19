@@ -131,9 +131,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Qn-FV-fjd"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="GGS-aR-fCv" appends="YES" id="WcL-4k-pUy"/>
-                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="hSY-IY-eyu"/>
                     <navigationItem key="navigationItem" id="J4G-eh-eWA"/>
@@ -153,8 +150,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2im-GH-48O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="lQx-Tk-HjN"/>
-                <tapGestureRecognizer id="GGS-aR-fCv"/>
             </objects>
             <point key="canvasLocation" x="-180" y="-308.09595202398805"/>
         </scene>

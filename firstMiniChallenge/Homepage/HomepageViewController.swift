@@ -46,7 +46,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Guide4")]
-    var citiesAvailable = [#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
+    var citiesAvailable = [#imageLiteral(resourceName: "Brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
@@ -152,6 +152,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func searchDisappear() {
          tblSearch.delegate = self
+        self.dismiss(animated: true, completion: nil)
         //            if UITableViewDelegate.touched = true {
         //                return (ENTER)
         //
