@@ -35,7 +35,8 @@ class ResultViewController: UIViewController {
         
         self.tabBarController?.tabBar.isHidden = true
         
-        if let found = Place.places.first(where: { $0.name == "Paris" }) {
+        if let found = Place.places.first(where: { $0.name == citySelected
+        }) {
             placeSelected = found
             cityName = found.name
             actualPosition = CLLocation(latitude: found.travelGuides[0].latitude, longitude: found.travelGuides[0].longitude)

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "firstMiniChallenge/Login/LoginViewController.swift"
-            timestampString = "535310619.429203"
+            timestampString = "535384546.774856"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -47,6 +47,54 @@
                   startingLineNumber = "47"
                   endingLineNumber = "47"
                   offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "firstMiniChallenge/Results/ResultViewController.swift"
+            timestampString = "535386748.063189"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "firstMiniChallenge.ResultViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "firstMiniChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmoreano/Desktop/iOS%20Academy/Challenges/4th%20Challenge/firstMiniChallenge/firstMiniChallenge/Results/ResultViewController.swift"
+                  timestampString = "535390746.273491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "1202">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (firstMiniChallenge.Place) -&gt; Swift.Bool in firstMiniChallenge.ResultViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "firstMiniChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/danielmoreano/Desktop/iOS%20Academy/Challenges/4th%20Challenge/firstMiniChallenge/firstMiniChallenge/Results/ResultViewController.swift"
+                  timestampString = "535390746.275143"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "65">
                </Location>
             </Locations>
          </BreakpointContent>

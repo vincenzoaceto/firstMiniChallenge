@@ -29,11 +29,14 @@ class ProfileViewController: UIViewController {
     public var costPerDay = 20
     
     private var isStartDate = true
+    public var travelGuideSelectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource  = self
+        
+        travelGuide = TravelGuide.travelGuides[travelGuideSelectedIndex]
     }
     
     override func viewDidAppear(_ animated: Bool) {
