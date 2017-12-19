@@ -25,6 +25,10 @@
 		74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DB86C71FDE904900106C89 /* HomepageViewController.swift */; };
 		74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */; };
 		7804F9868C77CBC76C836FAD /* Pods_firstMiniChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9B32C2673244DD3D33B482 /* Pods_firstMiniChallenge.framework */; };
+		95BBCB351FE9213D002D732A /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95BBCB341FE9213D002D732A /* Profile.storyboard */; };
+		95BBCB391FE92241002D732A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCB381FE92241002D732A /* MyProfileViewController.swift */; };
+		95BBCB3B1FE92BB5002D732A /* MyProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BBCB3A1FE92BB5002D732A /* MyProfileTableViewCell.swift */; };
+		9C12653A1FE574F500BBFD7B /* BookingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */; };
 		9C12653C1FE5751800BBFD7B /* Bookings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C12653B1FE5751800BBFD7B /* Bookings.storyboard */; };
 		9C5C79191FE8E50000E6B54F /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C79181FE8E50000E6B54F /* Timeline.swift */; };
 		9C5C791B1FE8E55F00E6B54F /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C791A1FE8E55F00E6B54F /* HeaderTableViewCell.swift */; };
@@ -108,6 +112,10 @@
 		74E57D351FE182F600D1A6C9 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8A7D6A6ADB323A4A417BAADE /* Pods_firstMiniChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstMiniChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91953C69E6ABA57FEFD923D9 /* Pods-firstMiniChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstMiniChallengeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-firstMiniChallengeUITests/Pods-firstMiniChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		95BBCB341FE9213D002D732A /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		95BBCB381FE92241002D732A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		95BBCB3A1FE92BB5002D732A /* MyProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9C1265391FE574F500BBFD7B /* BookingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewController.swift; sourceTree = "<group>"; };
 		9C12653B1FE5751800BBFD7B /* Bookings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bookings.storyboard; sourceTree = "<group>"; };
 		9C5C79181FE8E50000E6B54F /* Timeline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
 		9C5C791A1FE8E55F00E6B54F /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -243,6 +251,7 @@
 		74DB86951FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				95BBCB331FE92112002D732A /* Profile */,
 				E189D93D1FE82FB4008A6276 /* travelGuideProfile */,
 				9C731C9E1FE80D3E0080F725 /* Util */,
 				74DA44D71FE7FBD8009E8AFB /* Commons */,
@@ -293,6 +302,16 @@
 				6B6855AC1FE6D0D800E073C0 /* TableViewCell.swift */,
 			);
 			path = Homepage;
+			sourceTree = "<group>";
+		};
+		95BBCB331FE92112002D732A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				95BBCB341FE9213D002D732A /* Profile.storyboard */,
+				95BBCB3A1FE92BB5002D732A /* MyProfileTableViewCell.swift */,
+				95BBCB381FE92241002D732A /* MyProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		9C1265381FE574B500BBFD7B /* Bookings */ = {
@@ -508,6 +527,7 @@
 				7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */,
 				C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */,
 				74DB86C51FDE8DE600106C89 /* Homepage.storyboard in Resources */,
+				95BBCB351FE9213D002D732A /* Profile.storyboard in Resources */,
 				74DB86A11FDE7C3F00106C89 /* LaunchScreen.storyboard in Resources */,
 				E1F487041FE7D9120012420F /* bookedProfile.storyboard in Resources */,
 				74DB869E1FDE7C3F00106C89 /* Assets.xcassets in Resources */,
@@ -712,6 +732,8 @@
 				E189D9451FE86544008A6276 /* TravelGuideCell.swift in Sources */,
 				9CC8483A1FE64AAD0095A9DC /* Client.swift in Sources */,
 				9CC848361FE648080095A9DC /* Booking.swift in Sources */,
+				95BBCB3B1FE92BB5002D732A /* MyProfileTableViewCell.swift in Sources */,
+				95BBCB391FE92241002D732A /* MyProfileViewController.swift in Sources */,
 				9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */,
 				9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */,
 				E189D9431FE86173008A6276 /* Place.swift in Sources */,

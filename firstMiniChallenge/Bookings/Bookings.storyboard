@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -55,10 +55,23 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bookings" id="tRO-ie-je7"/>
+                    <connections>
+                        <segue destination="FIP-LY-GkN" kind="push" identifier="bookedProfile" id="Ck9-f9-mOh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="31C-r8-HhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="341.60000000000002" y="871.21439280359823"/>
+        </scene>
+        <!--bookedProfile-->
+        <scene sceneID="1NC-wW-bt2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="bookedProfile" id="FIP-LY-GkN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="d5I-P3-eWE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1r4-q6-7vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165" y="886"/>
         </scene>
     </scenes>
 </document>

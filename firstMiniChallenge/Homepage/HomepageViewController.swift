@@ -42,9 +42,11 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     @IBOutlet weak var CitiesAvailableCollectionView: UICollectionView!
     
+   
+    
     
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Guide4")]
-    var citiesAvailable = [#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
+    var citiesAvailable = [#imageLiteral(resourceName: "Brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
@@ -96,7 +98,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             
         } else if collectionView.tag == 2{
-            performSegue(withIdentifier:  guideArray[indexPath.row], sender: nil)
+//            performSegue(withIdentifier:  guideArray[indexPath.row], sender: nil)
             
         }
         
@@ -126,8 +128,37 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.tabBarController?.tabBar.isHidden = false
         
         
+        let backTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        self.tblSearch.isUserInteractionEnabled = true
+        self.tblSearch.addGestureRecognizer(backTapGestureRecognizer)
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    /*
+    func imageTapped(_ gestureRecognizer: UIGestureRecognizer,
+                                    shouldReceive touch: UITouch) -> Bool {
+        searchDisappear()
+        return true
+    }
+ 
+*/
+        
+        
+   @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
+         searchDisappear()
+    }
+    
+    func searchDisappear() {
+         tblSearch.delegate = self
+        self.dismiss(animated: true, completion: nil)
+        //            if UITableViewDelegate.touched = true {
+        //                return (ENTER)
+        //
+        
+    }
+   
     
     //MARK: UITableViewDelegate
     
