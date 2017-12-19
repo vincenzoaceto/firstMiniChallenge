@@ -62,7 +62,7 @@
                                     <color key="titleColor" red="0.28235294119999998" green="0.3294117647" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ww0-0v-D7C" kind="presentation" id="Qll-vV-dgE"/>
+                                    <segue destination="Ww0-0v-D7C" kind="presentation" animates="NO" id="Qll-vV-dgE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Memories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyo-kp-nOg">
