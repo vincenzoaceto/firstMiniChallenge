@@ -110,7 +110,9 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     var arrCity = ["Agra","Rome","Paris"];
     var arrFilter:[String] = []
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
