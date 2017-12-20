@@ -136,18 +136,6 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         fileManager.createFile(atPath: imagePath as String, contents: data, attributes: nil)
     }
     
-//    func to get the profile image
-//
-//    func getImage(imageName: String){
-//        let fileManager = FileManager.default
-//        let imagePath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString).appendingPathComponent(imageName)
-//        if fileManager.fileExists(atPath: imagePath){
-//            imageView.image = UIImage(contentsOfFile: imagePath)
-//        }else{
-//            print("Panic! No Image!")
-//        }
-//    }
-    
     @IBAction func signupButtonClick(_ sender: UIButton) {
         var flag = false;
         var field = ""
