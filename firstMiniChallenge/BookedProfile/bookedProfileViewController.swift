@@ -64,17 +64,6 @@ class bookedProfileViewController: UIViewController {
     }
     
     
-    /*
-    @objc
-    func test() {
-        navigationController?.popToRootViewController(animated: true)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-      //  navigationController?.popToRootViewController(animated: true)
-    }
-    */
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -86,11 +75,12 @@ class bookedProfileViewController: UIViewController {
 extension bookedProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return 10
+            return Memory.memories.count
         }
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath) as! MemoryCell
             
+            cell.memoryImageView.image = Memory.memories[indexPath.row].image
             
             return cell
         }
