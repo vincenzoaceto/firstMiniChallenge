@@ -11,8 +11,8 @@ import UIKit
 class MyProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
 
-    var data: [String] = ["Username","Email","Date of Birth"]
-    var oggetti: [String] = ["GiovannaRossi92","giovanna@gmail.com","10/02/1990"]
+    var data: [String] = ["Email","Password","Date of Birth"]
+    var oggetti: [String] = []
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var citta: UILabel!
@@ -34,10 +34,19 @@ UINavigationControllerDelegate {
         layer.startPoint = CGPoint(x:0.0, y:0.0)
         layer.endPoint = CGPoint(x:0.9, y:0.9)
         view.layer.addSublayer(layer)
-        citta.text = "NAPOLI, ITALY"
+        let defaults = UserDefaults.standard
+        oggetti.append(defaults.string(forKey: "username")!)
+        let password = defaults.string(forKey: "password")!
+        var securePassword: String = ""
+        for _ in password {
+            securePassword.append("*")
+        }
+        oggetti.append(securePassword)
+        oggetti.append(defaults.string(forKey: "date")!)
+        citta.text = defaults.string(forKey: "city")!.uppercased()
         citta.textColor = UIColor(hue: 0, saturation: 0, brightness: 100, alpha: 100)
         citta.layer.zPosition = CGFloat(2)
-        nome.text = "Giovanna Rossi"
+        nome.text = "\(defaults.string(forKey: "name")!) \(defaults.string(forKey: "surname")!)"
         nome.textColor = UIColor(hue: 0, saturation: 0, brightness: 100, alpha: 100)
         nome.layer.zPosition = CGFloat(2)
         profileImage.layer.zPosition = CGFloat(2)
@@ -55,14 +64,11 @@ UINavigationControllerDelegate {
         self.tabBarController?.tabBar.items![2].image = #imageLiteral(resourceName: "avatar")
         self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
         
-        let defaults = UserDefaults.standard
+        
         if let username = defaults.string(forKey: "username") {
             getImage(imageName: username)
         }
     }
-    
-
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -128,7 +134,7 @@ UINavigationControllerDelegate {
     
     @objc func buttonAction(_ sender: UITapGestureRecognizer) {
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let action1 = UIAlertAction(title: "Fotocamera", style: .default, handler: {(alert: UIAlertAction) -> Void in
+        let action1 = UIAlertAction(title: "Camera", style: .default, handler: {(alert: UIAlertAction) -> Void in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
@@ -138,7 +144,7 @@ UINavigationControllerDelegate {
             }
             
         })
-        let action2 = UIAlertAction(title: "Libreria foto e video", style: .default, handler: {(alert: UIAlertAction) -> Void in
+        let action2 = UIAlertAction(title: "Gallery", style: .default, handler: {(alert: UIAlertAction) -> Void in
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
@@ -170,13 +176,12 @@ UINavigationControllerDelegate {
             saveImage(imageName: username)
         }
         self.dismiss(animated:true, completion: nil)
-//        self.view?.removeFromSuperview()
         
     }
     
     
     @objc func dismissFullscreenImage(_ sender: UIPanGestureRecognizer) {
-        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.isNavigationBarHidden = true
         self.tabBarController?.tabBar.isHidden = false
         sender.view?.removeFromSuperview()
     }

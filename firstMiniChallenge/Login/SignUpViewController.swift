@@ -40,7 +40,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        let action1 = UIAlertAction(title: "Fotocamera", style: .default, handler: {(alert: UIAlertAction) -> Void in
+        let action1 = UIAlertAction(title: "Camera", style: .default, handler: {(alert: UIAlertAction) -> Void in
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 var imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
@@ -57,7 +57,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             
         })
-        let action2 = UIAlertAction(title: "Libreria foto e video", style: .default, handler: {(alert: UIAlertAction) -> Void in
+        let action2 = UIAlertAction(title: "Gallery", style: .default, handler: {(alert: UIAlertAction) -> Void in
             if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
