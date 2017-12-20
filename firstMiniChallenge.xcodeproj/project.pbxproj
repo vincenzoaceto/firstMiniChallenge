@@ -58,6 +58,8 @@
 		E189D9411FE8616C008A6276 /* TravelGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = E189D9401FE8616C008A6276 /* TravelGuide.swift */; };
 		E189D9431FE86173008A6276 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = E189D9421FE86173008A6276 /* Place.swift */; };
 		E189D9451FE86544008A6276 /* TravelGuideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E189D9441FE86544008A6276 /* TravelGuideCell.swift */; };
+		E1A96DC11FEA6CF80022B324 /* MemoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A96DC01FEA6CF80022B324 /* MemoryCell.swift */; };
+		E1A96DC31FEA6DA30022B324 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A96DC21FEA6DA30022B324 /* Memory.swift */; };
 		E1F1030A1FE19519006CE9BC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F103091FE19519006CE9BC /* ProfileViewController.swift */; };
 		E1F486FF1FE7C4860012420F /* Payment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F486FE1FE7C4860012420F /* Payment.storyboard */; };
 		E1F487011FE7C7610012420F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1F487001FE7C7610012420F /* PaymentViewController.swift */; };
@@ -145,6 +147,8 @@
 		E189D9401FE8616C008A6276 /* TravelGuide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuide.swift; sourceTree = "<group>"; };
 		E189D9421FE86173008A6276 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		E189D9441FE86544008A6276 /* TravelGuideCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuideCell.swift; sourceTree = "<group>"; };
+		E1A96DC01FEA6CF80022B324 /* MemoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MemoryCell.swift; path = firstMiniChallenge/TravelGuideProfile/MemoryCell.swift; sourceTree = SOURCE_ROOT; };
+		E1A96DC21FEA6DA30022B324 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		E1F103091FE19519006CE9BC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		E1F486FE1FE7C4860012420F /* Payment.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Payment.storyboard; sourceTree = "<group>"; };
 		E1F487001FE7C7610012420F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -214,6 +218,7 @@
 				9CBA13481FE6994000A1CD72 /* BaseEntity.swift */,
 				E189D9401FE8616C008A6276 /* TravelGuide.swift */,
 				E189D9421FE86173008A6276 /* Place.swift */,
+				E1A96DC21FEA6DA30022B324 /* Memory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -375,6 +380,7 @@
 			children = (
 				E189D93E1FE82FCF008A6276 /* travelGuideProfile.storyboard */,
 				E1F103091FE19519006CE9BC /* ProfileViewController.swift */,
+				E1A96DC01FEA6CF80022B324 /* MemoryCell.swift */,
 			);
 			path = travelGuideProfile;
 			sourceTree = "<group>";
@@ -743,6 +749,7 @@
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionView.swift in Sources */,
 				74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */,
 				9C5C79251FE8E62500E6B54F /* BookingsTableViewController.swift in Sources */,
+				E1A96DC31FEA6DA30022B324 /* Memory.swift in Sources */,
 				9C5C79191FE8E50000E6B54F /* Timeline.swift in Sources */,
 				C6F8C3721FE19A8000A4888C /* ReviewsViewController.swift in Sources */,
 				74DB86971FDE7C3F00106C89 /* AppDelegate.swift in Sources */,
@@ -755,6 +762,7 @@
 				747DB42A1FE2AC8100A6B920 /* User.swift in Sources */,
 				9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */,
 				7485E02D1FE939D700AB460D /* Constants.swift in Sources */,
+				E1A96DC11FEA6CF80022B324 /* MemoryCell.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

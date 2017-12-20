@@ -30,7 +30,9 @@ class ProfileViewController: UIViewController {
     
     private var isStartDate = true
     public var travelGuideSelectedIndex = 0
-    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
@@ -138,11 +140,13 @@ class ProfileViewController: UIViewController {
 extension ProfileViewController: UICollectionViewDataSource,UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        
+        return Memory.memories.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath) as! MemoryCell
         
+        cell.memoryImageView.image = Memory.memories[indexPath.row].image
         
         return cell
     }
