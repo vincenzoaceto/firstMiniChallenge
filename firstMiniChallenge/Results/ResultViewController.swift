@@ -21,7 +21,7 @@ class ResultViewController: UIViewController {
     public var longitude = 0.0
     public var cityName = "Results"
     public var travelGuideIndexSelected = 0
-    public var citySelected = ""
+    public var citySelected = "Rome"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +35,7 @@ class ResultViewController: UIViewController {
         
         self.tabBarController?.tabBar.isHidden = true
         
-        if let found = Place.places.first(where: { $0.name == citySelected
-        }) {
+        if let found = Place.places.first(where: { $0.name == citySelected }) {
             placeSelected = found
             cityName = found.name
             actualPosition = CLLocation(latitude: found.travelGuides[0].latitude, longitude: found.travelGuides[0].longitude)
