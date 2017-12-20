@@ -35,18 +35,46 @@ UINavigationControllerDelegate {
         layer.endPoint = CGPoint(x:0.9, y:0.9)
         view.layer.addSublayer(layer)
         let defaults = UserDefaults.standard
-        oggetti.append(defaults.string(forKey: "username")!)
-        let password = defaults.string(forKey: "password")!
-        var securePassword: String = ""
-        for _ in password {
-            securePassword.append("*")
+        
+        if let user = defaults.string(forKey: "username") {
+            oggetti.append(user)
+        } else {
+            oggetti.append("TEST")
         }
-        oggetti.append(securePassword)
-        oggetti.append(defaults.string(forKey: "date")!)
-        citta.text = defaults.string(forKey: "city")!.uppercased()
+        
+        if let password = defaults.string(forKey: "password") {
+            var securePassword: String = ""
+            for _ in password {
+                securePassword.append("*")
+            }
+            oggetti.append(securePassword)
+        } else {
+            oggetti.append("PASSWORD")
+        }
+        
+        if let date = defaults.string(forKey: "date") {
+            oggetti.append(date)
+        } else {
+            oggetti.append("DATE")
+        }
+        if let city = defaults.string(forKey: "city"){
+            citta.text = city.uppercased()
+        } else {
+            citta.text = "CITTA'"
+
+        }
         citta.textColor = UIColor(hue: 0, saturation: 0, brightness: 100, alpha: 100)
         citta.layer.zPosition = CGFloat(2)
-        nome.text = "\(defaults.string(forKey: "name")!) \(defaults.string(forKey: "surname")!)"
+        
+        if let nameSurname = defaults.string(forKey: "name") {
+             if let surname = defaults.string(forKey: "surname") {
+                nome.text = nameSurname + " " + surname
+             } else {
+                nome.text = "NAME SURNAME"
+            }
+        } else {
+            nome.text = "NAME SURNAME"
+        }
         nome.textColor = UIColor(hue: 0, saturation: 0, brightness: 100, alpha: 100)
         nome.layer.zPosition = CGFloat(2)
         profileImage.layer.zPosition = CGFloat(2)

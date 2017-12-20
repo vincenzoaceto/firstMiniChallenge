@@ -74,8 +74,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-FL-d25">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DcJ-FL-d25">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="My Profile" id="tyT-Gc-2TT">
                                         <barButtonItem key="rightBarButtonItem" title="Logout" id="P5a-qD-SDz">
@@ -96,8 +97,9 @@
                                     <outletCollection property="gestureRecognizers" destination="Wb0-fD-0nt" appends="YES" id="DxD-u5-NHb"/>
                                 </connections>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAPOLI, ITALY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNQ-eW-vAg">
-                                <rect key="frame" x="124" y="273" width="112" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NAPOLI, ITALY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNQ-eW-vAg">
+                                <rect key="frame" x="132" y="273" width="112" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -107,20 +109,14 @@
                         <constraints>
                             <constraint firstItem="ZgL-4Q-S02" firstAttribute="leading" secondItem="krQ-xo-6w1" secondAttribute="leading" constant="132" id="30C-qx-5dP"/>
                             <constraint firstItem="krQ-xo-6w1" firstAttribute="trailing" secondItem="ZgL-4Q-S02" secondAttribute="trailing" constant="133" id="F2j-OW-TbZ"/>
-                            <constraint firstItem="RNQ-eW-vAg" firstAttribute="top" secondItem="qLD-6N-0zE" secondAttribute="bottom" constant="8" id="R9O-GD-FMo"/>
                             <constraint firstAttribute="bottomMargin" secondItem="pMk-td-tjq" secondAttribute="bottom" constant="30" id="S9p-3u-CBB"/>
-                            <constraint firstItem="DcJ-FL-d25" firstAttribute="leading" secondItem="pMk-td-tjq" secondAttribute="leading" id="a8Q-nf-hcC"/>
                             <constraint firstItem="pMk-td-tjq" firstAttribute="top" secondItem="qLD-6N-0zE" secondAttribute="bottom" constant="50" id="aaz-OP-q3B"/>
-                            <constraint firstItem="RNQ-eW-vAg" firstAttribute="leading" secondItem="krQ-xo-6w1" secondAttribute="leading" constant="124" id="cxK-Ra-nJs"/>
                             <constraint firstItem="pMk-td-tjq" firstAttribute="leading" secondItem="krQ-xo-6w1" secondAttribute="leading" id="ezk-Mx-4fM"/>
                             <constraint firstItem="qLD-6N-0zE" firstAttribute="centerX" secondItem="TLW-fL-9qy" secondAttribute="centerX" id="ic1-dK-kzp"/>
-                            <constraint firstItem="ZgL-4Q-S02" firstAttribute="top" secondItem="DcJ-FL-d25" secondAttribute="bottom" constant="34" id="lEP-UF-P8i"/>
                             <constraint firstItem="pMk-td-tjq" firstAttribute="top" secondItem="TLW-fL-9qy" secondAttribute="top" constant="315" id="nqY-Jk-rja"/>
                             <constraint firstItem="qLD-6N-0zE" firstAttribute="top" secondItem="ZgL-4Q-S02" secondAttribute="bottom" constant="17" id="pkl-bm-yaC"/>
-                            <constraint firstItem="DcJ-FL-d25" firstAttribute="top" secondItem="krQ-xo-6w1" secondAttribute="top" id="tOl-Rm-g5X"/>
                             <constraint firstItem="krQ-xo-6w1" firstAttribute="trailing" secondItem="pMk-td-tjq" secondAttribute="trailing" constant="15" id="ujR-yC-VIf"/>
                             <constraint firstItem="qLD-6N-0zE" firstAttribute="leading" secondItem="krQ-xo-6w1" secondAttribute="leading" constant="16" id="xOo-vI-j00"/>
-                            <constraint firstItem="DcJ-FL-d25" firstAttribute="centerX" secondItem="RNQ-eW-vAg" secondAttribute="centerX" constant="7.5" id="yU3-iE-bQY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="krQ-xo-6w1"/>
                     </view>
