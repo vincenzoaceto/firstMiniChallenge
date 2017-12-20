@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TravelGuidesCollectionView: UICollectionViewCell {
+class TravelGuidesCollectionCell: UICollectionViewCell {
     
     
     
@@ -18,6 +18,21 @@ class TravelGuidesCollectionView: UICollectionViewCell {
     @IBOutlet weak var guidesImage: UIImageView!
     
     @IBOutlet weak var guidesInfo: UILabel!
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.guidesImage.alpha = 0.5
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        self.guidesImage.alpha = 1.0
+    }
+    
+    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesCancelled(touches, with: event)
+        self.guidesImage.alpha = 1.0
+    }
     
 //   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //

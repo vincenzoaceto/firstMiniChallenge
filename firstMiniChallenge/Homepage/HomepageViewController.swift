@@ -41,7 +41,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var travelGuidesCollectionView: UICollectionView!
     
     
-    @IBOutlet weak var CitiesAvailableCollectionView: UICollectionView!
+    @IBOutlet weak var citiesAvailableCollectionView: UICollectionView!
     
    
     
@@ -73,7 +73,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             
         }else {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelGuidesIdentifier", for: indexPath) as! TravelGuidesCollectionView
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelGuidesIdentifier", for: indexPath) as! TravelGuidesCollectionCell
             
 //            print(travelGuides.count)
 //            print(indexPath.row)
@@ -134,6 +134,14 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.tabBarController?.tabBar.items![2].image = #imageLiteral(resourceName: "avatar")
         self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
         self.tabBarController?.tabBar.items![2].title = "Profile"
+        
+        for gestureRecognizer in self.citiesAvailableCollectionView.gestureRecognizers! {
+            gestureRecognizer.delaysTouchesBegan = false
+        }
+        for gestureRecognizer in self.travelGuidesCollectionView.gestureRecognizers! {
+            gestureRecognizer.delaysTouchesBegan = false
+        }
+        
         
         // Do any additional setup after loading the view.
     }
