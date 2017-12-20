@@ -4,7 +4,8 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +23,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" contentMode="center" fixedFrame="YES" bounces="NO" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kRu-hJ-WqD">
-                                <rect key="frame" x="0.0" y="307" width="375" height="360"/>
+                                <rect key="frame" x="26" y="316" width="323" height="338"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Ns-YL-9Fl">
@@ -39,9 +40,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="319.5" height="330"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Guide1" translatesAutoresizingMaskIntoConstraints="NO" id="am4-wy-DD0">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Guide1" translatesAutoresizingMaskIntoConstraints="NO" id="am4-wy-DD0">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="181"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="320" id="E6n-ZH-pKx"/>
+                                                        <constraint firstAttribute="height" constant="181" id="uY7-0s-QHN"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVa-8d-qCz">
                                                     <rect key="frame" x="0.0" y="247" width="312" height="83"/>
@@ -51,9 +55,8 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-qm-zyS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsn-qm-zyS">
                                                     <rect key="frame" x="20" y="190" width="280" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -69,6 +72,21 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <rect key="contentStretch" x="0.20000000000000001" y="0.0" width="1" height="1"/>
+                                        <constraints>
+                                            <constraint firstItem="xsn-qm-zyS" firstAttribute="leading" secondItem="to1-w3-4MN" secondAttribute="leadingMargin" constant="12" id="3de-jG-K6e"/>
+                                            <constraint firstAttribute="trailing" secondItem="am4-wy-DD0" secondAttribute="trailing" id="7gL-cZ-UhE"/>
+                                            <constraint firstItem="am4-wy-DD0" firstAttribute="top" secondItem="to1-w3-4MN" secondAttribute="top" id="FT1-uH-RMw"/>
+                                            <constraint firstAttribute="trailing" secondItem="am4-wy-DD0" secondAttribute="trailing" id="LQ1-0E-mbJ"/>
+                                            <constraint firstItem="am4-wy-DD0" firstAttribute="leading" secondItem="to1-w3-4MN" secondAttribute="leading" id="Nke-7o-WWX"/>
+                                            <constraint firstItem="xsn-qm-zyS" firstAttribute="top" secondItem="am4-wy-DD0" secondAttribute="bottom" constant="9" id="NzV-r8-Wju"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xsn-qm-zyS" secondAttribute="trailing" constant="12" id="R8X-jk-a9D"/>
+                                            <constraint firstItem="am4-wy-DD0" firstAttribute="leading" secondItem="to1-w3-4MN" secondAttribute="leading" id="SmC-tx-0q6"/>
+                                            <constraint firstItem="am4-wy-DD0" firstAttribute="top" secondItem="to1-w3-4MN" secondAttribute="top" id="hbw-TM-dbQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="am4-wy-DD0" secondAttribute="trailing" id="mJV-af-GsZ"/>
+                                            <constraint firstItem="xsn-qm-zyS" firstAttribute="top" secondItem="am4-wy-DD0" secondAttribute="bottom" constant="9" id="qi3-iC-Kdy"/>
+                                            <constraint firstItem="am4-wy-DD0" firstAttribute="top" secondItem="to1-w3-4MN" secondAttribute="top" id="vcX-Xr-nqh"/>
+                                            <constraint firstItem="am4-wy-DD0" firstAttribute="leading" secondItem="to1-w3-4MN" secondAttribute="leading" id="xLN-nH-v43"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
