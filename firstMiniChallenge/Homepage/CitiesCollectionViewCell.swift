@@ -13,6 +13,7 @@ class CitiesCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var citiesImageView: UIImageView!
     
+    @IBOutlet weak var citiesLabel: UILabel!
     
     
 }

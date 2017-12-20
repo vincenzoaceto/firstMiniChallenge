@@ -8,6 +8,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLights.ttc">
+            <string>HelveticaNeue-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--XploreEasy-->
         <scene sceneID="Id3-k6-OPU">
@@ -18,40 +23,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleAspectFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LiA-5W-vuG">
-                                <rect key="frame" x="0.0" y="421" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="444" width="375" height="174"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ctF-x4-nu5">
-                                    <size key="itemSize" width="130" height="130"/>
+                                    <size key="itemSize" width="130" height="178"/>
                                     <size key="headerReferenceSize" width="10" height="0.0"/>
                                     <size key="footerReferenceSize" width="10" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CitiesIdentifier" id="g1s-6P-KFh" userLabel="Cities Available Collection View" customClass="CitiesCollectionViewCell" customModule="firstMiniChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="5" width="130" height="130"/>
+                                        <rect key="frame" x="10" y="-2" width="130" height="178"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sT0-so-FBj">
+                                                    <rect key="frame" x="0.0" y="112" width="130" height="48"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ngj-UM-0JZ" userLabel="citiesImageView">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
                                             <outlet property="citiesImageView" destination="ngj-UM-0JZ" id="9P7-I1-RZB"/>
+                                            <outlet property="citiesLabel" destination="sT0-so-FBj" id="Kpq-Rg-2vU"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Uvm-ON-jN0">
-                                    <rect key="frame" x="0.0" y="0.0" width="10" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="174"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0Yh-GI-ave">
-                                    <rect key="frame" x="140" y="0.0" width="10" height="140"/>
+                                    <rect key="frame" x="140" y="0.0" width="10" height="174"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>
@@ -60,14 +73,14 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cities with step free access" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVP-o5-6A0">
-                                <rect key="frame" x="16" y="392" width="210" height="21"/>
+                                <rect key="frame" x="16" y="399" width="210" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Best guides around me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLq-05-nWa">
-                                <rect key="frame" x="16" y="183" width="177" height="21"/>
+                                <rect key="frame" x="16" y="169" width="177" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -82,41 +95,50 @@
                                 </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleAspectFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eeK-YN-ChO">
-                                <rect key="frame" x="0.0" y="225" width="375" height="140"/>
+                                <rect key="frame" x="0.0" y="198" width="375" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mNX-AJ-tIo">
-                                    <size key="itemSize" width="130" height="130"/>
+                                    <size key="itemSize" width="130" height="178"/>
                                     <size key="headerReferenceSize" width="10" height="0.0"/>
                                     <size key="footerReferenceSize" width="10" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TravelGuidesIdentifier" id="UWn-2w-KW7" customClass="TravelGuidesCollectionView" customModule="firstMiniChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="5" width="130" height="130"/>
+                                        <rect key="frame" x="10" y="9.5" width="130" height="178"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="130" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="130" height="178"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wy5-hj-ekp" userLabel="Label">
+                                                    <rect key="frame" x="0.0" y="118" width="130" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dtL-if-6N1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="travelGuidesCollectionView" destination="dtL-if-6N1" id="1ca-Ug-3Cv"/>
+                                            <outlet property="guidesImage" destination="dtL-if-6N1" id="6tW-hi-4jn"/>
+                                            <outlet property="guidesInfo" destination="wy5-hj-ekp" id="tbC-af-oAA"/>
                                             <segue destination="VV5-6n-j4z" kind="show" identifier="Guide1" id="0Tl-Xq-qeK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sHS-KR-YhU">
-                                    <rect key="frame" x="0.0" y="0.0" width="10" height="140"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="10" height="197"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wV6-Ma-ANo">
-                                    <rect key="frame" x="140" y="0.0" width="10" height="140"/>
+                                    <rect key="frame" x="140" y="0.0" width="10" height="197"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionReusableView>
                                 <connections>
@@ -160,7 +182,7 @@
                         <segue destination="Z8k-zn-mra" kind="show" identifier="Guide2" id="9z8-6x-aAn"/>
                         <segue destination="opS-tR-KDB" kind="show" identifier="Guide3" id="Ray-nu-p3J"/>
                         <segue destination="lgJ-mn-gNz" kind="show" identifier="Agra" id="BFf-BN-58K"/>
-                        <segue destination="yK6-8d-dG3" kind="show" identifier="Guide4" id="qgz-Z8-wno"/>
+                        <segue destination="yK6-8d-dG3" kind="show" identifier="Don" id="qgz-Z8-wno"/>
                         <segue destination="ok0-hk-Bdn" kind="show" identifier="Rome" id="jtD-4D-0WT"/>
                         <segue destination="yjG-6l-k4Q" kind="show" identifier="goToResult" id="JRm-Jf-Mds"/>
                     </connections>
@@ -196,7 +218,7 @@
         <!--travelGuideProfile-->
         <scene sceneID="bl4-ia-tqr">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide4" storyboardName="travelGuideProfile" id="yK6-8d-dG3" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Don" storyboardName="travelGuideProfile" id="yK6-8d-dG3" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x96-QQ-VHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="568" y="-510"/>

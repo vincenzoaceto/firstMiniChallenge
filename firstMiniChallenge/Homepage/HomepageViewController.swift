@@ -15,6 +15,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     {
         
     }
+ 
     
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
@@ -45,8 +46,11 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
    
     
     
-    var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Guide4")]
+    var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Don")]
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
+    var guideReviews = ["Paula Andrade \n20€/day \nReviews:★★★☆☆ ","Andrea Pugliesi \n15€/day \nReviews:★★★★☆   15€/day   ","Roberta Luiggi\n20€/day \nReviews:★★★★☆ ","Ton Scott\n15€/day \nReviews:★★★★★ "]
+    var cityName = ["Agra","Rome","Paris"]
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
@@ -62,6 +66,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitiesIdentifier", for: indexPath) as! CitiesCollectionViewCell
             cell.citiesImageView.image = citiesAvailable[indexPath.row]
+            cell.citiesLabel.text = cityName[indexPath.row]
             //            cell.event = sentencesForIcons[indexPath.row]
             
             return cell
@@ -70,9 +75,12 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelGuidesIdentifier", for: indexPath) as! TravelGuidesCollectionView
             
-            print(travelGuides.count)
-            print(indexPath.row)
-            cell.travelGuidesCollectionView.image = travelGuides[indexPath.row]
+//            print(travelGuides.count)
+//            print(indexPath.row)
+            
+            cell.guidesImage.image = travelGuides[indexPath.row]
+            cell.guidesInfo.text = guideReviews[indexPath.row]
+            
             
             return cell
             
@@ -89,7 +97,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     var cityArray = ["Agra", "Rome", "Paris"]
-    var guideArray = ["Guide1", "Guide2", "Guide3", "Guide4"]
+    var guideArray = ["Guide1", "Guide2", "Guide3", "Don"]
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 1 {
