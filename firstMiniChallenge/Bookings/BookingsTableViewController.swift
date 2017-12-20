@@ -14,22 +14,15 @@ class BookingsTableViewController: UITableViewController {
     
     // Name, Surname, Date, Location, Profile Image
     let data:[Int: [(String, String, String?, String?, String?)]] = [0:[
-        ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-        ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-        ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-        ("Maria", "Corsa", "10/11/17", "Milan", "Guide1")
+        ("Maria", "Corsa", "2/1/18", "Rome", "Guide1"),
+        ("Cecil", "Howard", "10/1/18", "Paris", "Guide2"),
+        ("Isabella", "Menzel", "12/2/18", "Agra", "Guide3"),
+        ("Amelie", "Thomas", "21/3/18", "Paris", "Guide4")
         ], 1:[
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1"),
-            ("Maria", "Corsa", "10/11/17", "Milan", "Guide1")
+            ("Cecil", "Howard", "10/1/17", "Paris", "Guide2"),
+            ("Maria", "Corsa", "2/1/17", "Rome", "Guide1"),
+            ("Isabella", "Menzel", "5/11/17", "Agra", "Guide3"),
+            ("Amelie", "Thomas", "25/10/17", "Paris", "Guide4")
         ]]
     
     override func viewDidLoad() {
