@@ -32,22 +32,9 @@ class ProfileViewController: UIViewController {
     public var travelGuideSelectedIndex = 0
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView.delegate = self
-        collectionView.dataSource  = self
-        
         travelGuide = TravelGuide.travelGuides[travelGuideSelectedIndex]
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        datePicker.delegate = self
-        collectionView.delegate = self
-        collectionView.dataSource  = self
-        
-        
         self.title = travelGuide.name
+        
         
         var beginPositionX : CGFloat = 0
         var beginPositionY : CGFloat = 0
@@ -87,6 +74,22 @@ class ProfileViewController: UIViewController {
             
             self.subView.addSubview(label)
         }
+        
+    }
+    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource  = self
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        datePicker.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource  = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

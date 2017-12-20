@@ -72,6 +72,9 @@
                                                     <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
                                                         <color key="value" red="0.28366360070000002" green="0.39025941489999999" blue="0.81575202940000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KM3-ue-54s" customClass="JBDatePickerView" customModule="JBDatePicker">

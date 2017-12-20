@@ -30,11 +30,11 @@ struct TravelGuide{
     
     
     static var travelGuides =
-        [
-            TravelGuide(latitude: 40.835211, longitude: 14.2426034, name: "Janet Ghelanis", description: "I have 2 huge passions in life 1: is traveling arround the world and i do everything in my power to keep doing it. The other is learn new languages",location: "Interests: Location 1", image: UIImage(named: "Guide1")!),
-            TravelGuide(latitude: 40.835456, longitude: 14.2501048, name: "Amanda Gutierrez", description: "Hello there I would love to be your guide!. Im a student and a singer. I can give you any kind of tour you are trying to put together",location: "Interests: Art, history, music, Folklore, food in Rome", image: UIImage(named: "Guide2")!),
-            TravelGuide(latitude: 40.8357648, longitude: 14.2461082, name: "Jose Xanders", description: "I'm a student and I like to travel and take photos, also meet new people",location: "Interests: Local tour, guidance, accomodation", image: UIImage(named: "Ross")!),
-            TravelGuide(latitude: 40.839078, longitude: 14.2485123, name: "Daria Zotova", description: "I'm a professional turistic guide, I;m very passionate about archeology, movies, tv series and writing.",location: "Interests: Private tour, local experience, traditional food", image: UIImage(named: "Maria")!)
+        [//41.902069, 12.4512413
+            TravelGuide(latitude: 41.902069, longitude: 12.4512413, name: "Janet Ghelanis", description: "I have 2 huge passions in life 1: is traveling arround the world and i do everything in my power to keep doing it. The other is learn new languages",location: "Interests: Books, Love rock Music,Fashionista, Pizza,", image: UIImage(named: "Guide1")!),
+            TravelGuide(latitude: 41.896087, longitude: 12.4710523, name: "Amanda Gutierrez", description: "Hello there I would love to be your guide!. Im a student and a singer. I can give you any kind of tour you are trying to put together",location: "Interests: Art, history, music, Folklore, food in Rome", image: UIImage(named: "Guide2")!),
+            TravelGuide(latitude: 41.913675, longitude: 12.5137753, name: "Jose Xanders", description: "I'm a student and I like to travel and take photos, also meet new people",location: "Interests: Local tour, guidance, accomodation", image: UIImage(named: "Ross")!),
+            TravelGuide(latitude: 41.889422, longitude: 12.4665953, name: "Daria Zotova", description: "I'm a professional turistic guide, I;m very passionate about archeology, movies, tv series and writing.",location: "Interests: Private tour, local experience, traditional food", image: UIImage(named: "Maria")!)
             
         ]
     

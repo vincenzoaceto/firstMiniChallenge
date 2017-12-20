@@ -15,9 +15,9 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
             , "This guide is the best guide that you can get. She is the best at what she does. She knows her city quite well. Her knowledge about the monuments of the city is very deep. She has definitely earned by recommendation."
             , "Not a bad guide. She does seem like a she knows a lot about the city but it was hard for me understand her at time. May be she needs to work on her english a bit."
         ]
-    var nameOfReviewers:[String] = ["Janet Ghelani", "Jane Moreano", "Amber Abdullah"]
+    var nameOfReviewers:[String] = ["Matteo Ghelani", "Jeremy Moreano", "Amber Abdullah"]
     var ratings:[Double] = [4.0, 4.5, 3.5]
-    var imageNames:[String] = ["Janet", "Jane", "Amber"]
+    var imageNames:[String] = ["Matteo", "Jeremy", "Amber"]
     
     //Properties for ReView Body
     var fontSize = 13
