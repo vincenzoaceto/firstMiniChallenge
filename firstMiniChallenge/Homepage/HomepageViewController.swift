@@ -46,7 +46,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Guide4")]
-    var citiesAvailable = [#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
+    var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
@@ -112,13 +112,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     
-    
-    
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tblSearch.isHidden = true
@@ -126,11 +119,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         self.tblSearch.delegate = self
         self.searchBar.delegate = self
         self.tabBarController?.tabBar.isHidden = false
-        
-        
-        let backTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        self.tblSearch.isUserInteractionEnabled = true
-        self.tblSearch.addGestureRecognizer(backTapGestureRecognizer)
+
         
         self.tabBarController?.tabBar.items![2].image = #imageLiteral(resourceName: "avatar")
         self.tabBarController?.tabBar.items![2].selectedImage = #imageLiteral(resourceName: "avatar-selected")
@@ -138,29 +127,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         
         // Do any additional setup after loading the view.
     }
-    
-    /*
-    func imageTapped(_ gestureRecognizer: UIGestureRecognizer,
-                                    shouldReceive touch: UITouch) -> Bool {
-        searchDisappear()
-        return true
-    }
- 
-*/
-        
-        
-   @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer){
-         searchDisappear()
-    }
-    
-    func searchDisappear() {
-         tblSearch.delegate = self
-        self.dismiss(animated: true, completion: nil)
-        //            if UITableViewDelegate.touched = true {
-        //                return (ENTER)
-        //
-        
-    }
+   
    
     
     //MARK: UITableViewDelegate
@@ -205,6 +172,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     //MARK: UISearchbar delegate
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         self.tblSearch.isHidden = false
+        searchBar.showsCancelButton = true
         isSearch = true;
         self.tblSearch.reloadData()
     }
@@ -217,6 +185,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.showsCancelButton = false
         searchBar.resignFirstResponder()
         isSearch = false;
         self.tblSearch.reloadData()
@@ -262,41 +231,10 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
                     resultVC.citySelected = self.arrFilter[numeroDaCelula] // arrumar isso
                 } else {
                     // Fazer o mesmo pra esse caso onde nao esta no modo search
-                    
+                    return
                 }
             }
         }
     }
 }
 
-
-
-
-
-
-
-/*
-override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "goToCountry" {
-        if let countryViewController = segue.destination as? TableViewCell {
-            let numeroDaCelula = self.tblSearch.indexPathForSelectedRow!.row
-            if isSearch {
-                countryViewController.paisAtual = self.arrFilter[numeroDaCelula]
-            } else {
-                countryViewController.paisAtual = self.arrCity[numeroDaCelula]
-            }
-        }
-    }
-}
-
-
-
-
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
