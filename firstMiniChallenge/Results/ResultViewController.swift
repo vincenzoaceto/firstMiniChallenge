@@ -135,6 +135,24 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "travelguideCell", for: indexPath) as! TravelGuideCell
         
+        // Create card like  view
+        cell.layer.masksToBounds = false;
+        cell.backgroundColor = UIColor.white
+//        cell.layer.shadowRadius = 5.0;
+        cell.layer.borderColor = UIColor.clear.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOpacity = 1.0
+//        cell.layer.cornerRadius = 5.0
+        cell.layer.shadowOffset = CGSize(width: 2, height: 5)
+        cell.layer.contentsScale = UIScreen.main.scale
+//        cell.layer.shadowPath = UIBezierPath(roundedRect: cell.bounds, byRoundingCorners: .init(rawValue: 0), cornerRadii: CGSize(width: 15, height: 15)).cgPath
+        cell.layer.shouldRasterize = true
+        cell.layer.rasterizationScale = UIScreen.main.scale
+        cell.layer.shouldRasterize = true;
+        
+        
+        
         cell.travelGuideImageView.image = placeSelected!.travelGuides[indexPath.row].image
         cell.descriptionTextView.text = placeSelected!.travelGuides[indexPath.row].description
         cell.nameLabel.text = placeSelected!.travelGuides[indexPath.row].name
@@ -146,12 +164,13 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
         return cell
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         travelGuideIndexSelected = indexPath.row
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+        return 20
     }
 }
 
