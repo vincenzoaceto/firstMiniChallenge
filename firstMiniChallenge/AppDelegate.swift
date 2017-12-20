@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         SeedDbUtil.seedClient()
-        
+
+        IQKeyboardManager.sharedManager().enable = true
+
         return true
     }
 
