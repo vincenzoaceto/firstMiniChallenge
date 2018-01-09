@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Alamofire
 
 class HomepageViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
@@ -15,36 +16,21 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     {
         
     }
- 
     
     override func viewDidAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
     
     
-    
-    
-    
-    
-    
-    
     @IBOutlet weak var tblSearch: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
-    
-    
-    
-    
-    
-    
     @IBOutlet weak var travelGuidesCollectionView: UICollectionView!
-    
     
     @IBOutlet weak var citiesAvailableCollectionView: UICollectionView!
     
    
-    
     
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Don")]
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
@@ -89,13 +75,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     
     
-    
-    
-    
-    
-    
-    
-    
     var cityArray = ["Agra", "Rome", "Paris"]
     var guideArray = ["Guide1", "Guide2", "Guide3", "Don"]
     
@@ -111,7 +90,6 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         
     }
-    
     
     
     var isSearch : Bool = false
@@ -142,7 +120,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             gestureRecognizer.delaysTouchesBegan = false
         }
         
-        
+        getActractions()
         // Do any additional setup after loading the view.
     }
    
@@ -251,6 +229,16 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
                     // Fazer o mesmo pra esse caso onde nao esta no modo search
                     return
                 }
+            }
+        }
+    }
+    
+    func getActractions(){
+        Alamofire.request(Constants.BASEPATH+Constants.ACTRACTIONS).responseJSON { response in
+            debugPrint(response)
+            
+            if let json = response.result.value {
+                print("JSON: \(json)")
             }
         }
     }
