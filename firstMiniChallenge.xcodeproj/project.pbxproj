@@ -12,6 +12,7 @@
 		6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DAB191FE14A05003A587A /* TravelGuidesCollectionCell.swift */; };
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
 		7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7401643A1FE47D6D004D968A /* GoogleService-Info.plist */; };
+		7421263F2004D7FF00E33983 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421263E2004D7FF00E33983 /* Connection.swift */; };
 		747DB42A1FE2AC8100A6B920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* User.swift */; };
 		7485E02D1FE939D700AB460D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7485E02C1FE939D700AB460D /* Constants.swift */; };
 		74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DA44D81FE7FBEB009E8AFB /* Tools.swift */; };
@@ -111,6 +112,7 @@
 		6B7DAB191FE14A05003A587A /* TravelGuidesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuidesCollectionCell.swift; sourceTree = "<group>"; };
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
 		7401643A1FE47D6D004D968A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7421263E2004D7FF00E33983 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		747DB4291FE2AC8100A6B920 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		7485E02C1FE939D700AB460D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		74DA44D81FE7FBEB009E8AFB /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				74DA44D81FE7FBEB009E8AFB /* Tools.swift */,
 				7485E02C1FE939D700AB460D /* Constants.swift */,
+				7421263E2004D7FF00E33983 /* Connection.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -856,6 +859,7 @@
 				9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */,
 				E189D9431FE86173008A6276 /* Place.swift in Sources */,
 				9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */,
+				7421263F2004D7FF00E33983 /* Connection.swift in Sources */,
 				9C5C791E1FE8E59600E6B54F /* TimelineTableViewCell.swift in Sources */,
 				E1DED4571FEA79F500AC0534 /* IQKeyboardManager.swift in Sources */,
 				6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionCell.swift in Sources */,

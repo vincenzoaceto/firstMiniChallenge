@@ -11,5 +11,8 @@ import Foundation
 struct Constants {
     static let DEBUG = true
     static let BASEPATH = "https://salty-hollows-33109.herokuapp.com/api/"
+    
     static let ACTRACTIONS = "attractions/"
+    static let CLIENTS = "clients/"
+
 }

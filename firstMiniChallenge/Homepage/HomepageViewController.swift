@@ -31,7 +31,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     @IBOutlet weak var citiesAvailableCollectionView: UICollectionView!
     
    
-    
+    var connction = Connection()
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Don")]
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     var guideReviews = ["Paula Andrade \n20€/day ","Andrea Pugliesi \n15€/day ","Roberta Luiggi\n20€/day ","Ton Scott\n15€/day "]
@@ -120,7 +120,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             gestureRecognizer.delaysTouchesBegan = false
         }
         
-        getActractions()
+        connction.getActractions()
         // Do any additional setup after loading the view.
     }
    
@@ -233,14 +233,5 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     
-    func getActractions(){
-        Alamofire.request(Constants.BASEPATH+Constants.ACTRACTIONS).responseJSON { response in
-            debugPrint(response)
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
-            }
-        }
-    }
 }
 
