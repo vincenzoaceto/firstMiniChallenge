@@ -31,4 +31,24 @@ class Connection {
         }
     }
     
+    func getBookings(){
+        Alamofire.request(Constants.BASEPATH+Constants.BOOKINGS).responseJSON { response in
+            debugPrint(response)
+            
+            if let json = response.result.value {
+                print("JSON: \(json)")
+            }
+        }
+    }
+    
+    func getGuides(){
+        Alamofire.request(Constants.BASEPATH+Constants.GUIDES).responseJSON { response in
+            debugPrint(response)
+            
+            if let json = response.result.value {
+                print("JSON: \(json)")
+            }
+        }
+    }
+    
 }

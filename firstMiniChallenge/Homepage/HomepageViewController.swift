@@ -121,6 +121,9 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
         
         connction.getActractions()
+        connction.getClients()
+        connction.getBookings()
+        connction.getGuides()
         // Do any additional setup after loading the view.
     }
    

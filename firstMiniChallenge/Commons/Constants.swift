@@ -14,5 +14,7 @@ struct Constants {
     
     static let ACTRACTIONS = "attractions/"
     static let CLIENTS = "clients/"
+    static let GUIDES = "guides/"
+    static let BOOKINGS = "bookings/"
 
 }
