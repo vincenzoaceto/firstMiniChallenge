@@ -11,6 +11,14 @@
 		6B7DAB181FE14210003A587A /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */; };
 		6B7DAB1A1FE14A05003A587A /* TravelGuidesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DAB191FE14A05003A587A /* TravelGuidesCollectionCell.swift */; };
 		6BBBA0761FE0820800853FB8 /* CitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */; };
+		6BE4959A2003BAF200F5A664 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE495982003BAF200F5A664 /* Interface.storyboard */; };
+		6BE4959C2003BAF200F5A664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE4959B2003BAF200F5A664 /* Assets.xcassets */; };
+		6BE495A32003BAF200F5A664 /* firstMiniChallengeWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6BE495A22003BAF200F5A664 /* firstMiniChallengeWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6BE495A82003BAF200F5A664 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE495A72003BAF200F5A664 /* InterfaceController.swift */; };
+		6BE495AA2003BAF200F5A664 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE495A92003BAF200F5A664 /* ExtensionDelegate.swift */; };
+		6BE495AC2003BAF200F5A664 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE495AB2003BAF200F5A664 /* NotificationController.swift */; };
+		6BE495AE2003BAF200F5A664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE495AD2003BAF200F5A664 /* Assets.xcassets */; };
+		6BE495B32003BAF300F5A664 /* firstMiniChallengeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6BE495962003BAF200F5A664 /* firstMiniChallengeWatch.app */; };
 		7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7401643A1FE47D6D004D968A /* GoogleService-Info.plist */; };
 		7421263F2004D7FF00E33983 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421263E2004D7FF00E33983 /* Connection.swift */; };
 		747DB42A1FE2AC8100A6B920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* User.swift */; };
@@ -96,6 +104,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		6BE495A42003BAF200F5A664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DB868B1FDE7C3E00106C89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BE495A12003BAF200F5A664;
+			remoteInfo = "firstMiniChallengeWatch Extension";
+		};
+		6BE495B12003BAF300F5A664 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74DB868B1FDE7C3E00106C89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6BE495952003BAF200F5A664;
+			remoteInfo = firstMiniChallengeWatch;
+		};
 		74DB86A81FDE7C3F00106C89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 74DB868B1FDE7C3E00106C89 /* Project object */;
@@ -112,6 +134,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6BE495B92003BAF300F5A664 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6BE495A32003BAF200F5A664 /* firstMiniChallengeWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BE495BB2003BAF300F5A664 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6BE495B32003BAF300F5A664 /* firstMiniChallengeWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09882CF1BEDD32FCF9AF15BE /* Pods-firstMiniChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstMiniChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-firstMiniChallenge/Pods-firstMiniChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		2464268C07D13BB34ED33DD9 /* Pods-firstMiniChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-firstMiniChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-firstMiniChallengeTests/Pods-firstMiniChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +168,17 @@
 		6B7DAB171FE14210003A587A /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
 		6B7DAB191FE14A05003A587A /* TravelGuidesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelGuidesCollectionCell.swift; sourceTree = "<group>"; };
 		6BBBA0751FE0820800853FB8 /* CitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		6BE495962003BAF200F5A664 /* firstMiniChallengeWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = firstMiniChallengeWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE495992003BAF200F5A664 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		6BE4959B2003BAF200F5A664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BE4959D2003BAF200F5A664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE495A22003BAF200F5A664 /* firstMiniChallengeWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "firstMiniChallengeWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BE495A72003BAF200F5A664 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		6BE495A92003BAF200F5A664 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		6BE495AB2003BAF200F5A664 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		6BE495AD2003BAF200F5A664 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BE495AF2003BAF300F5A664 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BE495B02003BAF300F5A664 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		7401643A1FE47D6D004D968A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7421263E2004D7FF00E33983 /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		747DB4291FE2AC8100A6B920 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -215,6 +273,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6BE4959F2003BAF200F5A664 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74DB86901FDE7C3F00106C89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -253,6 +318,29 @@
 				91953C69E6ABA57FEFD923D9 /* Pods-firstMiniChallengeUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		6BE495972003BAF200F5A664 /* firstMiniChallengeWatch */ = {
+			isa = PBXGroup;
+			children = (
+				6BE495982003BAF200F5A664 /* Interface.storyboard */,
+				6BE4959B2003BAF200F5A664 /* Assets.xcassets */,
+				6BE4959D2003BAF200F5A664 /* Info.plist */,
+			);
+			path = firstMiniChallengeWatch;
+			sourceTree = "<group>";
+		};
+		6BE495A62003BAF200F5A664 /* firstMiniChallengeWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6BE495A72003BAF200F5A664 /* InterfaceController.swift */,
+				6BE495A92003BAF200F5A664 /* ExtensionDelegate.swift */,
+				6BE495AB2003BAF200F5A664 /* NotificationController.swift */,
+				6BE495AD2003BAF200F5A664 /* Assets.xcassets */,
+				6BE495AF2003BAF300F5A664 /* Info.plist */,
+				6BE495B02003BAF300F5A664 /* PushNotificationPayload.apns */,
+			);
+			path = "firstMiniChallengeWatch Extension";
 			sourceTree = "<group>";
 		};
 		742B37371FE16FE300CEEC2A /* Login */ = {
@@ -306,6 +394,8 @@
 				74DB86951FDE7C3F00106C89 /* firstMiniChallenge */,
 				74DB86AA1FDE7C3F00106C89 /* firstMiniChallengeTests */,
 				74DB86B51FDE7C3F00106C89 /* firstMiniChallengeUITests */,
+				6BE495972003BAF200F5A664 /* firstMiniChallengeWatch */,
+				6BE495A62003BAF200F5A664 /* firstMiniChallengeWatch Extension */,
 				74DB86941FDE7C3F00106C89 /* Products */,
 				4119DF67782713250AE08152 /* Pods */,
 				EED30995E1C51D40650CAFCA /* Frameworks */,
@@ -318,6 +408,8 @@
 				74DB86931FDE7C3F00106C89 /* firstMiniChallenge.app */,
 				74DB86A71FDE7C3F00106C89 /* firstMiniChallengeTests.xctest */,
 				74DB86B21FDE7C3F00106C89 /* firstMiniChallengeUITests.xctest */,
+				6BE495962003BAF200F5A664 /* firstMiniChallengeWatch.app */,
+				6BE495A22003BAF200F5A664 /* firstMiniChallengeWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -550,6 +642,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6BE495952003BAF200F5A664 /* firstMiniChallengeWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BE495BA2003BAF300F5A664 /* Build configuration list for PBXNativeTarget "firstMiniChallengeWatch" */;
+			buildPhases = (
+				6BE495942003BAF200F5A664 /* Resources */,
+				6BE495B92003BAF300F5A664 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6BE495A52003BAF200F5A664 /* PBXTargetDependency */,
+			);
+			name = firstMiniChallengeWatch;
+			productName = firstMiniChallengeWatch;
+			productReference = 6BE495962003BAF200F5A664 /* firstMiniChallengeWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		6BE495A12003BAF200F5A664 /* firstMiniChallengeWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BE495B82003BAF300F5A664 /* Build configuration list for PBXNativeTarget "firstMiniChallengeWatch Extension" */;
+			buildPhases = (
+				6BE4959E2003BAF200F5A664 /* Sources */,
+				6BE4959F2003BAF200F5A664 /* Frameworks */,
+				6BE495A02003BAF200F5A664 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "firstMiniChallengeWatch Extension";
+			productName = "firstMiniChallengeWatch Extension";
+			productReference = 6BE495A22003BAF200F5A664 /* firstMiniChallengeWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		74DB86921FDE7C3F00106C89 /* firstMiniChallenge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74DB86BB1FDE7C3F00106C89 /* Build configuration list for PBXNativeTarget "firstMiniChallenge" */;
@@ -560,10 +686,12 @@
 				74DB86911FDE7C3F00106C89 /* Resources */,
 				E0522D2753B18415EABEA333 /* [CP] Embed Pods Frameworks */,
 				4ACB12431B539ADC49255CC8 /* [CP] Copy Pods Resources */,
+				6BE495BB2003BAF300F5A664 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6BE495B22003BAF300F5A664 /* PBXTargetDependency */,
 			);
 			name = firstMiniChallenge;
 			productName = firstMiniChallenge;
@@ -622,6 +750,14 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Vincenzo Aceto";
 				TargetAttributes = {
+					6BE495952003BAF200F5A664 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					6BE495A12003BAF200F5A664 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					74DB86921FDE7C3F00106C89 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -654,11 +790,30 @@
 				74DB86921FDE7C3F00106C89 /* firstMiniChallenge */,
 				74DB86A61FDE7C3F00106C89 /* firstMiniChallengeTests */,
 				74DB86B11FDE7C3F00106C89 /* firstMiniChallengeUITests */,
+				6BE495952003BAF200F5A664 /* firstMiniChallengeWatch */,
+				6BE495A12003BAF200F5A664 /* firstMiniChallengeWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6BE495942003BAF200F5A664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE4959C2003BAF200F5A664 /* Assets.xcassets in Resources */,
+				6BE4959A2003BAF200F5A664 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6BE495A02003BAF200F5A664 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE495AE2003BAF200F5A664 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74DB86911FDE7C3F00106C89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -868,6 +1023,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6BE4959E2003BAF200F5A664 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE495AC2003BAF200F5A664 /* NotificationController.swift in Sources */,
+				6BE495AA2003BAF200F5A664 /* ExtensionDelegate.swift in Sources */,
+				6BE495A82003BAF200F5A664 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74DB868F1FDE7C3F00106C89 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -960,6 +1125,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6BE495A52003BAF200F5A664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BE495A12003BAF200F5A664 /* firstMiniChallengeWatch Extension */;
+			targetProxy = 6BE495A42003BAF200F5A664 /* PBXContainerItemProxy */;
+		};
+		6BE495B22003BAF300F5A664 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6BE495952003BAF200F5A664 /* firstMiniChallengeWatch */;
+			targetProxy = 6BE495B12003BAF300F5A664 /* PBXContainerItemProxy */;
+		};
 		74DB86A91FDE7C3F00106C89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 74DB86921FDE7C3F00106C89 /* firstMiniChallenge */;
@@ -973,6 +1148,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6BE495982003BAF200F5A664 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BE495992003BAF200F5A664 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		74DB869A1FDE7C3F00106C89 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -992,6 +1175,80 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6BE495B42003BAF300F5A664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
+				IBSC_MODULE = firstMiniChallengeWatch_Extension;
+				INFOPLIST_FILE = firstMiniChallengeWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincenzoaceto.xploreeasy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		6BE495B52003BAF300F5A664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
+				IBSC_MODULE = firstMiniChallengeWatch_Extension;
+				INFOPLIST_FILE = firstMiniChallengeWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincenzoaceto.xploreeasy.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
+		6BE495B62003BAF300F5A664 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
+				INFOPLIST_FILE = "firstMiniChallengeWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincenzoaceto.xploreeasy.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Debug;
+		};
+		6BE495B72003BAF300F5A664 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9ZVMLP4E42;
+				INFOPLIST_FILE = "firstMiniChallengeWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vincenzoaceto.xploreeasy.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.2;
+			};
+			name = Release;
+		};
 		74DB86B91FDE7C3F00106C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1202,6 +1459,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6BE495B82003BAF300F5A664 /* Build configuration list for PBXNativeTarget "firstMiniChallengeWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BE495B62003BAF300F5A664 /* Debug */,
+				6BE495B72003BAF300F5A664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BE495BA2003BAF300F5A664 /* Build configuration list for PBXNativeTarget "firstMiniChallengeWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BE495B42003BAF300F5A664 /* Debug */,
+				6BE495B52003BAF300F5A664 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		74DB868E1FDE7C3E00106C89 /* Build configuration list for PBXProject "firstMiniChallenge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

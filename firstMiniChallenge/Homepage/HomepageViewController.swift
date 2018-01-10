@@ -34,7 +34,7 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     var connction = Connection()
     var travelGuides = [#imageLiteral(resourceName: "Guide1"),#imageLiteral(resourceName: "Guide2"),#imageLiteral(resourceName: "Guide3"),#imageLiteral(resourceName: "Don")]
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
-    var guideReviews = ["Paula Andrade \n20€/day ","Andrea Pugliesi \n15€/day ","Roberta Luiggi\n20€/day ","Ton Scott\n15€/day "]
+    var guideReviews = ["Janet Ghelanis \n20€/day ","Andrea Pugliesi \n15€/day ","Roberta Luiggi\n20€/day ","Ton Scott\n15€/day "]
     var cityName = ["Agra","Rome","Paris"]
     
     
