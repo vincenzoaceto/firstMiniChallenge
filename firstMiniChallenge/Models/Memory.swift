@@ -9,21 +9,27 @@
 import Foundation
 import UIKit
 
-struct Memory {
-    public var name: String
+class Memory : IdentifiableEntity{
+    var name: String
     var image: UIImage
+    var images: [String]?
     
+    init(_id: String, name: String, image: UIImage, images: [String]?) {
+        self.name = name
+        self.image = image
+        super.init(_id:_id)
+    }
     
     static var memories =
         [
-            Memory(name: "Colosseum", image: UIImage(named: "colosseum")!),
-            Memory(name: "Dome", image: UIImage(named: "dome")!),
-            Memory(name: "Rome Church", image: UIImage(named: "rome_church")!),
-            Memory(name: "Rome Street", image: UIImage(named: "rome_street")!),
-            Memory(name: "Trevi Fountain", image: UIImage(named: "trevi-fountain")!),
-            Memory(name: "Vetican Italy", image: UIImage(named: "vetican_italy")!),
-            Memory(name: "Vetican Square", image: UIImage(named: "vetican_square")!),
-            Memory(name: "brandenburger", image: UIImage(named: "brandenburger")!)
+            Memory(_id: "1", name: "Colosseum", image: UIImage(named: "colosseum")!, images:nil),
+            Memory(_id: "2", name: "Dome", image: UIImage(named: "dome")!, images:nil),
+            Memory(_id: "3", name: "Rome Church", image: UIImage(named: "rome_church")!, images:nil),
+            Memory(_id: "4", name: "Rome Street", image: UIImage(named: "rome_street")!, images:nil),
+            Memory(_id: "5", name: "Trevi Fountain", image: UIImage(named: "trevi-fountain")!, images:nil),
+            Memory(_id: "6", name: "Vetican Italy", image: UIImage(named: "vetican_italy")!, images:nil),
+            Memory(_id: "7", name: "Vetican Square", image: UIImage(named: "vetican_square")!, images:nil),
+            Memory(_id: "8", name: "brandenburger", image: UIImage(named: "brandenburger")!, images:nil)
             
     ]
 }

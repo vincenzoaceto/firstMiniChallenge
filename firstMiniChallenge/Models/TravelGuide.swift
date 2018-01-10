@@ -10,7 +10,6 @@ import MapKit
 import Foundation
 
 struct TravelGuide{
-    
      var latitude : CLLocationDegrees
      var longitude : CLLocationDegrees
      var name : String

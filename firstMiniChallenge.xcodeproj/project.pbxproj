@@ -40,6 +40,10 @@
 		9C6ACEE9200615F500706807 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEE8200615F500706807 /* Address.swift */; };
 		9C6ACEEB2006166400706807 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEEA2006166400706807 /* Attraction.swift */; };
 		9C6ACEED200616CB00706807 /* GeographicLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEEC200616CB00706807 /* GeographicLocation.swift */; };
+		9C6ACEEF2006199000706807 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEEE2006199000706807 /* Currency.swift */; };
+		9C6ACEF120061A9400706807 /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEF020061A9400706807 /* Money.swift */; };
+		9C6ACEF320061B5F00706807 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEF220061B5F00706807 /* Language.swift */; };
+		9C6ACEF520061D6A00706807 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEF420061D6A00706807 /* Period.swift */; };
 		9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731C9F1FE80D520080F725 /* ImageUtil.swift */; };
 		9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731CA11FE80D550080F725 /* SeedDbUtil.swift */; };
 		9CBA13491FE6994100A1CD72 /* IdentifiableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */; };
@@ -47,8 +51,9 @@
 		9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */; };
 		9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */; };
 		9CC848361FE648080095A9DC /* Booking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848351FE648080095A9DC /* Booking.swift */; };
-		9CC848381FE648550095A9DC /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848371FE648550095A9DC /* Agent.swift */; };
+		9CC848381FE648550095A9DC /* Guide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848371FE648550095A9DC /* Guide.swift */; };
 		9CC8483A1FE64AAD0095A9DC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC848391FE64AAD0095A9DC /* Client.swift */; };
+		9CCFFC2020061EA0000223B9 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCFFC1F20061EA0000223B9 /* Review.swift */; };
 		9CEDB8DD1FE80B3F00C77B7B /* AgentDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDB8DC1FE80B3F00C77B7B /* AgentDAO.swift */; };
 		B62712E42C276509962B14B7 /* Pods_firstMiniChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C73367C4FDF9D153BB053B5A /* Pods_firstMiniChallengeUITests.framework */; };
 		C6F8C3701FE19A6500A4888C /* Reviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */; };
@@ -150,6 +155,10 @@
 		9C6ACEE8200615F500706807 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 		9C6ACEEA2006166400706807 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		9C6ACEEC200616CB00706807 /* GeographicLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicLocation.swift; sourceTree = "<group>"; };
+		9C6ACEEE2006199000706807 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		9C6ACEF020061A9400706807 /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		9C6ACEF220061B5F00706807 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		9C6ACEF420061D6A00706807 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		9C731C9F1FE80D520080F725 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		9C731CA11FE80D550080F725 /* SeedDbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDbUtil.swift; sourceTree = "<group>"; };
 		9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableEntity.swift; sourceTree = "<group>"; };
@@ -157,8 +166,9 @@
 		9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDAO.swift; sourceTree = "<group>"; };
 		9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDAO.swift; sourceTree = "<group>"; };
 		9CC848351FE648080095A9DC /* Booking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Booking.swift; sourceTree = "<group>"; };
-		9CC848371FE648550095A9DC /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		9CC848371FE648550095A9DC /* Guide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide.swift; sourceTree = "<group>"; };
 		9CC848391FE64AAD0095A9DC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		9CCFFC1F20061EA0000223B9 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		9CEDB8DC1FE80B3F00C77B7B /* AgentDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDAO.swift; sourceTree = "<group>"; };
 		BC9B32C2673244DD3D33B482 /* Pods_firstMiniChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_firstMiniChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F8C36F1FE19A6500A4888C /* Reviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reviews.storyboard; sourceTree = "<group>"; };
@@ -256,15 +266,20 @@
 			children = (
 				9C6ACEE8200615F500706807 /* Address.swift */,
 				9C6ACEEA2006166400706807 /* Attraction.swift */,
-				9C6ACEEC200616CB00706807 /* GeographicLocation.swift */,
-				747DB4291FE2AC8100A6B920 /* User.swift */,
 				9CC848351FE648080095A9DC /* Booking.swift */,
-				9CC848371FE648550095A9DC /* Agent.swift */,
 				9CC848391FE64AAD0095A9DC /* Client.swift */,
+				9C6ACEEE2006199000706807 /* Currency.swift */,
+				9C6ACEEC200616CB00706807 /* GeographicLocation.swift */,
+				9CC848371FE648550095A9DC /* Guide.swift */,
+				9C6ACEF220061B5F00706807 /* Language.swift */,
+				E1A96DC21FEA6DA30022B324 /* Memory.swift */,
+				9C6ACEF020061A9400706807 /* Money.swift */,
+				9C6ACEF420061D6A00706807 /* Period.swift */,
+				9CCFFC1F20061EA0000223B9 /* Review.swift */,
+				747DB4291FE2AC8100A6B920 /* User.swift */,
 				9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */,
 				E189D9401FE8616C008A6276 /* TravelGuide.swift */,
 				E189D9421FE86173008A6276 /* Place.swift */,
-				E1A96DC21FEA6DA30022B324 /* Memory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -845,7 +860,7 @@
 				E1F487061FE7D96A0012420F /* bookedProfileViewController.swift in Sources */,
 				9C5C79231FE8E5E100E6B54F /* TimelinePoint.swift in Sources */,
 				E1DED45A1FEA79F500AC0534 /* IQBarButtonItem.swift in Sources */,
-				9CC848381FE648550095A9DC /* Agent.swift in Sources */,
+				9CC848381FE648550095A9DC /* Guide.swift in Sources */,
 				74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */,
 				9C6ACEED200616CB00706807 /* GeographicLocation.swift in Sources */,
 				9CBA134B1FE69BC900A1CD72 /* DAO.swift in Sources */,
@@ -853,6 +868,8 @@
 				E1DED45E1FEA79F500AC0534 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */,
 				9CBA13491FE6994100A1CD72 /* IdentifiableEntity.swift in Sources */,
+				9C6ACEF120061A9400706807 /* Money.swift in Sources */,
+				9C6ACEF520061D6A00706807 /* Period.swift in Sources */,
 				E189D9411FE8616C008A6276 /* TravelGuide.swift in Sources */,
 				C6F8C3BE1FE3CA8800A4888C /* CustomTableViewCell.swift in Sources */,
 				E1DED45C1FEA79F500AC0534 /* IQTitleBarButtonItem.swift in Sources */,
@@ -864,6 +881,7 @@
 				9CC848361FE648080095A9DC /* Booking.swift in Sources */,
 				E1DED4531FEA79F500AC0534 /* IQUIViewController+Additions.swift in Sources */,
 				95BBCB3B1FE92BB5002D732A /* MyProfileTableViewCell.swift in Sources */,
+				9CCFFC2020061EA0000223B9 /* Review.swift in Sources */,
 				95BBCB391FE92241002D732A /* MyProfileViewController.swift in Sources */,
 				9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */,
 				9C6ACEE9200615F500706807 /* Address.swift in Sources */,
@@ -877,6 +895,7 @@
 				74DA44D91FE7FBEB009E8AFB /* Tools.swift in Sources */,
 				E1DED45B1FEA79F500AC0534 /* IQPreviousNextView.swift in Sources */,
 				9C5C79251FE8E62500E6B54F /* BookingsTableViewController.swift in Sources */,
+				9C6ACEEF2006199000706807 /* Currency.swift in Sources */,
 				E1A96DC31FEA6DA30022B324 /* Memory.swift in Sources */,
 				9C5C79191FE8E50000E6B54F /* Timeline.swift in Sources */,
 				E1DED4511FEA79F500AC0534 /* IQUITextFieldView+Additions.swift in Sources */,
@@ -892,6 +911,7 @@
 				9C5C791B1FE8E55F00E6B54F /* HeaderTableViewCell.swift in Sources */,
 				747DB42A1FE2AC8100A6B920 /* User.swift in Sources */,
 				E1DED4501FEA79F500AC0534 /* IQUIScrollView+Additions.swift in Sources */,
+				9C6ACEF320061B5F00706807 /* Language.swift in Sources */,
 				9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */,
 				E1DED44F1FEA79F500AC0534 /* IQNSArray+Sort.swift in Sources */,
 				E1DED4581FEA79F500AC0534 /* IQKeyboardReturnKeyHandler.swift in Sources */,

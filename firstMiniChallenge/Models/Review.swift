@@ -1,5 +1,5 @@
 //
-//  Attraction.swift
+//  Review.swift
 //  firstMiniChallenge
 //
 //  Created by Bilal Abdullah on 10/01/2018.
@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Attraction : IdentifiableEntity{
-    var attractionName : String?
-    var about: String?
-    var images : [String]?
-    var location: GeographicLocation?
+class Review : IdentifiableEntity{
+    var subject : String?
+    var review: String?
+    var rating : Float?
+    var date: Date?
     
     override init(_id: String) {
         super.init(_id:_id)
