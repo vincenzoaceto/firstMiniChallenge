@@ -37,9 +37,12 @@
 		9C5C791F1FE8E59600E6B54F /* TimelineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C5C791D1FE8E59600E6B54F /* TimelineTableViewCell.xib */; };
 		9C5C79231FE8E5E100E6B54F /* TimelinePoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C79221FE8E5E100E6B54F /* TimelinePoint.swift */; };
 		9C5C79251FE8E62500E6B54F /* BookingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C5C79241FE8E62500E6B54F /* BookingsTableViewController.swift */; };
+		9C6ACEE9200615F500706807 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEE8200615F500706807 /* Address.swift */; };
+		9C6ACEEB2006166400706807 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEEA2006166400706807 /* Attraction.swift */; };
+		9C6ACEED200616CB00706807 /* GeographicLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEEC200616CB00706807 /* GeographicLocation.swift */; };
 		9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731C9F1FE80D520080F725 /* ImageUtil.swift */; };
 		9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731CA11FE80D550080F725 /* SeedDbUtil.swift */; };
-		9CBA13491FE6994100A1CD72 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13481FE6994000A1CD72 /* BaseEntity.swift */; };
+		9CBA13491FE6994100A1CD72 /* IdentifiableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */; };
 		9CBA134B1FE69BC900A1CD72 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134A1FE69BC900A1CD72 /* DAO.swift */; };
 		9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */; };
 		9CBA13511FE7D12100A1CD72 /* ClientDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */; };
@@ -144,9 +147,12 @@
 		9C5C791D1FE8E59600E6B54F /* TimelineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimelineTableViewCell.xib; sourceTree = "<group>"; };
 		9C5C79221FE8E5E100E6B54F /* TimelinePoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelinePoint.swift; sourceTree = "<group>"; };
 		9C5C79241FE8E62500E6B54F /* BookingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingsTableViewController.swift; sourceTree = "<group>"; };
+		9C6ACEE8200615F500706807 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		9C6ACEEA2006166400706807 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
+		9C6ACEEC200616CB00706807 /* GeographicLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeographicLocation.swift; sourceTree = "<group>"; };
 		9C731C9F1FE80D520080F725 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		9C731CA11FE80D550080F725 /* SeedDbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDbUtil.swift; sourceTree = "<group>"; };
-		9CBA13481FE6994000A1CD72 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableEntity.swift; sourceTree = "<group>"; };
 		9CBA134A1FE69BC900A1CD72 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDAO.swift; sourceTree = "<group>"; };
 		9CBA13501FE7D12100A1CD72 /* ClientDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDAO.swift; sourceTree = "<group>"; };
@@ -248,11 +254,14 @@
 		747DB4281FE2AC5B00A6B920 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9C6ACEE8200615F500706807 /* Address.swift */,
+				9C6ACEEA2006166400706807 /* Attraction.swift */,
+				9C6ACEEC200616CB00706807 /* GeographicLocation.swift */,
 				747DB4291FE2AC8100A6B920 /* User.swift */,
 				9CC848351FE648080095A9DC /* Booking.swift */,
 				9CC848371FE648550095A9DC /* Agent.swift */,
 				9CC848391FE64AAD0095A9DC /* Client.swift */,
-				9CBA13481FE6994000A1CD72 /* BaseEntity.swift */,
+				9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */,
 				E189D9401FE8616C008A6276 /* TravelGuide.swift */,
 				E189D9421FE86173008A6276 /* Place.swift */,
 				E1A96DC21FEA6DA30022B324 /* Memory.swift */,
@@ -838,11 +847,12 @@
 				E1DED45A1FEA79F500AC0534 /* IQBarButtonItem.swift in Sources */,
 				9CC848381FE648550095A9DC /* Agent.swift in Sources */,
 				74DB86991FDE7C3F00106C89 /* LoginViewController.swift in Sources */,
+				9C6ACEED200616CB00706807 /* GeographicLocation.swift in Sources */,
 				9CBA134B1FE69BC900A1CD72 /* DAO.swift in Sources */,
 				E1DED4561FEA79F500AC0534 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				E1DED45E1FEA79F500AC0534 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */,
-				9CBA13491FE6994100A1CD72 /* BaseEntity.swift in Sources */,
+				9CBA13491FE6994100A1CD72 /* IdentifiableEntity.swift in Sources */,
 				E189D9411FE8616C008A6276 /* TravelGuide.swift in Sources */,
 				C6F8C3BE1FE3CA8800A4888C /* CustomTableViewCell.swift in Sources */,
 				E1DED45C1FEA79F500AC0534 /* IQTitleBarButtonItem.swift in Sources */,
@@ -856,6 +866,7 @@
 				95BBCB3B1FE92BB5002D732A /* MyProfileTableViewCell.swift in Sources */,
 				95BBCB391FE92241002D732A /* MyProfileViewController.swift in Sources */,
 				9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */,
+				9C6ACEE9200615F500706807 /* Address.swift in Sources */,
 				9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */,
 				E189D9431FE86173008A6276 /* Place.swift in Sources */,
 				9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */,
@@ -887,6 +898,7 @@
 				7485E02D1FE939D700AB460D /* Constants.swift in Sources */,
 				E1A96DC11FEA6CF80022B324 /* MemoryCell.swift in Sources */,
 				E1DED4521FEA79F500AC0534 /* IQUIView+Hierarchy.swift in Sources */,
+				9C6ACEEB2006166400706807 /* Attraction.swift in Sources */,
 				E115713E1FE09F0700E3A96C /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

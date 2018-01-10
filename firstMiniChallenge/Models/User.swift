@@ -8,23 +8,18 @@
 
 import Foundation
 
-class User : BaseEntity{
-    
-    let username : String
-    let password : String
-    
-    var name : String? 
-    var surname: String?
-    var age: Int?
+class User : IdentifiableEntity{
+    let firstName : String?
+    let lastName: String?
+    var phone : String?
     var email: String?
-    var facebook: String?
-    var city: String?
-    var country: String?
+    var username : String?
+    var password : String?
     var profileImage: String?
     
-    init(username: String, password: String) {
-        self.username = username
-        self.password = password
-        super.init(entityId: NSUUID().uuidString)
+    init(_id: String, firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+        super.init(_id:_id)
     }
 }

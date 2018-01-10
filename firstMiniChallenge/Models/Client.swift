@@ -9,8 +9,9 @@
 import Foundation
 
 // Model stub
-class Client: User {
-    override init(username: String, password: String) {
-        super.init(username: username, password: password)
-    }
-}
+//class Client: User {
+//    override init(username: String, password: String) {
+//        super.init(username: username, password: password)
+//    }
+//}
+
