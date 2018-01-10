@@ -18,6 +18,7 @@ class Connection {
                 let attractions = [Attraction](json: json)
                 completion(attractions)
             }
+            
         }
     }
     
