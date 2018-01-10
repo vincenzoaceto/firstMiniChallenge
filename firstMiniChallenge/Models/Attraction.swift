@@ -8,13 +8,9 @@
 
 import Foundation
 
-class Attraction : IdentifiableEntity{
+class Attraction : BaseEntity{
     var attractionName : String?
     var about: String?
     var images : [String]?
     var location: GeographicLocation?
-    
-    override init(_id: String) {
-        super.init(_id:_id)
-    }
 }

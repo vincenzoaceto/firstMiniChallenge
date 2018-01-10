@@ -20,4 +20,6 @@ pod 'Firebase/Database'
 pod 'JBDatePicker'
 pod 'Firebase/Auth'
 pod 'Alamofire', '~> 4.5'
+pod 'SwiftyJSON'
+pod 'EVReflection/MoyaRxSwift'
 end

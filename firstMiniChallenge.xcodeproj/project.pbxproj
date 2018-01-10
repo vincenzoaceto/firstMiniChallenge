@@ -46,6 +46,8 @@
 		9C6ACEF520061D6A00706807 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6ACEF420061D6A00706807 /* Period.swift */; };
 		9C731CA01FE80D520080F725 /* ImageUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731C9F1FE80D520080F725 /* ImageUtil.swift */; };
 		9C731CA21FE80D550080F725 /* SeedDbUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C731CA11FE80D550080F725 /* SeedDbUtil.swift */; };
+		9CA8EBE82006500C00A24400 /* BaseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8EBE72006500C00A24400 /* BaseEntity.swift */; };
+		9CA8EBEA200654DC00A24400 /* GuideMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA8EBE9200654DC00A24400 /* GuideMemory.swift */; };
 		9CBA13491FE6994100A1CD72 /* IdentifiableEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */; };
 		9CBA134B1FE69BC900A1CD72 /* DAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134A1FE69BC900A1CD72 /* DAO.swift */; };
 		9CBA134D1FE69F1500A1CD72 /* BookingDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */; };
@@ -161,6 +163,8 @@
 		9C6ACEF420061D6A00706807 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		9C731C9F1FE80D520080F725 /* ImageUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageUtil.swift; sourceTree = "<group>"; };
 		9C731CA11FE80D550080F725 /* SeedDbUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeedDbUtil.swift; sourceTree = "<group>"; };
+		9CA8EBE72006500C00A24400 /* BaseEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEntity.swift; sourceTree = "<group>"; };
+		9CA8EBE9200654DC00A24400 /* GuideMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideMemory.swift; sourceTree = "<group>"; };
 		9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableEntity.swift; sourceTree = "<group>"; };
 		9CBA134A1FE69BC900A1CD72 /* DAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAO.swift; sourceTree = "<group>"; };
 		9CBA134C1FE69F1500A1CD72 /* BookingDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingDAO.swift; sourceTree = "<group>"; };
@@ -273,6 +277,7 @@
 				9CC848371FE648550095A9DC /* Guide.swift */,
 				9C6ACEF220061B5F00706807 /* Language.swift */,
 				E1A96DC21FEA6DA30022B324 /* Memory.swift */,
+				9CA8EBE9200654DC00A24400 /* GuideMemory.swift */,
 				9C6ACEF020061A9400706807 /* Money.swift */,
 				9C6ACEF420061D6A00706807 /* Period.swift */,
 				9CCFFC1F20061EA0000223B9 /* Review.swift */,
@@ -280,6 +285,7 @@
 				9CBA13481FE6994000A1CD72 /* IdentifiableEntity.swift */,
 				E189D9401FE8616C008A6276 /* TravelGuide.swift */,
 				E189D9421FE86173008A6276 /* Place.swift */,
+				9CA8EBE72006500C00A24400 /* BaseEntity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -799,18 +805,28 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-firstMiniChallenge/Pods-firstMiniChallenge-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/EVReflection/EVReflection.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JBDatePicker/JBDatePicker.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EVReflection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JBDatePicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -867,6 +883,7 @@
 				E1DED4561FEA79F500AC0534 /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				E1DED45E1FEA79F500AC0534 /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				74E57D361FE182F600D1A6C9 /* SignUpViewController.swift in Sources */,
+				9CA8EBE82006500C00A24400 /* BaseEntity.swift in Sources */,
 				9CBA13491FE6994100A1CD72 /* IdentifiableEntity.swift in Sources */,
 				9C6ACEF120061A9400706807 /* Money.swift in Sources */,
 				9C6ACEF520061D6A00706807 /* Period.swift in Sources */,
@@ -904,6 +921,7 @@
 				E1DED4541FEA79F500AC0534 /* IQUIWindow+Hierarchy.swift in Sources */,
 				74DB86C81FDE904900106C89 /* HomepageViewController.swift in Sources */,
 				E1DED4591FEA79F500AC0534 /* IQTextView.swift in Sources */,
+				9CA8EBEA200654DC00A24400 /* GuideMemory.swift in Sources */,
 				6B6855AD1FE6D0D800E073C0 /* TableViewCell.swift in Sources */,
 				9CEDB8DD1FE80B3F00C77B7B /* AgentDAO.swift in Sources */,
 				E1F487011FE7C7610012420F /* PaymentViewController.swift in Sources */,

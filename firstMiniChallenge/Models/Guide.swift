@@ -17,7 +17,4 @@ class Guide: User {
     var languages: [Language]?
     var attractions: [Attraction]?
     var memories: [Memory]?
-    override init(_id: String, firstName: String, lastName: String) {
-        super.init(_id:_id, firstName: firstName, lastName: lastName)
-    }
 }

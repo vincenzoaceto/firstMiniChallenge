@@ -1,5 +1,5 @@
 //
-//  Money.swift
+//  GuideMemory.swift
 //  firstMiniChallenge
 //
 //  Created by Bilal Abdullah on 10/01/2018.
@@ -8,8 +8,7 @@
 
 import Foundation
 
-class Money : BaseEntity{
-    var amount : NSDecimalNumber?
-    var label: String?
-    var currency : Currency?
+class GuideMemory : BaseEntity{
+    var name: String?
+    var images: [String]?
 }

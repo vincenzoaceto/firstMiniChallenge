@@ -10,8 +10,6 @@ import Foundation
 
 // Model stub
 class Client: User {
-    override init(_id: String, firstName: String, lastName: String) {
-        super.init(_id:_id, firstName: firstName, lastName: lastName)
-    }
+    
 }
 

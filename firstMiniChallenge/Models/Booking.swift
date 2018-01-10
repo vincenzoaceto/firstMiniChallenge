@@ -8,15 +8,11 @@
 
 import Foundation
 
-class Booking : IdentifiableEntity{
+class Booking : BaseEntity{
     var client: Client?
     var guide: Guide?
     var period: Period?
     var cost: Money?
     var reviews: [Review]?
-    
-    override init(_id: String) {
-        super.init(_id:_id)
-    }
 }
 

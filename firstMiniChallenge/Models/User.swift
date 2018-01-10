@@ -8,18 +8,12 @@
 
 import Foundation
 
-class User : IdentifiableEntity{
-    let firstName : String?
-    let lastName: String?
+class User : BaseEntity{
+    var firstName : String?
+    var lastName: String?
     var phone : String?
     var email: String?
     var username : String?
     var password : String?
     var profileImage: String?
-    
-    init(_id: String, firstName: String, lastName: String) {
-        self.firstName = firstName
-        self.lastName = lastName
-        super.init(_id:_id)
-    }
 }

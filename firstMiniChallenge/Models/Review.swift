@@ -8,13 +8,9 @@
 
 import Foundation
 
-class Review : IdentifiableEntity{
+class Review : BaseEntity{
     var subject : String?
     var review: String?
     var rating : Float?
     var date: Date?
-    
-    override init(_id: String) {
-        super.init(_id:_id)
-    }
 }

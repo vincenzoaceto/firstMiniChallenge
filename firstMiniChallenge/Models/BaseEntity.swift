@@ -1,5 +1,5 @@
 //
-//  Money.swift
+//  BaseEntity.swift
 //  firstMiniChallenge
 //
 //  Created by Bilal Abdullah on 10/01/2018.
@@ -7,9 +7,8 @@
 //
 
 import Foundation
+import EVReflection
 
-class Money : BaseEntity{
-    var amount : NSDecimalNumber?
-    var label: String?
-    var currency : Currency?
+class BaseEntity : EVObject{
+
 }

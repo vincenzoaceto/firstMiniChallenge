@@ -8,47 +8,46 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class Connection {
-    
-    func getActractions(){
-        Alamofire.request(Constants.BASEPATH+Constants.ACTRACTIONS).responseJSON { response in
-            debugPrint(response)
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
+    func getActractions(completion: @escaping (_ attractions: [Attraction]) -> Void) {
+        Alamofire.request(Constants.BASEPATH+Constants.ACTRACTIONS).responseData { (resData) -> Void in
+            print(resData.result.value!)
+            if let json = String(data : resData.result.value!, encoding : String.Encoding.utf8) {
+                let attractions = [Attraction](json: json)
+                completion(attractions)
             }
         }
     }
     
-    func getClients(){
-        Alamofire.request(Constants.BASEPATH+Constants.CLIENTS).responseJSON { response in
-            debugPrint(response)
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
+    func getClients(completion: @escaping (_ attractions: [Client]) -> Void) {
+        Alamofire.request(Constants.BASEPATH+Constants.CLIENTS).responseData { (resData) -> Void in
+            print(resData.result.value!)
+            if let json = String(data : resData.result.value!, encoding : String.Encoding.utf8) {
+                let clients = [Client](json: json)
+                completion(clients)
             }
         }
     }
     
-    func getBookings(){
-        Alamofire.request(Constants.BASEPATH+Constants.BOOKINGS).responseJSON { response in
-            debugPrint(response)
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
+    func getBookings(completion: @escaping (_ attractions: [Booking]) -> Void) {
+        Alamofire.request(Constants.BASEPATH+Constants.BOOKINGS).responseData { (resData) -> Void in
+            print(resData.result.value!)
+            if let json = String(data : resData.result.value!, encoding : String.Encoding.utf8) {
+                let bookings = [Booking](json: json)
+                completion(bookings)
             }
         }
     }
     
-    func getGuides(){
-        Alamofire.request(Constants.BASEPATH+Constants.GUIDES).responseJSON { response in
-            debugPrint(response)
-            
-            if let json = response.result.value {
-                print("JSON: \(json)")
+    func getGuides(completion: @escaping (_ attractions: [Guide]) -> Void) {
+        Alamofire.request(Constants.BASEPATH+Constants.GUIDES).responseData { (resData) -> Void in
+            print(resData.result.value!)
+            if let json = String(data : resData.result.value!, encoding : String.Encoding.utf8) {
+                let guides = [Guide](json: json)
+                completion(guides)
             }
         }
     }
-    
 }

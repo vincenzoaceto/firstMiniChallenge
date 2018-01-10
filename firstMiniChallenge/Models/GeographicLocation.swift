@@ -8,10 +8,10 @@
 
 import Foundation
 
-class GeographicLocation {
+class GeographicLocation : BaseEntity{
     var name : String?
     var state: String?
     var country : String?
-    var longitude: Float?
-    var latitude: Float?
+    var longitude: String?
+    var latitude: String?
 }

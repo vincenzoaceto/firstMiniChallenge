@@ -120,10 +120,12 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             gestureRecognizer.delaysTouchesBegan = false
         }
         
-        connction.getActractions()
-        connction.getClients()
-        connction.getBookings()
-        connction.getGuides()
+        connction.getActractions(completion: {(_ attractions: [Attraction]) -> Void in
+            print(attractions)
+        })
+//        connction.getClients()
+//        connction.getBookings()
+//        connction.getGuides()
         // Do any additional setup after loading the view.
     }
    

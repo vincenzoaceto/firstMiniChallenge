@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Period {
+class Period : BaseEntity{
     var startDate : Date?
     var endDate: Date?
 }
