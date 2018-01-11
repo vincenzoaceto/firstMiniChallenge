@@ -152,9 +152,9 @@
                                             </subviews>
                                         </view>
                                         <connections>
+                                            <outlet property="cosmosView" destination="Brp-my-gat" id="bb3-yL-MCd"/>
                                             <outlet property="guidesImage" destination="dtL-if-6N1" id="6tW-hi-4jn"/>
                                             <outlet property="guidesInfo" destination="wy5-hj-ekp" id="tbC-af-oAA"/>
-                                            <segue destination="VV5-6n-j4z" kind="show" identifier="Guide1" id="0Tl-Xq-qeK"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -203,58 +203,13 @@
                         <outlet property="searchBar" destination="sxD-sM-ADD" id="htb-1s-tU7"/>
                         <outlet property="tblSearch" destination="g9B-aZ-UW9" id="yT7-xu-Xum"/>
                         <outlet property="travelGuidesCollectionView" destination="eeK-YN-ChO" id="zvS-ZN-gIu"/>
-                        <segue destination="eO9-C4-fq8" kind="show" identifier="Paris" id="Q46-AV-roR"/>
-                        <segue destination="Z8k-zn-mra" kind="show" identifier="Guide2" id="9z8-6x-aAn"/>
-                        <segue destination="opS-tR-KDB" kind="show" identifier="Guide3" id="Ray-nu-p3J"/>
-                        <segue destination="lgJ-mn-gNz" kind="show" identifier="Agra" id="BFf-BN-58K"/>
-                        <segue destination="yK6-8d-dG3" kind="show" identifier="Don" id="qgz-Z8-wno"/>
-                        <segue destination="ok0-hk-Bdn" kind="show" identifier="Rome" id="jtD-4D-0WT"/>
                         <segue destination="yjG-6l-k4Q" kind="show" identifier="goToResult" id="JRm-Jf-Mds"/>
+                        <segue destination="VV5-6n-j4z" kind="show" identifier="goToTravelGuideProfile" id="VYf-hb-t03"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2im-GH-48O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-180" y="-308.09595202398805"/>
-        </scene>
-        <!--travelGuideProfile-->
-        <scene sceneID="rhk-B2-wgy">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide3" storyboardName="travelGuideProfile" id="opS-tR-KDB" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kD6-Z8-xbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="568" y="-776"/>
-        </scene>
-        <!--Result-->
-        <scene sceneID="D3w-mr-eqN">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Agra" storyboardName="Result" id="lgJ-mn-gNz" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E65-Fy-WXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="573" y="-695"/>
-        </scene>
-        <!--Result-->
-        <scene sceneID="1QP-VF-UKE">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Paris" storyboardName="Result" id="eO9-C4-fq8" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S6e-v3-iVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="545" y="-540"/>
-        </scene>
-        <!--travelGuideProfile-->
-        <scene sceneID="bl4-ia-tqr">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Don" storyboardName="travelGuideProfile" id="yK6-8d-dG3" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x96-QQ-VHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="568" y="-510"/>
-        </scene>
-        <!--Result-->
-        <scene sceneID="S4x-tb-4JK">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Rome" storyboardName="Result" id="ok0-hk-Bdn" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0fB-Mk-GoZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="573" y="-332"/>
         </scene>
         <!--Result-->
         <scene sceneID="PP8-hx-jjx">
@@ -262,23 +217,15 @@
                 <viewControllerPlaceholder storyboardName="Result" id="yjG-6l-k4Q" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TzH-71-qMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="-378"/>
+            <point key="canvasLocation" x="686" y="-290"/>
         </scene>
         <!--travelGuideProfile-->
         <scene sceneID="aDD-9U-Hsz">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide1" storyboardName="travelGuideProfile" id="VV5-6n-j4z" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lLx-i7-DUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="Guide1" storyboardName="travelGuideProfile" id="VV5-6n-j4z" sceneMemberID="viewController"/>
             </objects>
-            <point key="canvasLocation" x="568" y="-237"/>
-        </scene>
-        <!--travelGuideProfile-->
-        <scene sceneID="U6T-LK-q8d">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Guide2" storyboardName="travelGuideProfile" id="Z8k-zn-mra" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eFg-FU-8Mu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="568" y="-99"/>
+            <point key="canvasLocation" x="629" y="-135"/>
         </scene>
     </scenes>
 </document>

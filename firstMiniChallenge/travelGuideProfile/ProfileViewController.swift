@@ -14,6 +14,7 @@ class ProfileViewController: UIViewController {
 
  
     //@IBOutlet weak var testimage: UIImageView!
+    @IBOutlet weak var costPerDayLabel: UILabel!
     @IBOutlet weak var myPassionsLabel: UILabel!
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var datePicker: JBDatePickerView!
@@ -21,19 +22,39 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-
+    @IBOutlet weak var profileTravelGuidePicture: UIImageView!
+    @IBOutlet weak var ratingCosmosView: CosmosView!
+    
     public var startDate : Date?
     public var endDate : Date?
-    public var travelGuide: TravelGuide = TravelGuide.travelGuides[0]
-    
-    public var costPerDay = 20
+    public var travelGuide: TravelGuide?// = TravelGuide.travelGuides[0]
+    public var memories: [Memory] = []
+    public var costPerDay = 15
+    public var citySelected = "Rome"
+    public var placeSelectedIndex = 0
     
     private var isStartDate = true
     public var travelGuideSelectedIndex = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
-        travelGuide = TravelGuide.travelGuides[travelGuideSelectedIndex]
-        self.title = travelGuide.name
+        
+        //travelGuide = TravelGuide.travelGuides[travelGuideSelectedIndex]
+        
+        self.title = travelGuide!.name
+        profileTravelGuidePicture.image = travelGuide!.image
+        profileTravelGuidePicture.clipsToBounds = true
+        
+        profileTravelGuidePicture.layer.cornerRadius = 60;
+        costPerDay = travelGuide!.costPerDay
+        
+        memories = Memory.memories()
+        
+        costPerDayLabel.text = "\(costPerDay)€/day"
+        
+        ratingCosmosView.rating = travelGuide!.rating
+     
+        
         
         
         var beginPositionX : CGFloat = 0
@@ -43,9 +64,8 @@ class ProfileViewController: UIViewController {
         beginPositionX = myPassionsLabel.frame.origin.x
         beginPositionY = myPassionsLabel.frame.origin.y + myPassionsLabel.frame.height + 10
         
-        var myPassions = ["I love trying new cuisines","Books","Love rock music","Fashionista","Pizza","Still 30","Global trotter"]
         
-        for myPassion in myPassions {
+        for myPassion in travelGuide!.passions {
             
             var label = UILabel()
             
@@ -113,6 +133,7 @@ class ProfileViewController: UIViewController {
             destinationVC.totalCost = costPerDay * dateComponents.day!
             destinationVC.startDate = startDateLabel.text!
             destinationVC.endDate = endDateLabel.text!
+            destinationVC.placeSelectedIndex = placeSelectedIndex
             
         }
     }
@@ -144,12 +165,12 @@ extension ProfileViewController: UICollectionViewDataSource,UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return Memory.memories.count
+        return memories.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath) as! MemoryCell
         
-        cell.memoryImageView.image = Memory.memories[indexPath.row].image
+        cell.memoryImageView.image = memories[indexPath.row].image
         
         return cell
     }

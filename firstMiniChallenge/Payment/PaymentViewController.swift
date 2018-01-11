@@ -13,11 +13,15 @@ class PaymentViewController: UIViewController {
 
     public var startDate = ""
     public var endDate = ""
+    public var placeSelectedIndex = 0
+    public var travelGuideSelectedIndex = 0
     public var totalCost = 0
     
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var totalCostLabel: UILabel!
+    @IBOutlet weak var cityLabel: UILabel!
+    
     
     private let store: EKEventStore = EKEventStore()
     private var userDidGivePermission: Bool = true
@@ -27,6 +31,7 @@ class PaymentViewController: UIViewController {
         startDateLabel.text = startDate
         endDateLabel.text = endDate
         totalCostLabel.text = String(totalCost) + "€"
+        cityLabel.text = Place.places[placeSelectedIndex].name
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,12 +41,14 @@ class PaymentViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "bookedTravelGuideProfile" {
+            
+            let destinationVC = segue.destination as! bookedProfileViewController
+            destinationVC.placeSelectedIndex = placeSelectedIndex
+            destinationVC.travelGuideSelectedIndex = travelGuideSelectedIndex
+            
             createEventinTheCalendar(with: "XploreEasy: Travel to Agria", forDate: Date(), toDate: Date())
         }
     }
-    
-    
-    
     
     
     func createEventinTheCalendar(with title:String, forDate eventStartDate:Date, toDate eventEndDate:Date) {

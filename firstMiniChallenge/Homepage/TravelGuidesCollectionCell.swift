@@ -19,6 +19,8 @@ class TravelGuidesCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var guidesInfo: UILabel!
     
+    @IBOutlet weak var cosmosView: CosmosView!
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.guidesImage.alpha = 0.5

@@ -12,6 +12,12 @@ class bookedProfileViewController: UIViewController {
     @IBOutlet weak var myPassionsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
+    var placeSelectedIndex = 0
+    var travelGuideSelectedIndex = 0
+    var memories = [Memory]()
+    
+    
     @IBAction func goBackToHomepageWhenTapped(_ sender: Any)
     {
         performSegue(withIdentifier: "unwindToHomepage", sender: self)
@@ -23,6 +29,7 @@ class bookedProfileViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        memories = Memory.memories()
         
         var myPassions = ["I love trying new cuisines","Books","Love rock music","Fashionista","Pizza","Still 30","Global trotter"]
         
@@ -75,12 +82,12 @@ class bookedProfileViewController: UIViewController {
 extension bookedProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource{
     
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return Memory.memories.count
+            return memories.count
         }
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemoryCell", for: indexPath) as! MemoryCell
             
-            cell.memoryImageView.image = Memory.memories[indexPath.row].image
+            cell.memoryImageView.image = memories[indexPath.row].image
             
             return cell
         }

@@ -27,7 +27,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="251"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePictureTravelGuide" translatesAutoresizingMaskIntoConstraints="NO" id="cbK-cx-gik">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profilePictureTravelGuide" translatesAutoresizingMaskIntoConstraints="NO" id="cbK-cx-gik">
                                                 <rect key="frame" x="127" y="34" width="120" height="121"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -205,10 +205,13 @@
                     <size key="freeformSize" width="375" height="1400"/>
                     <connections>
                         <outlet property="collectionView" destination="g0K-Fm-G59" id="jOl-mM-mNZ"/>
+                        <outlet property="costPerDayLabel" destination="xNH-Pu-fEs" id="8pj-VV-qEz"/>
                         <outlet property="datePicker" destination="KM3-ue-54s" id="Bcy-yg-PBc"/>
                         <outlet property="endDateLabel" destination="zVe-Ej-khA" id="GCG-hm-PU0"/>
                         <outlet property="monthCalendarLabel" destination="fb7-IR-CSe" id="8gy-KD-QaU"/>
                         <outlet property="myPassionsLabel" destination="2cg-4s-CDL" id="eBt-7R-LP8"/>
+                        <outlet property="profileTravelGuidePicture" destination="cbK-cx-gik" id="i3i-lG-K4j"/>
+                        <outlet property="ratingCosmosView" destination="ffv-9H-kQQ" id="7R8-1u-qLm"/>
                         <outlet property="startDateLabel" destination="0TX-rq-UjD" id="keu-i4-HHD"/>
                         <outlet property="subView" destination="jq1-62-SfE" id="cBE-Te-eu5"/>
                     </connections>

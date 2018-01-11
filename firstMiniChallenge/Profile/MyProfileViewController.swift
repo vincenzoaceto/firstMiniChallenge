@@ -25,8 +25,8 @@ UINavigationControllerDelegate {
         tableView.dataSource = self
         tableView.isScrollEnabled = false
         tableView.rowHeight = 95
-        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2;
-        profileImage.clipsToBounds = true;
+        profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
+        profileImage.clipsToBounds = true
         let layer = CAGradientLayer()
         layer.frame = CGRect(x: 62, y: 2, width: 251.0, height: 375.0)
         layer.colors = [UIColor(red:0.25, green:0.36, blue:0.82, alpha:1.0).cgColor, UIColor(red:0.29, green:0.49, blue:0.91, alpha:1.0).cgColor, UIColor(red:0.35, green:0.65, blue:0.94, alpha:1.0).cgColor]

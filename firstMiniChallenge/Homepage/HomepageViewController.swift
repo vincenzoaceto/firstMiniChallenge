@@ -36,13 +36,16 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     var citiesAvailable = [#imageLiteral(resourceName: "brandenburger"),#imageLiteral(resourceName: "Rome"),#imageLiteral(resourceName: "Paris")]
     var guideReviews = ["Janet Ghelanis \n20€/day ","Andrea Pugliesi \n15€/day ","Roberta Luiggi\n20€/day ","Ton Scott\n15€/day "]
     var cityName = ["Agra","Rome","Paris"]
+    var travelGuideSelectedIndex = 0
+    var placeSelectedIndex = 0
     
+    var listTravelGuides = TravelGuide.travelGuidesRome
+    var listPlaces = Place.places
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 2 {
-            return travelGuides.count
+            return listTravelGuides.count
         }else {
-            //            return emojis.count
             return citiesAvailable.count
         }
     }
@@ -51,8 +54,12 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 1 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CitiesIdentifier", for: indexPath) as! CitiesCollectionViewCell
-            cell.citiesImageView.image = citiesAvailable[indexPath.row]
-            cell.citiesLabel.text = cityName[indexPath.row]
+            
+            //cell.citiesImageView.image = citiesAvailable[indexPath.row]
+            //cell.citiesLabel.text = cityName[indexPath.row]
+            cell.citiesImageView.image = listPlaces[indexPath.row].image
+            cell.citiesLabel.text = listPlaces[indexPath.row].name
+            
             //            cell.event = sentencesForIcons[indexPath.row]
             
             return cell
@@ -61,12 +68,10 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TravelGuidesIdentifier", for: indexPath) as! TravelGuidesCollectionCell
             
-//            print(travelGuides.count)
-//            print(indexPath.row)
             
-            cell.guidesImage.image = travelGuides[indexPath.row]
-            cell.guidesInfo.text = guideReviews[indexPath.row]
-            
+            cell.guidesImage.image = listTravelGuides[indexPath.row].image
+            cell.guidesInfo.text = "\(listTravelGuides[indexPath.row].name) \n\(listTravelGuides[indexPath.row].costPerDay)€/day"
+            cell.cosmosView.rating = listTravelGuides[indexPath.row].rating
             
             return cell
             
@@ -80,12 +85,15 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView.tag == 1 {
-            performSegue(withIdentifier: cityArray[indexPath.row], sender: nil)
+            
+            placeSelectedIndex = indexPath.row
+            performSegue(withIdentifier: "goToResult", sender: nil)
             
             
             
         } else if collectionView.tag == 2{
-//            performSegue(withIdentifier:  guideArray[indexPath.row], sender: nil)
+            travelGuideSelectedIndex = indexPath.row
+            performSegue(withIdentifier:  "goToTravelGuideProfile", sender: nil)
             
         }
         
@@ -226,14 +234,25 @@ class HomepageViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
+//            if let resultVC = segue.destination as? ResultViewController {
+//                let numeroDaCelula = self.tblSearch.indexPathForSelectedRow!.row
+//                if isSearch {
+//                    resultVC.citySelected = self.arrFilter[numeroDaCelula] // arrumar isso
+//                } else {
+//                    // Fazer o mesmo pra esse caso onde nao esta no modo search
+//                    return
+//                }
+//            }
+            
             if let resultVC = segue.destination as? ResultViewController {
-                let numeroDaCelula = self.tblSearch.indexPathForSelectedRow!.row
-                if isSearch {
-                    resultVC.citySelected = self.arrFilter[numeroDaCelula] // arrumar isso
-                } else {
-                    // Fazer o mesmo pra esse caso onde nao esta no modo search
-                    return
-                }
+                resultVC.placeIndexSelected = placeSelectedIndex
+            }
+            
+        }else if segue.identifier == "goToTravelGuideProfile" {
+            if let profileVC = segue.destination as?  ProfileViewController{
+                profileVC.travelGuide = listTravelGuides[travelGuideSelectedIndex]
+                profileVC.travelGuideSelectedIndex = travelGuideSelectedIndex
+                
             }
         }
     }

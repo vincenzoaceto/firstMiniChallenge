@@ -12,7 +12,6 @@ import MapKit
 class ResultViewController: UIViewController {
 
     public var actualPosition = CLLocation(latitude: 40.8425211, longitude: 14.2426034)
-    public var placeSelected: Place?
     
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -22,6 +21,8 @@ class ResultViewController: UIViewController {
     public var cityName = "Results"
     public var travelGuideIndexSelected = 0
     public var citySelected = "Rome"
+    public var placeIndexSelected = 0
+    public var place = Place.places[0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,14 +34,12 @@ class ResultViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.isPrefetchingEnabled = false
         
-        self.tabBarController?.tabBar.isHidden = true
+        place = Place.places[placeIndexSelected]
         
-        if let found = Place.places.first(where: { $0.name == citySelected }) {
-            placeSelected = found
-            cityName = found.name
-            actualPosition = CLLocation(latitude: found.travelGuides[0].latitude, longitude: found.travelGuides[0].longitude)
-            
-        }
+        cityName = place.name
+        citySelected = place.name
+        
+        self.tabBarController?.tabBar.isHidden = true
         
         self.title = cityName
         centerMapOnLocation(location: actualPosition)
@@ -66,15 +65,15 @@ class ResultViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "" {
-            var destinationViewController = segue.destination as! ProfileViewController
+        if segue.identifier == "TravelGuide" {
             
-            destinationViewController.travelGuide = (placeSelected?.travelGuides[travelGuideIndexSelected])!
+            let destinationViewController = segue.destination as! ProfileViewController
+            destinationViewController.placeSelectedIndex = placeIndexSelected
+            destinationViewController.travelGuideSelectedIndex = travelGuideIndexSelected
+            destinationViewController.citySelected = citySelected
+            destinationViewController.travelGuide = (place.travelGuides[travelGuideIndexSelected])
         }
-        
     }
-    
-    
 }
 
 extension ResultViewController: MKMapViewDelegate {
@@ -102,7 +101,7 @@ extension ResultViewController: MKMapViewDelegate {
         MKMapView.animate(withDuration: duration, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 10, options: UIViewAnimationOptions.curveEaseIn, animations: {
             
             
-            var viewRegion = MKCoordinateRegionMakeWithDistance(zoomRegion.center, 220, 220)
+            let viewRegion = MKCoordinateRegionMakeWithDistance(zoomRegion.center, 220, 220)
             self.mapView.setRegion(viewRegion, animated: true)
             
         }, completion: nil)
@@ -128,7 +127,7 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      //   return travelGuides.count
-        return placeSelected!.travelGuides.count
+        return place.travelGuides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -153,12 +152,12 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
         
         
         
-        cell.travelGuideImageView.image = placeSelected!.travelGuides[indexPath.row].image
-        cell.descriptionTextView.text = placeSelected!.travelGuides[indexPath.row].description
-        cell.nameLabel.text = placeSelected!.travelGuides[indexPath.row].name
-        cell.locationLabel.text = placeSelected!.travelGuides[indexPath.row].location
+        cell.travelGuideImageView.image = place.travelGuides[indexPath.row].image
+        cell.descriptionTextView.text = place.travelGuides[indexPath.row].description
+        cell.nameLabel.text = place.travelGuides[indexPath.row].name
+        cell.locationLabel.text = place.travelGuides[indexPath.row].location
         
-        actualPosition = CLLocation(latitude: placeSelected!.travelGuides[indexPath.row].latitude, longitude: placeSelected!.travelGuides[indexPath.row].longitude)
+        actualPosition = CLLocation(latitude: place.travelGuides[indexPath.row].latitude, longitude: place.travelGuides[indexPath.row].longitude)
         
         centerMapOnLocation(location: actualPosition)
         
@@ -167,6 +166,7 @@ extension ResultViewController: UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         travelGuideIndexSelected = indexPath.row
+        performSegue(withIdentifier: "TravelGuide", sender: nil)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
