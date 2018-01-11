@@ -7,7 +7,17 @@
 		<key>firstMiniChallenge.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>15</integer>
+		</dict>
+		<key>firstMiniChallengeWatch (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>16</integer>
+		</dict>
+		<key>firstMiniChallengeWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
 		</dict>
 	</dict>
 </dict>
