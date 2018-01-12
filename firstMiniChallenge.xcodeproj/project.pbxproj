@@ -18,7 +18,6 @@
 		6BE495AA2003BAF200F5A664 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE495A92003BAF200F5A664 /* ExtensionDelegate.swift */; };
 		6BE495AC2003BAF200F5A664 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE495AB2003BAF200F5A664 /* NotificationController.swift */; };
 		6BE495AE2003BAF200F5A664 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE495AD2003BAF200F5A664 /* Assets.xcassets */; };
-		6BE495B32003BAF300F5A664 /* firstMiniChallengeWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6BE495962003BAF200F5A664 /* firstMiniChallengeWatch.app */; };
 		7401643B1FE47D6D004D968A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7401643A1FE47D6D004D968A /* GoogleService-Info.plist */; };
 		7421263F2004D7FF00E33983 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421263E2004D7FF00E33983 /* Connection.swift */; };
 		747DB42A1FE2AC8100A6B920 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747DB4291FE2AC8100A6B920 /* User.swift */; };
@@ -111,13 +110,6 @@
 			remoteGlobalIDString = 6BE495A12003BAF200F5A664;
 			remoteInfo = "firstMiniChallengeWatch Extension";
 		};
-		6BE495B12003BAF300F5A664 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 74DB868B1FDE7C3E00106C89 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6BE495952003BAF200F5A664;
-			remoteInfo = firstMiniChallengeWatch;
-		};
 		74DB86A81FDE7C3F00106C89 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 74DB868B1FDE7C3E00106C89 /* Project object */;
@@ -152,7 +144,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				6BE495B32003BAF300F5A664 /* firstMiniChallengeWatch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -699,7 +690,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				6BE495B22003BAF300F5A664 /* PBXTargetDependency */,
 			);
 			name = firstMiniChallenge;
 			productName = firstMiniChallenge;
@@ -1138,11 +1128,6 @@
 			target = 6BE495A12003BAF200F5A664 /* firstMiniChallengeWatch Extension */;
 			targetProxy = 6BE495A42003BAF200F5A664 /* PBXContainerItemProxy */;
 		};
-		6BE495B22003BAF300F5A664 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6BE495952003BAF200F5A664 /* firstMiniChallengeWatch */;
-			targetProxy = 6BE495B12003BAF300F5A664 /* PBXContainerItemProxy */;
-		};
 		74DB86A91FDE7C3F00106C89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 74DB86921FDE7C3F00106C89 /* firstMiniChallenge */;
@@ -1370,7 +1355,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YJZCXBFJA;
+				DEVELOPMENT_TEAM = E76VR3ED8R;
 				INFOPLIST_FILE = firstMiniChallenge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1387,7 +1372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2YJZCXBFJA;
+				DEVELOPMENT_TEAM = E76VR3ED8R;
 				INFOPLIST_FILE = firstMiniChallenge/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
